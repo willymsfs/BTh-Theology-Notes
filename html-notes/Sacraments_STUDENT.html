@@ -1,0 +1,472 @@
+<title>The Sacraments of the Church — STUDENT EDITION</title>
+<style>
+  :root {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+      --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+      --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52; color-scheme: light;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+  }
+  :root[data-theme="light"] {
+    --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+    --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+    --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--wine-soft); }
+  h1, h2, h3, h4, .display {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "URW Palladio", serif;
+    text-wrap: balance; font-weight: 400; color: var(--gold); margin: 0;
+  }
+  p { margin: 0 0 1.1em; max-width: 42em; }
+  strong { color: var(--ink); font-weight: 700; }
+  em { color: var(--wine); font-style: italic; }
+  a { color: var(--wine); }
+
+  header.hero { padding: 60px 24px 44px; text-align: center; border-bottom: 1px solid var(--line); }
+  header.hero .eyebrow { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wine); margin-bottom: 12px; }
+  header.hero h1 { font-size: clamp(30px, 4.6vw, 44px); max-width: 20ch; margin: 0 auto 8px; font-style: italic; }
+  header.hero .sub { max-width: 46em; margin: 0 auto 16px; color: var(--ink-soft); font-size: 18px; }
+  header.hero .inst { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+  header.hero .edition {
+    display: inline-block; margin: 12px 0 10px; padding: 4px 14px; border: 1px solid var(--gold);
+    border-radius: 20px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+  }
+  header.hero .meta { font-size: 13.5px; color: var(--muted); margin-top: 8px; }
+  header.hero .leitmotif-line { font-size: 14.5px; color: var(--wine); font-style: italic; margin-top: 10px; }
+
+  nav.chapters {
+    position: sticky; top: 0; z-index: 10; display: flex; gap: 2px; overflow-x: auto;
+    background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 12px;
+  }
+  nav.chapters a {
+    flex: none; padding: 12px 13px; font-size: 13px; text-decoration: none; color: var(--muted);
+    white-space: nowrap; border-bottom: 2px solid transparent;
+  }
+  nav.chapters a:hover { color: var(--wine); border-color: var(--wine-soft); }
+
+  main { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }
+
+  section.chapter { padding: 52px 0 34px; border-bottom: 1px solid var(--line); scroll-margin-top: 50px; }
+  section.chapter:last-of-type { border-bottom: none; }
+  section.chapter h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 18px; font-style: italic; }
+
+  h3.sec { font-size: 20px; color: var(--gold); margin: 28px 0 10px; }
+
+  ul.plain, ol { padding-left: 1.3em; margin: 0 0 1.1em; max-width: 42em; }
+  ul.plain li, ol li { margin-bottom: 9px; }
+
+  .review { margin-top: 24px; background: var(--gold-soft); border: 1px solid var(--line); border-radius: 3px; padding: 18px 22px; }
+  .review h4 { margin: 0 0 10px; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+  .review ol { margin: 0; padding-left: 1.2em; font-size: 16.5px; color: var(--ink-soft); }
+
+  .cue {
+    background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--gold);
+    border-radius: 3px; padding: 14px 18px; margin: 18px 0;
+  }
+  .cue p { margin: 0; font-size: 16.5px; color: var(--ink-soft); }
+  .cue strong { color: var(--gold); }
+
+  footer.page { max-width: 780px; margin: 0 auto; padding: 34px 24px 60px; font-size: 13.5px; color: var(--muted); }
+</style>
+
+<header class="hero">
+  <p class="eyebrow">BTh &middot; Morning Star Regional Seminary</p>
+  <h1>The Sacraments of the Church</h1>
+  <p class="sub">BTh Class Notes in the Tradition of Fr. William Anthony, MSFS</p>
+  <div class="inst">Course: Sacramental Theology (BTh). Faculty affiliated to Jnana-Deepa, Pune. Leitmotif Text: The Road to Emmaus (Lk 24:13-35).</div>
+  <div class="edition">STUDENT EDITION</div>
+  
+  
+</header>
+
+<nav class="chapters">
+  <a href="#welcome-you-are-a-sacramental-people">Welcome: You are a Sacramental People</a>
+  <a href="#the-emmaus-leitmotif-seven-readings-of-l">The Emmaus Leitmotif: Seven Readings of Luke 24</a>
+  <a href="#unit-one-what-is-a-sacrament">Unit One: What is a Sacrament?</a>
+  <a href="#unit-two-the-second-vatican-council-and-">Unit Two: The Second Vatican Council and the Sacraments</a>
+  <a href="#unit-three-baptism">Unit Three: Baptism</a>
+  <a href="#unit-four-confirmation">Unit Four: Confirmation</a>
+  <a href="#unit-five-the-eucharist">Unit Five: The Eucharist</a>
+  <a href="#closing-doxology-every-meal-an-emmaus">Closing Doxology: Every Meal an Emmaus</a>
+  <a href="#for-the-oral-exam-schemas-to-reproduce">For the Oral Exam: Schemas to Reproduce</a>
+  <a href="#recalling-the-road">Recalling the Road</a>
+  <a href="#unit-six-reconciliation">Unit Six: Reconciliation</a>
+  <a href="#unit-seven-anointing-of-the-sick">Unit Seven: Anointing of the Sick</a>
+  <a href="#unit-eight-holy-orders">Unit Eight: Holy Orders</a>
+  <a href="#unit-nine-matrimony">Unit Nine: Matrimony</a>
+  <a href="#closing-doxology-the-whole-of-life-made-">Closing Doxology: The Whole of Life Made Sacrament</a>
+  <a href="#for-the-oral-exam-schemas-to-reproduce">For the Oral Exam: Schemas to Reproduce</a>
+</nav>
+
+<main>
+<section class="chapter" id="welcome-you-are-a-sacramental-people">
+<h2>Welcome: You are a Sacramental People</h2>
+<p>Dear Seminarian, before you study the Seven Sacraments you must know that you already live inside a Sacramental World. Every Bush is afire with God, every Meal is a possible Emmaus, every Neighbour is a Visible Sign of an Invisible Grace. To study the Sacraments is not to memorise Matter and Form. It is to learn to recognise the Risen One in the Breaking of the Bread.</p>
+<p>Curiosity, Commitment, Engagement: bring these three to this course.</p>
+<p><em>A word of humility. We handle Mysteries greater than our Minds. Any definition we make of a Sacrament is more unlike the Grace than like it. We speak, but we bow.</em></p>
+</section>
+<section class="chapter" id="the-emmaus-leitmotif-seven-readings-of-l">
+<h2>The Emmaus Leitmotif: Seven Readings of Luke 24</h2>
+<p>The Sacraments are best entered through one Master Text. The Road to Emmaus (Lk 24:13-35) is the First Liturgy celebrated by the Risen Christ, and it is read here seven ways. Each reading seeds a later Unit.</p>
+<ul class="plain">
+<li><strong>Sacrament as Encounter with the Risen One</strong> (15): He drew near and walked with them. Seeds the whole Theology of Real Presence.</li>
+<li><strong>Sacrament as Word that Burns</strong> (32): Were not our Hearts burning within us? Seeds the Liturgy of the Word, and the note that Word and Sacrament are inseparable.</li>
+<li><strong>Sacrament as Breaking of the Bread</strong> (30-31): He took, blessed, broke, gave; their Eyes were opened. Seeds the Eucharist and the Structure of the Mass.</li>
+<li><strong>Sacrament as Sign perceptible to Faith</strong> (16, 31): their Eyes were kept from recognising Him, then opened. Seeds the definition of Sacrament as Efficacious Sign.</li>
+<li><strong>Sacrament as Ecclesial Act</strong> (33): they returned to Jerusalem, to the Eleven. Seeds the truth that Sacraments make the Church and the Church makes the Sacraments.</li>
+<li><strong>Sacrament as Mission</strong> (33-35): they told what had happened on the Road. Seeds the Missionary and Social thrust of every Sacrament.</li>
+<li><strong>Sacrament as Journey of the Anawim</strong> (17, 21): they walked sad, their Hopes broken, the Little Ones of a defeated Movement. Seeds the Indian reading: the Sacraments among the Poor, the Dalit, the Tribal.</li>
+</ul>
+<p>Is Emmaus beckoning us? Do our Sacraments still make Hearts burn and Eyes open in India today?</p>
+</section>
+<section class="chapter" id="unit-one-what-is-a-sacrament">
+<h2>Unit One: What is a Sacrament?</h2>
+<p><strong>Etymology.</strong> Sacrament = Latin <em>sacramentum</em> = a Sacred Oath, the pledge of a Roman soldier. It translates the Greek <em>mysterion</em> = Mystery. So a Sacrament = a Sacred Mystery pledged in a Visible Sign.</p>
+<h3 class="sec">Sacrament Defined as a Series</h3>
+<p>Following the method of Definition by Waves, the Sacrament is not defined once but many ways.</p>
+<ul class="plain">
+<li><strong>Sacrament as Sign.</strong> An Efficacious Sign of Grace, instituted by Christ, entrusted to the Church, by which Divine Life is dispensed (CCC 1131). Not a mere Signpost but a Sign that effects what it signifies.</li>
+<li><strong>Sacrament as Encounter.</strong> A personal meeting with the Risen Lord, not a thing received but a Person met (Emmaus).</li>
+<li><strong>Sacrament as Mystery.</strong> <em>Mysterion</em>: the hidden Plan of God made visible in Christ and continued in the Church.</li>
+<li><strong>Sacrament as Word made Visible.</strong> <em>Verbum Visibile</em> (Augustine): the Word attaches to the Element and it becomes a Sacrament.</li>
+<li><strong>Sacrament as Ecclesial Celebration.</strong> Sacraments of the Church, by the Church, for the building of the Church (SC 59).</li>
+</ul>
+<h3 class="sec">The Two Primordial Sacraments</h3>
+<p>Before the Seven there are two prior Sacraments, and this is the key to all Sacramental Theology.</p>
+<ul class="plain">
+<li>*<em>Christ is the </em>Ursakrament*** = the Primordial Sacrament. He is the Visible Sign of the Invisible Father. Whoever sees Him sees the Father (Jn 14:9).</li>
+<li>*<em>The Church is the </em>Grundsakrament*** = the Foundational Sacrament, the Sign and Instrument of Communion with God and of the Unity of the whole Human Race (LG 1).</li>
+<li>Arrow chain: Father =&gt; Christ (Ursakrament) =&gt; Church (Grundsakrament) =&gt; Seven Sacraments =&gt; the Faithful.</li>
+</ul>
+<h3 class="sec">Matter and Form</h3>
+<p>Every Sacrament has a Body and a Soul.</p>
+<ul class="plain">
+<li><strong>Matter</strong> = the Element or Gesture: Water, Oil, Bread and Wine, the Laying on of Hands.</li>
+<li><strong>Form</strong> = the Word that specifies the Sign: I baptize you...; This is my Body...</li>
+<li>This follows the Hylomorphic scheme of Aristotle and Aquinas: Matter is determined by Form, as the Body is animated by the Soul.</li>
+</ul>
+<h3 class="sec">The Seven and Their Three Groups</h3>
+<p>The Church celebrates Seven Sacraments (Council of Trent, 1547; ND 1311-1313), sorted into three groups.</p>
+<ul class="plain">
+<li><strong>Sacraments of Initiation:</strong> Baptism, Confirmation, Eucharist.</li>
+<li><strong>Sacraments of Healing:</strong> Reconciliation, Anointing of the Sick.</li>
+<li><strong>Sacraments of Communion and Mission:</strong> Holy Orders, Matrimony.</li>
+</ul>
+<p>Mnemonic for Initiation: <strong>BCE</strong> = Baptism, Confirmation, Eucharist = the Christian is Born, Sealed, and Nourished.</p>
+<h3 class="sec">Sacrament and the Indian Lens</h3>
+<ul class="plain">
+<li><strong>Samskara.</strong> The Sanskrit <em>Samskara</em> = a Rite of Passage that perfects and refines the Person. The Indian Christian names Baptism <em>Jnana-Snana</em> = the Bath of Wisdom, and the Eucharist <em>Khrist-Prasad</em> = the Grace-Gift of Christ.</li>
+<li><strong>Prasad.</strong> What the Devotee receives from the Deity is <em>Prasad</em>, Grace made edible. The Eucharist as <em>Prasad</em> speaks to the Indian Heart.</li>
+<li><strong>Darshan.</strong> The Hindu goes to the Temple for <em>Darshan</em>, the Seeing of the Deity. The Sacrament is the Christian Darshan: in the Sign the Faithful see the Lord.</li>
+</ul>
+<h3 class="sec">Polarities of the Sacramental Life</h3>
+<p>The Sacrament lives between Poles. State the Thesis, then the counter-pull.</p>
+<ul class="plain">
+<li><strong>Sign and Reality.</strong> The Sacrament is a Visible Sign. But it truly contains and confers the Invisible Reality it signifies. It is not empty Symbol nor bare Magic.</li>
+<li><strong>Opus Operatum and Opus Operantis.</strong> Grace is given by the Work worked (<em>ex opere operato</em>), independent of the Minister&#x27;s Merit. But its Fruit depends on the Disposition of the Receiver (<em>opus operantis</em>). The Sacrament is not Magic; the open Heart matters.</li>
+<li><strong>Institution and History.</strong> Christ instituted the Sacraments. But their Rites developed through Centuries of the Church. Identity and Change are held together.</li>
+<li><strong>Personal and Communitarian.</strong> The Sacrament sanctifies the Individual. But every Sacrament is an Act of the whole Church and builds the Community.</li>
+<li><strong>Cult and Justice.</strong> The Sacrament is Worship offered to God. But a Worship that ignores the Cry of the Poor is a Parody (Am 5:21-24; 1 Cor 11:20-22). Orthodoxy and Orthopraxis.</li>
+</ul>
+<p>All Sacraments are tested by the Life they produce. A Sacrament that does not send the Communicant back to Jerusalem, to the Neighbour, has not fully worked.</p>
+</section>
+<section class="chapter" id="unit-two-the-second-vatican-council-and-">
+<h2>Unit Two: The Second Vatican Council and the Sacraments</h2>
+<p>When did the Modern Renewal of the Sacraments begin? At the Second Vatican Council (VC II, 1962-1965), convoked by Pope St. John XXIII for <em>Aggiornamento</em> = Updating.</p>
+<h3 class="sec">The 4 - 9 - 3 of the Council</h3>
+<p>The Council gave Sixteen Documents, always sorted 4-9-3.</p>
+<ul class="plain">
+<li><strong>4 Constitutions:</strong> <em>Sacrosanctum Concilium</em> (SC), <em>Lumen Gentium</em> (LG), <em>Dei Verbum</em> (DV), <em>Gaudium et Spes</em> (GS).</li>
+<li><strong>9 Decrees:</strong> IM, OE, UR, CD, PC, OT, AA, AG, PO.</li>
+<li><strong>3 Declarations:</strong> GE, NA, DH.</li>
+</ul>
+<h3 class="sec">Sacrosanctum Concilium: The Magna Carta of the Liturgy</h3>
+<p>The very First Document promulgated by the Council (4 December 1963) was on the Sacred Liturgy. This itself is a Statement: the Church begins her Renewal at the Altar.</p>
+<p>Key Principles of SC:</p>
+<ul class="plain">
+<li><strong>The Liturgy is the Source and Summit.</strong> The Liturgy is the <em>Fons et Culmen</em> = the Fountain and the Summit of the whole Life of the Church (SC 10).</li>
+<li><strong>Full, Conscious, Active Participation.</strong> <em>Participatio Actuosa</em>: the Faithful are not silent spectators but a Priestly People who offer (SC 14). This is the heart-word of the whole Council.</li>
+<li><strong>Christ Present in Four Ways.</strong> In the Minister, in the Species of the Eucharist, in the Word proclaimed, in the Assembly gathered to pray and sing (SC 7). Real Presence is not narrowed to the Host alone.</li>
+<li><strong>Vernacular and Inculturation.</strong> The Mother Tongue may be used (SC 36); the Rites admit legitimate variations of Peoples and Cultures (SC 37-40). This Article 37-40 is the Charter of Indian Liturgical Inculturation: the <em>Bharatiya Puja</em>, the Indian Anaphora, the <em>Panchanga Pranam</em>.</li>
+<li><strong>Noble Simplicity.</strong> The Rites should be short, clear, free from useless repetition (SC 34).</li>
+</ul>
+<h3 class="sec">Dei Verbum: Word and Sacrament</h3>
+<p>The Constitution on Divine Revelation teaches that the Church venerates the Body of the Lord and the Word of God as one Table (DV 21). Emmaus is the proof: the Heart burns at the Word (32) before the Eyes open at the Bread (31). Word and Sacrament are the two Hands of the one Christ.</p>
+<h3 class="sec">Lumen Gentium: The Church as Sacrament</h3>
+<p><em>Lumen Gentium</em> names the Church herself the Sacrament, the Sign and Instrument of Union with God and of the Unity of Humankind (LG 1). Thus the Seven Sacraments flow from the one Sacrament that is the Church.</p>
+<p>Rhetorical question for India: SC 37-40 opened the door to Inculturation in 1963. After sixty years, has our Liturgy taken Flesh in the Soil of Bharat, or does it still wear a borrowed Roman Coat?</p>
+</section>
+<section class="chapter" id="unit-three-baptism">
+<h2>Unit Three: Baptism</h2>
+<p><strong>The Gateway.</strong> Baptism is the <em>Ianua Sacramentorum</em> = the Door of the Sacraments, the Basis of the whole Christian Life, the Identity Card of the Christian (CCC 1213).</p>
+<h3 class="sec">The Word Behind the Water</h3>
+<p>Baptism is prefigured, instituted, and commanded.</p>
+<ul class="plain">
+<li><strong>Prefigured (OT):</strong> the Spirit over the Waters of Creation (Gen 1:1-2); the Flood and the Ark; the Crossing of the Red Sea; the Water from the Rock. Water that Drowns Sin and Saves Life.</li>
+<li><strong>Instituted (NT):</strong> the Baptism of Jesus in the Jordan (Mt 3:13-17), where the Trinity is revealed; the necessity of being Born of Water and the Spirit (Jn 3:5).</li>
+<li><strong>Commanded:</strong> Go, make Disciples of all Nations, baptizing them in the Name of the Father and of the Son and of the Holy Spirit (Mt 28:19).</li>
+<li><strong>Interpreted:</strong> to be baptized is to Die and Rise with Christ (Rom 6:3-4). Baptism is a Paschal Sacrament.</li>
+</ul>
+<h3 class="sec">Matter, Form, Minister</h3>
+<ul class="plain">
+<li><strong>Matter:</strong> Water, by Immersion or Pouring, three times.</li>
+<li><strong>Form (Latin Church):</strong> N., I baptize you in the Name of the Father and of the Son and of the Holy Spirit.</li>
+<li><strong>Minister:</strong> ordinarily the Bishop, Priest, or Deacon. But in Necessity anyone, even a Non-Christian, can baptize with the right Intention. Grace is not the Property of the Clergy.</li>
+</ul>
+<h3 class="sec">The Effects: Five Gifts</h3>
+<ul class="plain">
+<li>Forgiveness of all Sins, Original and Personal.</li>
+<li>Rebirth as an Adopted Child of God.</li>
+<li>Incorporation into Christ and His Church, the Body.</li>
+<li>The Indelible Character = the Seal that is never repeated.</li>
+<li>The Grace of the Threefold Office: Priest, Prophet, King.</li>
+</ul>
+<h3 class="sec">Baptism and the Indian Context</h3>
+<ul class="plain">
+<li><strong>Jnana-Snana</strong> = the Bath of Wisdom. The Indian Christian tradition, from Thomas Stephens onward, names Baptism the Snana that enlightens.</li>
+<li><strong>Water in Indian Religiosity.</strong> The Ganga purifies; the pilgrim bathes at the Tirtha. Baptism speaks to a People who already know that Water is Holy.</li>
+<li><strong>Baptism against Caste.</strong> Since all are equally born anew in Christ (Gal 3:28), there are no High and Low in the Font. The scandal of the Baptized Dalit seated apart is a Contradiction of the very Water that made all one. Here Baptism becomes a Social Sacrament.</li>
+</ul>
+<p>Baptism is not a naming Ceremony nor a social Custom. It is a Death and a Birth.</p>
+</section>
+<section class="chapter" id="unit-four-confirmation">
+<h2>Unit Four: Confirmation</h2>
+<p><strong>The Sacrament of Intensification.</strong> Confirmation completes and perfects Baptismal Grace, and equips the Baptized for Mission and Witness (CCC 1285). If Baptism is Birth, Confirmation is Coming of Age in the Spirit.</p>
+<h3 class="sec">The Word Behind the Oil</h3>
+<ul class="plain">
+<li><strong>Prophesied:</strong> the Messiah is anointed with the Spirit (Is 11:2; 61:1).</li>
+<li><strong>Promised:</strong> the Paraclete is promised (Jn 14-16); you will receive Power when the Holy Spirit comes upon you (Acts 1:8).</li>
+<li><strong>Fulfilled:</strong> the Descent at Pentecost (Acts 2:1-4). Confirmation is the Personal Pentecost of the Christian.</li>
+<li><strong>Practised:</strong> the Apostles laid Hands on the Baptized and they received the Holy Spirit (Acts 8:14-17; 19:5-6). Paul speaks of being Sealed with the Spirit (Eph 1:13).</li>
+</ul>
+<h3 class="sec">Matter, Form, Minister</h3>
+<ul class="plain">
+<li><strong>Matter:</strong> Anointing with Sacred Chrism on the Forehead, with the Laying on of the Hand.</li>
+<li><strong>Form:</strong> Be sealed with the Gift of the Holy Spirit.</li>
+<li><strong>Minister:</strong> ordinarily the Bishop, sign of the link to the Apostles; a delegated Priest in Mission Lands or Danger of Death.</li>
+</ul>
+<h3 class="sec">The Effects and the Seven Gifts</h3>
+<p>Confirmation gives a special Outpouring of the Holy Spirit, an Increase of the Seven Gifts, an Indelible Character, and Strength to confess the Faith prophetically.</p>
+<p>The Seven Gifts (Is 11:2): Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, Fear of the Lord.</p>
+<h3 class="sec">Confirmation and the Indian Context</h3>
+<ul class="plain">
+<li><strong>Shakti.</strong> The Indian mind knows <em>Shakti</em> = Divine Energy and Power. The Spirit of Confirmation is the true Shakti that empowers the Weak.</li>
+<li><strong>The Power of the Powerless.</strong> For the Subaltern, the Tribal, the Dalit, the Spirit is not private comfort but liberating Power against the Forces that dehumanize (FABC). Confirmation makes the Little Ones Prophets in their own Land.</li>
+<li><strong>Antaryamin.</strong> The Spirit dwells within as the <em>Antaryamin</em> = the Inner Ruler, closer to us than we are to ourselves.</li>
+</ul>
+<p>Confirmation is not a Farewell to the Church, as it sadly appears when the Confirmed disappear. It is a Commissioning.</p>
+</section>
+<section class="chapter" id="unit-five-the-eucharist">
+<h2>Unit Five: The Eucharist</h2>
+<p><strong>Source and Summit.</strong> The Eucharist is the <em>Fons et Culmen</em> of the whole Christian Life (LG 11; SC 10). The other Sacraments are ordered to It as to their End. It is the Sacrament of Sacraments.</p>
+<h3 class="sec">The Emmaus Shape of the Mass</h3>
+<p>The Structure of the Holy Qurbana is written in Luke 24.</p>
+<ul class="plain">
+<li><strong>Liturgy of the Word:</strong> He opened the Scriptures on the Road; the Heart burned (32). We celebrate this at the <em>Bema</em>.</li>
+<li><strong>Liturgy of the Eucharist:</strong> He took, blessed, broke, gave; the Eyes were opened (30-31). We celebrate this at the Altar, the <em>Madbaha</em>.</li>
+<li>A full Encounter needs both: the Burning Heart of the Word and the Opened Eyes of the Bread.</li>
+</ul>
+<h3 class="sec">The Three Dimensions</h3>
+<p>The Eucharist is at once Sacrifice, Presence, and Meal.</p>
+<ul class="plain">
+<li>*<em>Sacrifice (</em>Anamnesis<em>):</em><em> the Eucharist re-presents, not repeats, the one Sacrifice of Calvary (Trent; ND 1546-1547). </em>Anamnesis* = a Memorial that makes the Past Event present now.</li>
+<li><strong>Real Presence (Transubstantiation):</strong> by the Words of Institution and the <em>Epiclesis</em>, the Bread and Wine become the Body, Blood, Soul and Divinity of Christ; the Substance changes, the Accidents remain (Trent; ND 1526).</li>
+<li><strong>Communion Meal:</strong> the one Bread makes the many one Body (1 Cor 10:17). The Eucharist makes the Church.</li>
+</ul>
+<h3 class="sec">Matter, Form, Minister</h3>
+<ul class="plain">
+<li><strong>Matter:</strong> Wheat Bread and Grape Wine.</li>
+<li><strong>Form:</strong> the Words of Institution: This is my Body... This is the Chalice of my Blood...</li>
+<li><strong>Epiclesis:</strong> the Invocation of the Holy Spirit to transform the Gifts and the Assembly. In the Syro-Malabar Anaphora of Addai and Mari the Epiclesis comes in the fourth <em>Gehantha</em>, image of the Resurrection.</li>
+<li><strong>Minister:</strong> the ordained Priest, acting <em>in Persona Christi Capitis</em>.</li>
+</ul>
+<h3 class="sec">The Eucharist and the Indian Context</h3>
+<p>The Indian Christian names the Eucharist <em>Khrist-Preet-Samskar</em> = the Sacrament of Love, and reads it through the three <em>Margas</em> that seek <em>Moksha</em>.</p>
+<ul class="plain">
+<li><strong>Jnana Marga</strong> (Path of Knowledge): the Real Presence known by Faith; the Christian <em>Advaita</em> of loving Communion with the Father, not absorption.</li>
+<li><strong>Bhakti Marga</strong> (Path of Devotion): the Lord received as <em>Prasad</em>, the <em>Antaryamin</em> dwelling in the Heart.</li>
+<li><strong>Karma Marga</strong> (Path of Action): the <em>Yagna</em> = the Self-Offering that sends the Communicant to <em>Nishkama Karma</em> = selfless service, and to <em>Lokasamgraha</em> = the welfare of all. Share the Bread with the Hungry.</li>
+<li>These three converge in <strong>Prema Marga</strong> = the Way of Love.</li>
+</ul>
+<h3 class="sec">The Eucharist and Caste: A Social Sacrament</h3>
+<p>The Table Fellowship of Jesus welcomed the Outcast and shattered the Purity Lines (Mk 2:15-17). Therefore, where Caste divides the one Table of the Lord, the Eucharist is turned into a Sacrilege and a Parody (1 Cor 11:20-22; George M. Soares-Prabhu). The Bread that is broken must break down every Wall.</p>
+<p><em>Yajna</em> and <em>Rta</em>: the Indian mind knows that the Cosmic Order (<em>Rta</em>) is upheld by Sacrifice (<em>Yajna</em>). Christ is the true Yajna who upholds the New Creation.</p>
+<p>Is the Bread we break making the Poor rise, or are we counting our old Stock while the Cry of the People goes unheard?</p>
+</section>
+<section class="chapter" id="closing-doxology-every-meal-an-emmaus">
+<h2>Closing Doxology: Every Meal an Emmaus</h2>
+<p>We began on the Road to Emmaus and we end there. The whole World is a Sacrament, for <em>Ishavasyam Idam Sarvam</em> = the Lord pervades all that is. Water, Oil, Bread and Wine: the humble Elements of the Earth become the Vehicles of Grace. To be a Sacramental People is to walk the Indian Road with the Risen One, to let the Word burn our Hearts, and to know Him in the Breaking of the Bread with the Least, the Lost, and the Last.</p>
+<p><em>Stay with us, Lord, for it is towards Evening (Lk 24:29).</em></p>
+<p>Amen.</p>
+</section>
+<section class="chapter" id="for-the-oral-exam-schemas-to-reproduce">
+<h2>For the Oral Exam: Schemas to Reproduce</h2>
+<ul class="plain">
+<li>The Seven Readings of Emmaus.</li>
+<li>Ursakrament =&gt; Grundsakrament =&gt; Seven Sacraments.</li>
+<li>The 4-9-3 of Vatican II; the five Principles of SC.</li>
+<li>Baptism: Matter, Form, five Effects.</li>
+<li>Confirmation: Matter, Form, the Seven Gifts.</li>
+<li>Eucharist: the three Dimensions; the three Margas converging in Prema Marga.</li>
+<li>The Social Sacrament: the Eucharist against Caste.</li>
+</ul>
+</section>
+<section class="chapter" id="recalling-the-road">
+<h2>Recalling the Road</h2>
+<p>In Part One we walked to Emmaus and learned that the Sacraments are the Encounter with the Risen One in Word and in the Breaking of the Bread. Now we follow the same Christ who Heals the broken Heart on the Road (the Sacraments of Healing) and who sends the Two back to Jerusalem to build and to serve (the Sacraments of Communion and Mission). The same Risen Lord who opened Eyes now binds Wounds and gathers the Community.</p>
+<p>Two Sacraments of Healing: Reconciliation, Anointing of the Sick.</p>
+<p>Two Sacraments at the Service of Communion: Holy Orders, Matrimony.</p>
+</section>
+<section class="chapter" id="unit-six-reconciliation">
+<h2>Unit Six: Reconciliation</h2>
+<p><strong>The Sacrament of the Second Plank.</strong> Reconciliation is the Second Plank after the Shipwreck of Sin (Tertullian), the Sacrament that restores the Baptismal Grace weakened or lost by Sin. It is at once the Sacrament of Conversion, Penance, Confession, Forgiveness, and Reconciliation.</p>
+<h3 class="sec">The Word Behind the Absolution</h3>
+<ul class="plain">
+<li><strong>Prefigured (OT):</strong> <em>Shub</em> = to Turn Back, to Return to God. The Repentance of David (2 Sam 12:13); the Penitential Psalm (Ps 51).</li>
+<li><strong>Enacted by Jesus:</strong> He forgave the Sins of the Paralytic to show His Authority (Mk 2:1-12); He ate with Tax Collectors and Sinners; He told the Parable of the Prodigal, the Lost Sheep, the Lost Coin (Lk 15).</li>
+<li><strong>Instituted:</strong> Receive the Holy Spirit. Whose Sins you forgive are forgiven; whose Sins you retain are retained (Jn 20:22-23); the Power to Bind and to Loose (Mt 16:19; 18:18).</li>
+<li><strong>The Ministry given to the Church:</strong> God has given us the Ministry of Reconciliation; we are Ambassadors for Christ (2 Cor 5:18-20).</li>
+</ul>
+<h3 class="sec">The Four Acts and the Form</h3>
+<ul class="plain">
+<li><strong>Matter</strong> = the Three Acts of the Penitent: <strong>Contrition</strong> (Sorrow and Resolve, Perfect from Love, Imperfect from Fear), <strong>Confession</strong> (the Disclosure of Sins), <strong>Satisfaction</strong> (the Penance, the healing Amendment).</li>
+<li><strong>The fourth Act</strong> = <strong>Absolution</strong> by the Priest, which is the <strong>Form</strong>: I absolve you from your Sins in the Name of the Father and of the Son and of the Holy Spirit.</li>
+<li><strong>Minister:</strong> a validly ordained Priest with Jurisdiction, acting <em>in Persona Christi</em> as Judge, Healer, Father, and Physician.</li>
+<li><strong>The Seal</strong> = the <em>Sigillum</em>: absolute Secrecy; its direct Violation incurs Excommunication <em>latae sententiae</em>. The Confessor knows nothing outside the Confession.</li>
+</ul>
+<h3 class="sec">The Four Dimensions of Sin: The Indian Lens</h3>
+<p>Sin is not only Private. Following the Indian reading, Sin has four Levels.</p>
+<ul class="plain">
+<li><strong>Individual Sin:</strong> the personal Turning from God (Adam, Cain).</li>
+<li><strong>Communitarian Sin:</strong> no Sin is purely Private; every selfish Act wounds the Body.</li>
+<li><strong>Structural Sin:</strong> Sins hardened into Systems: Casteism, Untouchability, Bonded Labour, the Dowry Evil.</li>
+<li><strong>Cosmic Sin:</strong> the Sins that wound the Earth: Pollution, Deforestation.</li>
+<li>Sanskrit pairing: the <em>Shadripus</em> = the Six Enemies of the Soul (Lust, Anger, Greed, Delusion, Pride, Envy); the Buddhist <em>Tanha</em> = Craving that binds. Reconciliation loosens these Bonds.</li>
+</ul>
+<h3 class="sec">Three Models</h3>
+<p>Reconciliation works through three complementary Models: <strong>Therapeutic</strong> (Healing the Wounds of Sin), <strong>Juridical</strong> (Forgiving the Guilt), <strong>Relational</strong> (Restoring Communion with God and the Community).</p>
+<p>Rhetorical question for India: our Age suffers a Loss of the Sense of Sin. Can the Confessional become again a Place of Mercy, a Field-Hospital, as Pope Francis asks, rather than a Torture-Chamber of Fear?</p>
+</section>
+<section class="chapter" id="unit-seven-anointing-of-the-sick">
+<h2>Unit Seven: Anointing of the Sick</h2>
+<p><strong>The Sacrament of the Suffering Christ.</strong> Anointing is the Supernatural Balm for the Wounded Soul and the deteriorating Body, uniting the Sickness of the Faithful to the Passion of Christ.</p>
+<h3 class="sec">The Word Behind the Oil</h3>
+<ul class="plain">
+<li><strong>In the Ministry of Jesus:</strong> He sent the Twelve, who anointed with Oil many who were Sick and cured them (Mk 6:13); He is the Divine Physician who heals the whole Person.</li>
+<li><strong>The Apostolic Charter:</strong> Is anyone among you Sick? Let them call the Elders of the Church, and let them pray over them, anointing them with Oil in the Name of the Lord; the Prayer of Faith will save the Sick, and the Lord will raise them up; and if they have committed Sins, they will be forgiven (Jas 5:14-15).</li>
+</ul>
+<h3 class="sec">Matter, Form, Effects</h3>
+<ul class="plain">
+<li><strong>Matter:</strong> the Oil of the Sick, <em>Oleum Infirmorum</em>, blessed by the Bishop, anointed on Forehead and Hands.</li>
+<li><strong>Form:</strong> Through this holy Anointing may the Lord in His Love and Mercy help you with the Grace of the Holy Spirit; may the Lord who frees you from Sin save you and raise you up.</li>
+<li><strong>Minister:</strong> the Priest or Bishop alone.</li>
+<li><strong>Effects:</strong> the Gifts of the Spirit (Peace, Courage, Strength); Union with the Passion of Christ; Forgiveness of Sins if the Person could not confess; Healing of the Body if it be God&#x27;s Will; Preparation for the Final Journey.</li>
+</ul>
+<h3 class="sec">From Extreme Unction to Anointing: The Council&#x27;s Gift</h3>
+<p>Before the Council the Sacrament had narrowed to <em>Extreme Unction</em>, the Rite of the Dying alone. <em>Sacrosanctum Concilium</em> (SC 73) restored the older name <strong>Anointing of the Sick</strong> and taught that it is not only for those at the point of Death. The 1972 New Rite (<em>Ordo Unctionis Infirmorum</em>) made it a Communal Celebration, joined to Penance and to the Eucharist as <strong>Viaticum</strong> = Food for the Way.</p>
+<h3 class="sec">The Indian Lens</h3>
+<ul class="plain">
+<li>In the Indian mind Sickness is a Disruption of <em>Rta</em> = the Cosmic Order, and is often read through <em>Karma</em>. The Sacrament answers with <strong>Integral Healing</strong> of Body and Spirit, and refuses a fatalistic Resignation.</li>
+<li>It calls for the Community, the Family, and the Caregiver to gather. The Anointing is a Christian Answer to Suffering that neither denies the Pain nor surrenders to Despair.</li>
+</ul>
+<p>Anointing is not a Death-Sentence whispered at the last Breath. It is the Lord walking the Road of Suffering with His People.</p>
+</section>
+<section class="chapter" id="unit-eight-holy-orders">
+<h2>Unit Eight: Holy Orders</h2>
+<p><strong>The Sacrament of Apostolic Ministry.</strong> By Holy Orders the Mission entrusted by Christ to His Apostles continues in the Church until the End of the Age. It configures the ordained to Christ the Head, Shepherd, and Servant.</p>
+<h3 class="sec">Common and Ministerial Priesthood</h3>
+<ul class="plain">
+<li><strong>Christ is the one Priest.</strong> The one Priesthood of Christ is shared in two ways.</li>
+<li><strong>The Common Priesthood</strong> of all the Baptized: the whole People shares the Priestly, Prophetic, and Kingly Office (LG 10).</li>
+<li><strong>The Ministerial Priesthood</strong> of the Ordained: it differs from the Common not only in degree but in essence, and it exists at the Service of the Common Priesthood (LG 10). The two are ordered to one another.</li>
+</ul>
+<h3 class="sec">The Word Behind the Laying on of Hands</h3>
+<ul class="plain">
+<li><strong>Prefigured (OT):</strong> the Priesthood of Melchizedek, Priest and King, without Genealogy (Gen 14; Ps 110), figure of the eternal Priest; the Levitical Priesthood of Sacrifice.</li>
+<li><strong>Fulfilled:</strong> Christ the eternal High Priest in the Order of Melchizedek, who offered Himself once for all (Heb 7-10).</li>
+<li><strong>Handed on:</strong> the Apostles laid Hands on their Successors (Acts 6:6; 1 Tim 4:14; 2 Tim 1:6). Apostolic Succession by the Laying on of Hands.</li>
+</ul>
+<h3 class="sec">The Three Grades, Matter and Form</h3>
+<ul class="plain">
+<li><strong>Three Grades:</strong> the Episcopate (fullness of the Sacrament), the Presbyterate, the Diaconate.</li>
+<li><strong>Matter:</strong> the Laying on of Hands by the Bishop. <strong>Form:</strong> the Consecratory Prayer proper to each Grade.</li>
+<li><strong>Minister:</strong> the Bishop alone.</li>
+<li><strong>The Indelible Character:</strong> ordination seals the Soul forever; the ordained cannot become un-ordained. Once a Priest, always a Priest.</li>
+<li><strong>In Persona Christi Capitis:</strong> the Priest acts in the Person of Christ the Head.</li>
+</ul>
+<h3 class="sec">The Threefold Office and the Ship of Formation</h3>
+<p>The Ordained shares Christ as <strong>Prophet</strong> (to Teach, the Ministry of the Word), <strong>Priest</strong> (to Sanctify, the Ministry of the Sacraments), <strong>King</strong> (to Shepherd, the Ministry of Leadership).</p>
+<p>Formation for this Ministry follows the mnemonic <strong>SHIP</strong> (Pastores Dabo Vobis): <strong>S</strong>piritual, <strong>H</strong>uman, <strong>I</strong>ntellectual, <strong>P</strong>astoral. Human Formation is the Foundation, the Priest a Bridge and not an Obstacle; Spiritual Formation is the Heart; Pastoral Formation is the Goal, the Shepherd who carries the Smell of the Sheep.</p>
+<h3 class="sec">The Indian Lens</h3>
+<ul class="plain">
+<li>The Priest is called to be not merely a <em>Pujari</em>, a cultic Functionary of Rites and Power, but a Builder of the Community of the Kingdom, a Servant of the Word, the Sacraments, and the World, standing with the Last, the Lost, and the Least.</li>
+<li>The Indian tradition knows the <em>Guru</em>: the ordained is a <em>Sat-Guru</em> who by Word and Life leads the Disciple from the Darkness of Ignorance to the Light of Truth.</li>
+</ul>
+<p>Question of Discipleship: is our Priesthood a Ladder of Power, or the Way of the One who washed the Feet of His own?</p>
+</section>
+<section class="chapter" id="unit-nine-matrimony">
+<h2>Unit Nine: Matrimony</h2>
+<p><strong>The Sacrament of the Covenant of Love.</strong> By Matrimony a baptized Man and Woman form a Covenant of the whole of Life, ordered to the Good of the Spouses and to the Procreation and Education of Children, raised by Christ to the dignity of a Sacrament.</p>
+<h3 class="sec">The Word Behind the Vows</h3>
+<ul class="plain">
+<li><strong>In the Beginning:</strong> God created them Male and Female; the Two become one Flesh (Gen 1:27; 2:24). Marriage is written into Creation.</li>
+<li><strong>Restored by Christ:</strong> what God has joined, let no one separate (Mk 10:9); the first Sign at Cana (Jn 2:1-11).</li>
+<li><strong>The Great Mystery:</strong> Marriage is the Image of the Covenant of Christ and the Church (Eph 5:25-32). This is a great <em>Mysterion</em>.</li>
+</ul>
+<h3 class="sec">The Essentials</h3>
+<ul class="plain">
+<li><strong>Ends:</strong> the Well-being of the Spouses and the Procreation and Upbringing of Children.</li>
+<li><strong>Essential Properties:</strong> <strong>Unity</strong> (Monogamy) and <strong>Indissolubility</strong>.</li>
+<li><strong>Matter and Form:</strong> the Spouses themselves are the Ministers; the Matter and Form are the exchange of <strong>Consent</strong>. <em>Consensus facit Matrimonium</em> = Consent makes the Marriage. The Priest or Deacon is the Church&#x27;s Witness; in the Eastern Churches the Priestly Blessing is required for Validity.</li>
+</ul>
+<h3 class="sec">Nullity and Dissolution in Brief</h3>
+<ul class="plain">
+<li>A Marriage may be declared null for <strong>Defect of Form</strong>, <strong>Diriment Impediment</strong>, or <strong>Defect of Consent</strong> (force, fear, error, simulation, psychological incapacity: Canon 1095).</li>
+<li><strong>Ratum et Consummatum:</strong> a consummated sacramental Marriage is absolutely indissoluble; only Death dissolves it.</li>
+<li><strong>Pauline Privilege</strong> and <strong>Petrine Privilege</strong> address the non-sacramental or non-consummated bond.</li>
+</ul>
+<h3 class="sec">The Indian Lens: The Domestic Church in Bharat</h3>
+<ul class="plain">
+<li>The Christian Family is the <em>Kudumba</em>, the <strong>Domestic Church</strong> = <em>Ecclesia Domestica</em>, the First Seminary and the First Parish.</li>
+<li>Marriage in India faces the Dowry Evil, Caste Endogamy, and the wound of Female Foeticide. The Sacrament stands as a Prophetic Sign of the Equal Dignity of Woman and Man (Gal 3:28), against every System that treats the Bride as a Burden or a Commodity.</li>
+<li>Sanskrit pairing: the <em>Saptapadi</em>, the Seven Steps of the Hindu Rite by which the Two walk together, resonates with the Christian Covenant of a shared Journey; but the Christian Covenant is sealed not by the Fire alone but by the Fidelity of Christ.</li>
+</ul>
+</section>
+<section class="chapter" id="closing-doxology-the-whole-of-life-made-">
+<h2>Closing Doxology: The Whole of Life Made Sacrament</h2>
+<p>From the Cradle to the Grave, from the Sickbed to the Altar, from the Ordination to the Marriage Bed, the Seven Sacraments sanctify the whole of Human Life. <em>Ishavasyam Idam Sarvam</em> = the Lord pervades all that is. To be a Sacramental People is to let every Threshold of Life become an Emmaus, where the Risen One draws near, breaks the Bread, and sends us to serve the Least.</p>
+<p><em>Stay with us, Lord, for it is towards Evening (Lk 24:29).</em></p>
+<p>Amen.</p>
+</section>
+<section class="chapter" id="for-the-oral-exam-schemas-to-reproduce">
+<h2>For the Oral Exam: Schemas to Reproduce</h2>
+<ul class="plain">
+<li>Reconciliation: the Three Acts of the Penitent plus Absolution; the Four Levels of Sin.</li>
+<li>Anointing: Matter, Form, the Charter of James 5:14-15; from Extreme Unction to Anointing (SC 73).</li>
+<li>Holy Orders: Common and Ministerial Priesthood (LG 10); the three Grades; SHIP.</li>
+<li>Matrimony: the two Properties; <em>Consensus facit Matrimonium</em>; the Domestic Church.</li>
+</ul>
+</section>
+</main>
+
+<footer class="page">
+  Class notes for the Bachelor of Theology Programme, Morning Star Regional Seminary, Barrackpore &mdash; affiliated to Jnana-Deepa Pontifical Athenaeum, Pune. STUDENT EDITION. Text only, no diagrams &mdash; hierarchy carried by heading levels, bold, italic and colour.
+</footer>
