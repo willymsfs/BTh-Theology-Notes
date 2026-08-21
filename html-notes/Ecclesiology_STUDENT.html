@@ -1,0 +1,749 @@
+<title>Ecclesiology — STUDENT EDITION</title>
+<style>
+  :root {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+      --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+      --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52; color-scheme: light;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+  }
+  :root[data-theme="light"] {
+    --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+    --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+    --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--wine-soft); }
+  h1, h2, h3, h4, .display {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "URW Palladio", serif;
+    text-wrap: balance; font-weight: 400; color: var(--gold); margin: 0;
+  }
+  p { margin: 0 0 1.1em; max-width: 42em; }
+  strong { color: var(--ink); font-weight: 700; }
+  em { color: var(--wine); font-style: italic; }
+  a { color: var(--wine); }
+
+  header.hero { padding: 60px 24px 44px; text-align: center; border-bottom: 1px solid var(--line); }
+  header.hero .eyebrow { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wine); margin-bottom: 12px; }
+  header.hero h1 { font-size: clamp(30px, 4.6vw, 44px); max-width: 20ch; margin: 0 auto 8px; font-style: italic; }
+  header.hero .sub { max-width: 46em; margin: 0 auto 16px; color: var(--ink-soft); font-size: 18px; }
+  header.hero .inst { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+  header.hero .edition {
+    display: inline-block; margin: 12px 0 10px; padding: 4px 14px; border: 1px solid var(--gold);
+    border-radius: 20px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+  }
+  header.hero .meta { font-size: 13.5px; color: var(--muted); margin-top: 8px; }
+  header.hero .leitmotif-line { font-size: 14.5px; color: var(--wine); font-style: italic; margin-top: 10px; }
+
+  nav.chapters {
+    position: sticky; top: 0; z-index: 10; display: flex; gap: 2px; overflow-x: auto;
+    background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 12px;
+  }
+  nav.chapters a {
+    flex: none; padding: 12px 13px; font-size: 13px; text-decoration: none; color: var(--muted);
+    white-space: nowrap; border-bottom: 2px solid transparent;
+  }
+  nav.chapters a:hover { color: var(--wine); border-color: var(--wine-soft); }
+
+  main { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }
+
+  section.chapter { padding: 52px 0 34px; border-bottom: 1px solid var(--line); scroll-margin-top: 50px; }
+  section.chapter:last-of-type { border-bottom: none; }
+  section.chapter h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 18px; font-style: italic; }
+
+  h3.sec { font-size: 20px; color: var(--gold); margin: 28px 0 10px; }
+
+  ul.plain, ol { padding-left: 1.3em; margin: 0 0 1.1em; max-width: 42em; }
+  ul.plain li, ol li { margin-bottom: 9px; }
+
+  .review { margin-top: 24px; background: var(--gold-soft); border: 1px solid var(--line); border-radius: 3px; padding: 18px 22px; }
+  .review h4 { margin: 0 0 10px; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+  .review ol { margin: 0; padding-left: 1.2em; font-size: 16.5px; color: var(--ink-soft); }
+
+  .cue {
+    background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--gold);
+    border-radius: 3px; padding: 14px 18px; margin: 18px 0;
+  }
+  .cue p { margin: 0; font-size: 16.5px; color: var(--ink-soft); }
+  .cue strong { color: var(--gold); }
+
+  footer.page { max-width: 780px; margin: 0 auto; padding: 34px 24px 60px; font-size: 13.5px; color: var(--muted); }
+</style>
+
+<header class="hero">
+  <p class="eyebrow">BTh &middot; Morning Star Regional Seminary</p>
+  <h1>Ecclesiology</h1>
+  <p class="sub">The Theology of the Church</p>
+  <div class="inst">Class Notes for the Bachelor of Theology Programme<br/>Morning Star Regional Seminary, Barrackpore<br/>Affiliated to Jnana-Deepa Pontifical Athenaeum, Pune</div>
+  <div class="edition">STUDENT EDITION</div>
+  <p class="meta">Third Year BTh  |  4 Credits  |  60 Contact Hours  |  22 Weeks  |  14 Units</p>
+  <p class="leitmotif-line">Leitmotif of the Course: Pentecost (Acts 2)</p>
+</header>
+
+<nav class="chapters">
+  <a href="#welcome-you-are-the-church">Welcome: You are the Church</a>
+  <a href="#the-leitmotif-of-the-course-pentecost-ac">The Leitmotif of the Course: Pentecost (acts 2)</a>
+  <a href="#aim-architecture-and-assessment">Aim, Architecture and Assessment</a>
+  <a href="#unit-1-why-the-church">Unit 1: Why the Church?</a>
+  <a href="#unit-2-did-christ-found-the-church">Unit 2: Did Christ Found the Church?</a>
+  <a href="#units-3-and-4-the-ecclesiologies-of-the-">Units 3 and 4: The Ecclesiologies of the New Testament</a>
+  <a href="#unit-5-from-the-apostolic-church-to-vati">Unit 5: From the Apostolic Church to Vatican I</a>
+  <a href="#unit-6-the-models-of-the-church-accordin">Unit 6: The Models of the Church According to Avery Dulles</a>
+  <a href="#unit-7-the-convocation-of-the-second-vat">Unit 7: The Convocation of the Second Vatican Council</a>
+  <a href="#unit-8-the-shifts-of-vision-and-the-rece">Unit 8: The Shifts of Vision and the Reception of the Council</a>
+  <a href="#unit-9-lumen-gentium-part-one-mystery-sa">Unit 9: Lumen Gentium, Part One: Mystery, Sacrament, People of God</a>
+  <a href="#unit-10-lumen-gentium-part-two-body-temp">Unit 10: Lumen Gentium, Part Two: Body, Temple and Communion</a>
+  <a href="#the-seven-polarities-of-ecclesiology">The Seven Polarities of Ecclesiology</a>
+  <a href="#unit-11-hierarchy-collegiality-and-prima">Unit 11: Hierarchy, Collegiality and Primacy</a>
+  <a href="#unit-12-magisterium-and-infallibility">Unit 12: Magisterium and Infallibility</a>
+  <a href="#unit-13-ecumenism">Unit 13: Ecumenism</a>
+  <a href="#unit-14-the-synodal-church">Unit 14: The Synodal Church</a>
+  <a href="#closing-unit-the-church-of-the-open-door">Closing Unit: The Church of the Open Door</a>
+  <a href="#select-bibliography">Select Bibliography</a>
+</nav>
+
+<main>
+<section class="chapter" id="welcome-you-are-the-church">
+<h2>Welcome: You are the Church</h2>
+<p>You are not about to study an Institution that stands outside You. You are about to study Yourself. Before Ecclesiology is a Treatise, it is a Confession: I believe in One, Holy, Catholic and Apostolic Church. Every Seminarian who sits in this Class is a living Paragraph of the Subject Matter.</p>
+<p>On the Road to Damascus, Saul heard a Voice that did not say, Why do you persecute my Followers, or Why do you persecute my Organisation. The Voice said, Saul, Saul, why do you persecute me (Acts 9:4). Christ so identifies Himself with the Community that an Attack on the Community is an Attack on Him. That single Verse is the Seed of the whole Course. The Church is not an Agency that Christ founded and then left behind; the Church is the Body in which He continues to be encountered in History.</p>
+<p>Three Virtues are asked of You in this Course: <strong>Wonder</strong> before the Mystery, <strong>Honesty</strong> before the Failures, <strong>Commitment</strong> to the Renewal. Wonder without Honesty becomes Triumphalism. Honesty without Wonder becomes Cynicism. Both without Commitment become Mere Talk in the Corridor.</p>
+<p>A Warning against Arrogance stands at the Head of these Notes. Pope Francis reminds Theologians that no Thought is ever complete and that Theology must be done with an Open Mind and on the Knees (VG 3). The Church is a Mystery to be contemplated before She is a Problem to be solved. Whoever finishes this Course thinking that the Church has been fully explained has misunderstood the Course.</p>
+</section>
+<section class="chapter" id="the-leitmotif-of-the-course-pentecost-ac">
+<h2>The Leitmotif of the Course: Pentecost (acts 2)</h2>
+<p>Every Course needs one Text to which it returns until the Text becomes a Habit of the Mind. For these Notes that Text is Pentecost. Ecclesiology begins not with a Constitution but with a Room, a Wind, a Fire and a Crowd of Ordinary People who suddenly find themselves understood. Read Acts 2 slowly. It contains, in Seed, every Unit of this Course.</p>
+<h3 class="sec">Eight Readings of Acts 2</h3>
+<p><strong>1. The Church as Assembly.</strong> When the Day of Pentecost had come, they were all together in one place (2:1). The Church is first a Gathering, an Ekklesia, before She is a Structure. This Verse seeds Unit 1.</p>
+<p><strong>2. The Church as Gift, not Blueprint.</strong> There appeared to them Tongues as of Fire, distributed and resting on each one of them (2:3). Nobody in the Upper Room drafted the Fire. The Church is received before She is organised. This Verse seeds Unit 2, the Question whether Christ founded the Church.</p>
+<p><strong>3. The Church as Plurality of Tongues.</strong> Each one heard them speaking in his own Language (2:6, 8-11). Fifteen Peoples are named. Pentecost does not abolish Difference; Pentecost makes Difference intelligible. This Verse seeds Units 3 and 4, the Plurality of New Testament Ecclesiologies.</p>
+<p><strong>4. The Church as Herald.</strong> Peter, standing with the Eleven, lifted up his Voice and addressed them (2:14). Note the Grammar: one Voice, but standing with the Eleven. Primacy and Collegiality are born in the same Sentence. This Verse seeds Unit 6 and Unit 11.</p>
+<p><strong>5. The Church as Communion.</strong> They devoted themselves to the Teaching of the Apostles and to the Fellowship, to the Breaking of Bread and to the Prayers (2:42). Here is the classical Tetrad: <strong>Marturia</strong> (Witness), <strong>Koinonia</strong> (Communion), <strong>Leitourgia</strong> (Worship), <strong>Diakonia</strong> (Service). This Verse seeds Units 9 and 10.</p>
+<p><strong>6. The Church as Prophetic Community of Sons and Daughters.</strong> Your Sons and your Daughters shall prophesy (2:17-18). The Spirit is poured on Menservants and Maidservants. The Sensus Fidei of the whole People of God, and the Synodal Church of listening, stand on this Verse. It seeds Unit 14.</p>
+<p><strong>7. The Church as the Community that shares Bread.</strong> They sold their Possessions and Goods and distributed them to all, as any had Need (2:44-45). Ecclesiology and Economics meet here. A Poor Church for the Poor is not a Slogan of the Twenty-First Century; it is a Description of the First Community.</p>
+<p><strong>8. The Church as Universal and Missionary.</strong> The Promise is to You and to your Children and to all that are far off (2:39). The Ones far off are already inside the Promise. This Verse seeds Unit 13 on Ecumenism and the whole Question of Salvation outside the visible Boundaries of the Church.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> Pentecost is the most Indian Chapter in the New Testament. Fifteen Language Groups hear one Message in fifteen Tongues. India recognises twenty-two Scheduled Languages in the Eighth Schedule of the Constitution and counts hundreds of Mother Tongues. A Church that speaks only one Language in a Land of many Tongues has not yet received the Fire. Inculturation is not a Concession to Indian Sentiment; Inculturation is Pentecostal Obedience.</p>
+<p>Two Words are planted here and harvested at the End of the Course. Watch for them. The first is <strong>Communion for Mission</strong>: the Church gathers in order to be sent. The second is <strong>the Open Door</strong>: the House where they were sitting does not stay shut, and a Church that stays shut has stopped being the Church of Pentecost.</p>
+</section>
+<section class="chapter" id="aim-architecture-and-assessment">
+<h2>Aim, Architecture and Assessment</h2>
+<h3 class="sec">Aim of the Course</h3>
+<p>To lead the Student from a merely Institutional Idea of the Church to a Theological Vision of the Church as Mystery, Sacrament, People of God and Communion for Mission; to trace how that Vision was formed, narrowed, and recovered across Twenty Centuries; and to place the Student, as a future Priest, inside the Synodal and Missionary Task of the Church in India today.</p>
+<p>The Course obeys Article 41 of the Statutes of Jnana-Deepa, which requires that Systematic Theology be taught with Fidelity to the Sources and Attention to the Context of the Learner. The four Criteria of Veritatis Gaudium govern the Method: <strong>Mission</strong> first, <strong>Dialogue</strong> as Habit, <strong>Interdisciplinarity</strong> as Method, <strong>Collaboration</strong> as Working Style (VG 4).</p>
+<h3 class="sec">The Four Movements of the Course</h3>
+<p><strong>Movement A: Biblical Foundations (Units 1 to 4).</strong> Why the Church exists, whether Christ founded Her, and the Plurality of Images in the New Testament.</p>
+<p><strong>Movement B: The Long Development (Units 5 and 6).</strong> From the Apostolic Community to Vatican I, and the Models of Avery Dulles as the Instrument for reading that Development.</p>
+<p><strong>Movement C: The Council (Units 7 to 10).</strong> The Convocation of Vatican II, the Shifts of Vision, and Lumen Gentium studied Chapter by Chapter.</p>
+<p><strong>Movement D: Renewal and Mission (Units 11 to 14).</strong> Collegiality and Primacy, Magisterium and Infallibility, Ecumenism, and the Synodal Church of Pope Francis.</p>
+<p>Between Movement C and Movement D stands a short Unit on the Seven Polarities of Ecclesiology. It is the Hinge of the Course.</p>
+<h3 class="sec">Looking Ahead</h3>
+<p>Unit 1 Why the Church. Unit 2 Did Christ found the Church. Units 3 and 4 New Testament Ecclesiologies. Unit 5 From the Apostolic Church to Vatican I. Unit 6 The Models of Dulles. Unit 7 The Convocation of Vatican II. Unit 8 The Shifts of Vision. Unit 9 Lumen Gentium Part One: Mystery, Sacrament, People of God. Unit 10 Lumen Gentium Part Two: Body of Christ, Temple of the Spirit, Communion. The Seven Polarities. Unit 11 Hierarchy, Collegiality, Primacy. Unit 12 Magisterium and Infallibility. Unit 13 Ecumenism. Unit 14 The Synodal Church of Pope Francis. Closing Unit: The Church of the Open Door.</p>
+<h3 class="sec">Evaluation</h3>
+<p>Continuous Internal Assessment, 30 Marks: Attendance and Participation, one Seminar Presentation, one Written Test. Mid-Semester Examination, 20 Marks, covering Units 1 to 7. End-Semester Examination, 50 Marks, covering all Fourteen Units with one Question of Integration.</p>
+<p>Three Virtues carry the Marks: <strong>Attention</strong> in the Class, <strong>Attendance</strong> in the Body, <strong>Articulation</strong> in the Answer Script. The Seminar Presentation must contain one Indian Application; a Presentation without India will be returned.</p>
+<h3 class="sec">Primary Texts to Be Kept Open</h3>
+<p>Lumen Gentium (21 November 1964) is the Textbook of this Course and must be carried to every Class. Alongside it: Unitatis Redintegratio (1964), Christus Dominus (1965), Gaudium et Spes (1965), Pastor Aeternus of Vatican I (1870), Evangelii Gaudium (24 November 2013, Solemnity of Christ the King), and the Final Document of the Synod on Synodality (2024). The Sixteen Documents of Vatican II are sorted 4-9-3: four Constitutions (SC, LG, DV, GS), nine Decrees (IM, AG, UR, OE, AA, PC, OT, PO, CD), three Declarations (NA, GE, DH).</p>
+<p>The standing Companion Volume for the Course is Models of the Church by Avery Dulles, with Ecclesiology for a Global Church by Richard Gaillardetz and An Introduction to Ecclesiology by Veli-Matti Karkkainen for wider Reading.</p>
+</section>
+<section class="chapter" id="unit-1-why-the-church">
+<h2>Unit 1: Why the Church?</h2>
+<p>The Course opens with the Question that every Seminarian will be asked by a Hindu Colleague, by a Sceptical Cousin, and one day by a Parishioner in Pain: Why do we need the Church at all? God is everywhere. Prayer needs no Building. Goodness needs no Committee. Why the Church?</p>
+<p>The Question is not Impiety. It is the Threshold Question of Ecclesiology, and a Theology that has not felt its Force will produce Answers that convince nobody.</p>
+<h3 class="sec">What Ecclesiology is and is Not</h3>
+<p>Ecclesiology = Ekklesia + Logos = the Discourse on the Assembly called out by God. Ekklesia (Gk) = ek (out of) + kalein (to call) = those summoned out of their Houses into a Public Assembly. The Word is not first Religious; in Athens the Ekklesia was the Assembly of Citizens summoned by a Herald.</p>
+<p>What Ecclesiology is NOT: not Canon Law with Footnotes; not a Defence Brief for the Institution; not Church History; not Pastoral Management. Ecclesiology is Faith seeking Understanding of the Community in which Faith is received, celebrated and handed on.</p>
+<p>Three Levels must be kept apart and held together: the Church <strong>believed</strong> (the Object of the Creed), the Church <strong>experienced</strong> (the Parish where You served, with its Beauty and its Politics), and the Church <strong>studied</strong> (the Discipline of these Notes). A Theology that never touches the second Level is Sterile.</p>
+<h3 class="sec">The Threshold Question: Is the Church Necessary?</h3>
+<p><strong>A. The Modern Denial.</strong> The Church is a Historical Accident. Jesus intended a Movement of the Heart; His Followers built an Organisation with Property, Lawyers and Uniforms. From the Enlightenment onward this Line runs through Reimarus, through the Anticlerical Tradition of Europe, and through the Marxist Analysis of Religion as an Instrument of Class Interest. The Institution is read as the Betrayal of the Founder.</p>
+<p><strong>B. The Sociological Reduction.</strong> The Church is neither Betrayal nor Necessity; She is simply what all Human Religious Impulse produces. Every Movement institutionalises. Charisma becomes Routine, said Max Weber (1864-1920), and the Church is one Instance of a general Law. This View is not hostile; it is merely Deaf to the Theological Claim. It can describe Everything about the Church except why She exists.</p>
+<p><strong>C. The Theological Position.</strong> The Church is willed by God as the Sacrament of Salvation: the Sign and Instrument of Communion with God and of Unity among all Wo/Men (LG 1). Salvation is offered to the Human Person not as an Isolated Soul but as a Member of a People. It has pleased God to make Wo/Men holy and to save them not merely as Individuals without any Bond between them, but by making them into a single People (LG 9). The Church is necessary not because God is unable to save without Her, but because the God who saves is a Communion of Three, and saves by making a Communion.</p>
+<p>Position C carries the Weight of the Tradition and the Citation of the Council. Note the Trinitarian Ground: the Church is a People made one by the Unity of the Father, the Son and the Holy Spirit (LG 4, quoting Cyprian). Ecclesiology is a Chapter of the Doctrine of God before it is a Chapter of Church Order.</p>
+<h3 class="sec">The Church Before the Church: Qahal Yahweh</h3>
+<p>The Christian Ekklesia has an Old Testament Passport. The Septuagint uses Ekklesia to translate the Hebrew <strong>Qahal</strong> = the Assembly of Israel summoned by God, and uses Synagoge to translate <strong>Edah</strong> = the Congregation as a standing Body. Qahal Yahweh is the Assembly at the Foot of Sinai on the Day of the Assembly (Dt 4:10; 9:10).</p>
+<p>Four Marks of Qahal Yahweh pass into the Church: <strong>Election</strong> (You did not choose me, but I chose you, Jn 15:16); <strong>Covenant</strong> (I will be your God and you shall be my People, Jer 31:33); <strong>Assembly for Worship</strong>; and <strong>Mission to the Nations</strong> (a Light to the Nations, Is 49:6). The Church is therefore not a New Idea in Chapter Two of Acts but the Gathering of the Eschatological Israel.</p>
+<p><strong>EXAMPLE: </strong>Ask a Class where the Church begins and half will say Pentecost, half will say Matthew 16. Both Answers are too late. The Church begins in the Call of Abraham, takes Shape at Sinai, is gathered anew around Jesus, and is sent at Pentecost. The Council itself uses the Image of a People prepared in a long Preparation (LG 2).</p>
+<h3 class="sec">The Jesus Movement: Proto-ecclesiology in the Gospels</h3>
+<p>Before there is a Church there is a Group around Jesus with recognisable Features. Five Features are visible in the Synoptic Tradition.</p>
+<p><strong>1. The Twelve.</strong> He appointed Twelve, to be with Him, and to be sent out to preach (Mk 3:14). Twelve is not an Administrative Number; Twelve is the Number of the Tribes. The Appointment of the Twelve is a Prophetic Sign of the Gathering of Israel.</p>
+<p><strong>2. A Table Practice.</strong> Jesus eats with Tax Collectors and Sinners (Mk 2:15-17; Lk 15:1-2). The Table is the earliest Ecclesial Structure and it is a Structure of Welcome, not of Screening.</p>
+<p><strong>3. A New Family.</strong> Whoever does the Will of God is my Brother and Sister and Mother (Mk 3:35). Belonging is by Discipleship, not by Blood, Caste or Purity.</p>
+<p><strong>4. A Rule of Service.</strong> Whoever would be great among you must be your Servant (Mk 10:43). Authority is redefined before it is instituted.</p>
+<p><strong>5. A Community of the Kingdom.</strong> The Group exists for the Kingdom of God (KG), not for itself. This last Feature governs all Ecclesiology: the Church is for the KG, and the KG is wider than the Church.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> India will test each of these five Features. The Table Practice is tested wherever Dalit Christians sit at a separate Section of the Parish Hall or bury their Dead in a separate Corner of the Cemetery. The New Family is tested wherever Marriage Alliances inside the Church are arranged along Caste Lines. A Community that recites Mark 3:35 on Sunday and practises Endogamy on Monday has an Ecclesiology Problem, not merely a Social Problem.</p>
+<h3 class="sec">Four Answers to Why the Church</h3>
+<p><strong>Because Salvation is Social.</strong> Sin divides; Grace gathers. The Remedy must have the same Shape as the Wound.</p>
+<p><strong>Because Faith is handed on.</strong> Nobody believes alone. Faith comes from what is heard (Rom 10:17), and Hearing requires a Community of Speakers across Generations.</p>
+<p><strong>Because the Sacraments are Public Acts.</strong> A private Baptism is a Contradiction in Terms. The Word and the Sacrament are entrusted to a Body.</p>
+<p><strong>Because the Gospel has Social Consequences.</strong> Hunger, Caste and Displacement are structural; Structures are answered by Communities, not by Sentiments.</p>
+<p>Is the Fire of Pentecost falling on this Class, or only the Notes about the Fire?</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Give the Etymology of Ekklesia and connect it to Qahal Yahweh with two Scripture References.</li>
+<li>State the three Positions on the Necessity of the Church, and give the Conciliar Citation that supports the third.</li>
+<li>Name the five Features of the Jesus Movement and show how one of them is tested in the Indian Church.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-2-did-christ-found-the-church">
+<h2>Unit 2: Did Christ Found the Church?</h2>
+<p>This Unit contains the single Question most likely to appear in an Examination and most likely to be answered badly. The bad Answer quotes Matthew 16:18, closes the Bible and sits down. The good Answer explains what Founding means.</p>
+<h3 class="sec">The Blueprint View and Its Problem</h3>
+<p><strong>Blueprint Ecclesiology</strong> holds that Jesus, during His earthly Life, established the Church complete with the Seven Sacraments, the Primacy of Peter, the Episcopal Order and the Structure of Governance, and that the Apostles simply executed the Plan. The Manuals before Vatican II largely worked with this View.</p>
+<p>Three Difficulties are fatal to the Blueprint in its crude Form. First, Jesus preached the Kingdom of God, and the Word Ekklesia appears on His Lips only twice, both in Matthew (Mt 16:18; 18:17). Second, the Structures of Ministry in the New Testament are visibly plural and developing: Apostles, Prophets and Teachers in Corinth (1 Cor 12:28), Elders in Jerusalem and in the Pastoral Letters, Overseers and Deacons at Philippi (Phil 1:1). Third, the Community expected an imminent End; a Founder who expected the End of the World shortly does not draft a Code of Canon Law.</p>
+<p>Alfred Loisy (1857-1940) stated the Difficulty in a Sentence that every Student should be able to quote and to answer: Jesus announced the Kingdom, and it was the Church that came. Loisy meant it partly as a Defence of Development against Liberal Protestantism, but the Sentence has been used ever since as an Accusation.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Older Textbooks present Loisy simply as a Modernist Enemy to be refuted. Current Scholarship reads the Sentence as an early Statement of the Problem of Continuity between the Preaching of Jesus and the Community that followed. Teach the Sentence as a Question, not as a Heresy, and the Class will engage it honestly.</p>
+<h3 class="sec">The Historical Answer: Founding as a Process</h3>
+<p>Raymond E. Brown (1928-1998) offers the Formulation that has become standard in Catholic Teaching: the Church is founded by Christ, but the Founding is a Process spread across the whole Christ Event and not a Ceremony on a single Afternoon. The Church is founded Christologically and Pneumatologically at once.</p>
+<p><strong>Five Moments of the One Founding:</strong></p>
+<p><strong>1. The Preaching of the Kingdom.</strong> The Call to Conversion gathers a People (Mk 1:15).</p>
+<p><strong>2. The Choice of the Twelve.</strong> A visible Nucleus with a Mission is constituted (Mk 3:13-19).</p>
+<p><strong>3. The Last Supper.</strong> Do this in Remembrance of me (Lk 22:19; 1 Cor 11:24-25) gives the Community its constitutive Rite and its New Covenant.</p>
+<p><strong>4. The Cross and Resurrection.</strong> The Scattered are gathered again around the Risen One; Forgiveness and Mission are given together (Jn 20:21-23).</p>
+<p><strong>5. Pentecost.</strong> The Spirit constitutes the Community as a public, missionary Body (Acts 2:1-4, 41).</p>
+<p>Founding is therefore best written as an Arrow Chain: Preaching =&gt; Calling =&gt; Supper =&gt; Paschal Mystery =&gt; Pentecost =&gt; Church. Remove any Link and the Church that results is either a Society without a Saviour or a Saviour without a People.</p>
+<h3 class="sec">Matthew 16:18 Read Properly</h3>
+<p>You are Peter, and on this Rock I will build my Church (Mt 16:18). Four Observations belong in the Answer Script. First, the Verb is Future: I will build. The Building follows Easter. Second, the Word is Kepha (Aram) = Rock, a Nickname and a Function, not a Title of Office in the later Sense. Third, the Context is a Confession of Faith; the Rock is Peter as Confessor. Fourth, the Church is called <strong>my</strong> Church: the Community belongs to Christ and not to Peter.</p>
+<p><strong>EXAMPLE: </strong>A useful Classroom Image: the Foundation Stone of a College is laid on one Day, but the College is founded across the Years of Planning, Building, Staffing and the arrival of the first Students. If asked when Morning Star was founded, You give a Date; if asked how it was founded, You tell a Story. Matthew 16 gives the Date. Acts 2 tells the Story.</p>
+<h3 class="sec">The Post-easter Church and the Role of the Spirit</h3>
+<p>Between Good Friday and Pentecost the Disciples are a Group of Frightened Failures behind locked Doors (Jn 20:19). What turns a Group of Failures into a Missionary Community is not a better Organisational Chart but the Gift of the Spirit. Hence the Church is <strong>Creatura Verbi et Creatura Spiritus</strong>: born of the Word and born of the Spirit.</p>
+<p>Two Errors are avoided by holding both Origins together. <strong>Christomonism</strong> makes the Church a Corporation that merely executes Instructions received in AD 30; the Spirit becomes a Rubber Stamp. <strong>Pneumatic Enthusiasm</strong> makes the Church a Cloud of Inspiration with no Body, no Order and no Accountability. The Catholic Position holds Structure and Spirit as two Hands of the one God.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> The Question of Founding is not academic in India. Sects and Independent Prayer Groups multiply in Bengal, Andhra and Tamil Nadu, some claiming direct Guidance of the Spirit without any Link to Apostolic Tradition. At the same time some of our own Parishes function as Administrative Offices where the Spirit is never expected to say anything new. Both are Errors, and they are Mirror Images of each other.</p>
+<h3 class="sec">The Answer in One Paragraph</h3>
+<p>Christ founded the Church. He did not found Her by delivering a Constitution on a single Day, but by gathering Disciples, choosing the Twelve, giving the Supper, dying, rising, and pouring out the Spirit. The Church is therefore of Divine Institution in her Origin and Human in her Historical Forms; what is of Christ cannot be abolished, and what is of History can be reformed. Ecclesia semper reformanda = the Church is always to be reformed, and this Principle is Catholic, not merely Protestant (UR 6).</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>State the Sentence of Loisy and give a Theological Answer to it in five Sentences.</li>
+<li>Name the five Moments of the Founding of the Church with one Scripture Reference each.</li>
+<li>Distinguish Christomonism from Pneumatic Enthusiasm and give one Indian Example of each Tendency.</li>
+</ol></div>
+</section>
+<section class="chapter" id="units-3-and-4-the-ecclesiologies-of-the-">
+<h2>Units 3 and 4: The Ecclesiologies of the New Testament</h2>
+<p>The Thesis of these two Units can be written on the Board in one Line: <strong>The New Testament gives us Ecclesiologies in the Plural.</strong> There is no single Chapter in the Bible that defines the Church. There are Communities in Rome, Corinth, Antioch, Ephesus and Jerusalem, each with its own Problems, and each producing its own Vision of what the Church is.</p>
+<p>Paul Minear counted ninety-six Images of the Church in the New Testament: Vine, Flock, Field, Building, Bride, Body, Temple, Household, Salt, Light, Letter of Christ, People, Way, Remnant, Firstfruits and many more.</p>
+<p>This Plurality is not a Weakness to be tidied away. It is the New Testament Form of Catholicity. Ekam sat viprah bahudha vadanti (RV 1:164:46) = Truth is One, the Sages call it by many Names. The Christian Version is milder and stronger: the Church is One, and the Apostolic Writers describe Her by many Images, because no single Image contains Her.</p>
+<h3 class="sec">The Five Archetypes in Summary</h3>
+<p><strong>Mark</strong> = the Community of Disciples under the Cross. <strong>Matthew</strong> = the Community of the New Israel with binding Authority. <strong>Luke-Acts</strong> = the Little Flock led by the Spirit into the whole World. <strong>John</strong> = the Community of Mutual Indwelling, Sheepfold and Vine. <strong>Paul</strong> = the Body of Christ animated by many Charisms, meeting in Houses.</p>
+<h3 class="sec">Mark: The Community of Disciples Under the Cross</h3>
+<p>Mark never uses the Word Ekklesia. His Ecclesiology is carried by the Word <strong>Akolouthein</strong> = to follow. The Church in Mark is whoever walks behind Jesus on the Road to Jerusalem.</p>
+<p>Three Features. First, <strong>Discipleship as Failure and Forgiveness</strong>: the Twelve misunderstand (8:32-33), sleep (14:37), flee (14:50) and deny (14:66-72), and the Risen One still sends them to Galilee (16:7). Second, <strong>Authority as Service</strong>: the Sons of Zebedee ask for Thrones and are given a Cup (10:35-45). Third, <strong>The Cross as the Place of Confession</strong>: the first Human Being in the Gospel to confess Jesus as Son of God is a Roman Centurion at the Foot of the Cross (15:39), and he is an Outsider.</p>
+<p>Mark is the Corrective the Church needs in every Age of Success. A Church that cannot narrate its own Failures has stopped reading Mark.</p>
+<h3 class="sec">Matthew: The Community of the New Israel</h3>
+<p>Matthew is the only Evangelist who uses Ekklesia (16:18; 18:17), and his Community is a Jewish-Christian Body working out how to be Israel after the Destruction of the Temple in the Year 70.</p>
+<p>Four Features. First, <strong>Continuity with Israel</strong>: Jesus is the New Moses of the Mountain, and the Law is fulfilled, not abolished (5:17). Second, <strong>Binding and Loosing</strong>: Authority to decide Matters of Discipline is given to Peter (16:19) and, in the same Words, to the Community (18:18). Third, <strong>A Procedure for Conflict</strong>: Matthew 18 gives the earliest Church Order in the New Testament, and it moves from private Correction to the Assembly, with Reconciliation as the Goal. Fourth, <strong>Corpus Mixtum</strong>: the Church contains Wheat and Weeds until the Harvest (13:24-30, 47-50), and the Servants are forbidden to do the Weeding.</p>
+<p><strong>EXAMPLE: </strong>Matthew 18 is the Charter of every Parish Conflict Resolution that ever worked. First go and speak alone. Notice that the Procedure begins with a private Conversation and not with a Complaint Letter to the Bishop. Many Diocesan Files would be thinner if Verse 15 were obeyed.</p>
+<h3 class="sec">Luke and Acts: The Spirit-led Community</h3>
+<p>Luke writes in two Volumes, and the second Volume is the first Ecclesiology in narrative Form. The Church of Acts is marked by four Things.</p>
+<p><strong>1. The Primacy of the Spirit.</strong> Every Advance is initiated by the Spirit and not by a Committee: Pentecost (2), the Ethiopian Official (8), Cornelius (10), the Sending from Antioch (13:2).</p>
+<p><strong>2. A visible Common Life.</strong> The Summaries (2:42-47; 4:32-35) describe Teaching, Fellowship, Breaking of Bread, Prayer and the Sharing of Goods. Luke is honest enough to place the Story of Ananias and Sapphira (5:1-11) immediately after the Ideal, so that no Reader mistakes the Summary for a Boast.</p>
+<p><strong>3. Structures that grow from Need.</strong> The Seven are appointed because the Hellenist Widows are being overlooked in the daily Distribution (6:1-6). Ministry in Acts arises where a Group is neglected.</p>
+<p><strong>4. Decision by Common Discernment.</strong> The Assembly at Jerusalem (15:1-29) listens to Testimony, argues, appeals to Scripture, and concludes with the Formula that it has seemed good to the Holy Spirit and to us (15:28). This Verse is the Charter of Synodality and will return in Unit 14.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> Acts 6 is the Charter Text for every Church where one Language Group or one Caste Group is quietly overlooked in the daily Distribution. In many Indian Parishes the daily Distribution is not Food but Attention: whose Feast is celebrated in the Parish, whose Language is used at the main Mass, whose Youth are chosen for Leadership. The Apostolic Answer is not a Denial that the Neglect exists; the Apostolic Answer is a Structural Change with new Ministers named from the neglected Group itself. Note that all Seven Names in Acts 6:5 are Greek.</p>
+<h3 class="sec">John: The Community of Mutual Indwelling</h3>
+<p>The Johannine Community produces the least institutional and the most intense Ecclesiology in the New Testament. John never uses Ekklesia in the Gospel, and he prefers Images of organic Union.</p>
+<p><strong>The Vine and the Branches (15:1-8).</strong> Abide in me and I in you. The Church is the Branch System of a single Vine; there is no Membership that is not Communion.</p>
+<p><strong>The Sheepfold and the Shepherd (10:1-18).</strong> One Flock, one Shepherd, and the Sheep are known by Name. The Text also carries a Mission Clause: other Sheep I have that are not of this Fold (10:16).</p>
+<p><strong>The Paraclete (14:26; 16:13).</strong> The Community is taught from within by the Spirit of Truth. Johannine Authority is Pneumatic before it is Hierarchical.</p>
+<p><strong>Discipleship rather than Apostleship.</strong> The Beloved Disciple is never named and holds no Office, yet he is the Model Believer; Mary Magdalene is the Apostle to the Apostles (20:17-18); Martha makes the Confession that Matthew gives to Peter (11:27).</p>
+<p>Mary Coloe reads the Johannine Church through the Image of the Household of God: the Community is the Dwelling Place where the Father and the Son come to make their Home (14:23), so that the Temple is replaced by a Family.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Popular Presentations sometimes set Johannine Equality against Petrine Office, as though the New Testament contained a Democratic Gospel and a Hierarchical Gospel. The Final Chapter of John itself resists this: John 21 gives Peter a Pastoral Charge and the Beloved Disciple a Charge to remain. The two Charisms are placed side by side, not against each other. Teach the Tension; do not resolve it by choosing a Side.</p>
+<h3 class="sec">Paul: The Body of Christ in the House Church</h3>
+<p>Paul is the first Christian Theologian of the Church, and his Ecclesiology is worked out in Letters to Communities in Crisis.</p>
+<p><strong>1. Soma Christou, the Body of Christ (1 Cor 12; Rom 12).</strong> The Image does three Jobs at once: it grounds Unity (one Body), it justifies Difference (many Members), and it protects the Weak (the Members that seem weaker are indispensable, 1 Cor 12:22). Paul introduces the Image not to praise Order but to stop the Strong from despising the Poor at the Supper (1 Cor 11:17-22).</p>
+<p><strong>2. Charism before Office.</strong> There are varieties of Gifts but the same Spirit (1 Cor 12:4). Apostles, Prophets, Teachers, Workers of Miracles, Healers, Helpers, Administrators, Speakers in Tongues (12:28). Notice that Helpers and Administrators are Charisms, which means that the Parish Accountant is not less Spiritual than the Preacher.</p>
+<p><strong>3. Baptismal Equality.</strong> There is neither Jew nor Greek, neither Slave nor Free, neither Male nor Female; for you are all one in Christ Jesus (Gal 3:28). The Text is Baptismal Liturgy quoted by Paul, and it dismantles the three great Divisions of the Ancient World: Race, Class and Gender.</p>
+<p><strong>4. The House Church.</strong> Prisca and Aquila with the Church in their House (Rom 16:3-5); Nympha (Col 4:15); Philemon and Apphia (Phlm 2). The earliest Church Building is a Family Home, the earliest Church Furniture is a Table, and Women are named as Hosts and Leaders. Phoebe is called Diakonos and Prostatis of many (Rom 16:1-2), and Junia is called Outstanding among the Apostles (Rom 16:7).</p>
+<p><strong>5. Koinonia and the Collection.</strong> The Communion between Churches is expressed in Money. Paul spends two full Chapters (2 Cor 8-9) on the Collection for the Poor of Jerusalem. Ecclesial Communion that never reaches the Purse is Rhetoric.</p>
+<h3 class="sec">The Later Writings: From Charism Towards Order</h3>
+<p><strong>Ephesians and Colossians</strong> raise the Body Image to a Cosmic Level: Christ is the Head of the Body, the Church (Col 1:18), and the Church is His Fullness (Eph 1:23). Here appear the Marks that later Councils will systematise: one Body, one Spirit, one Hope, one Lord, one Faith, one Baptism, one God and Father of all (Eph 4:4-6).</p>
+<p><strong>The Pastoral Letters</strong> show the Transition to a settled Ministry: Overseers, Elders and Deacons with Lists of Qualifications (1 Tim 3:1-13; Tit 1:5-9), the Laying on of Hands (1 Tim 4:14; 2 Tim 1:6), and the Church described as the Household of God, the Pillar and Bulwark of the Truth (1 Tim 3:15). The Concern has shifted from Charismatic Abundance to Sound Teaching and Continuity.</p>
+<p><strong>First Peter</strong> gives the Priestly Vocabulary that Vatican II will recover: a chosen Race, a royal Priesthood, a holy Nation, a People for the Possession of God (1 Pet 2:9). <strong>Hebrews</strong> gives the Pilgrim Image: here we have no lasting City (Heb 13:14). <strong>Revelation</strong> gives the Bride and the New Jerusalem, and warns Seven Concrete Churches that Lampstands can be removed (Rev 2-3).</p>
+<h3 class="sec">Synthesis: Unity in Plurality</h3>
+<p>Four Convictions run through all the New Testament Ecclesiologies and hold the Plurality together.</p>
+<p><strong>One.</strong> The Church is derived, never self-generated: she is of God, of Christ, of the Spirit.</p>
+<p><strong>Two.</strong> The Church is constituted by Word and Sacrament: Preaching, Baptism, the Supper of the Lord.</p>
+<p><strong>Three.</strong> The Church is for Mission: gathered in order to be sent (Communion for Mission).</p>
+<p><strong>Four.</strong> The Church is Eschatological: a Sign of a Kingdom she does not own and cannot complete.</p>
+<p><strong>EXAMPLE: </strong>A Class Exercise that works well: ask each Student to name the New Testament Model that best describes the Parish of Origin, and the Model that Parish most needs. The Gap between the two Answers is a Pastoral Plan.</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Set out the five New Testament Archetypes of the Church in a Table with one Text each.</li>
+<li>Show from Acts 6 and Acts 15 that Structure and Discernment develop from Need in the Apostolic Church.</li>
+<li>Explain the double Function of the Body of Christ Image in 1 Corinthians 12, and apply it to Caste in the Indian Church.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-5-from-the-apostolic-church-to-vati">
+<h2>Unit 5: From the Apostolic Church to Vatican I</h2>
+<p>Nineteen Centuries lie between the Upper Room and the First Vatican Council. This Unit maps them in five Periods. The Movement to be traced is a double one: an increasing Clarity of Structure, and a decreasing Visibility of the Community. Both must be told honestly.</p>
+<h3 class="sec">A. Early Catholicism (second and Third Centuries)</h3>
+<p><strong>Ignatius of Antioch (died about 107)</strong> gives the first clear Statement of the Threefold Ministry: nothing is to be done without the Bishop, and where the Bishop is, there is the Catholic Church. The Word Katholikos = kath holou = according to the Whole, appears here for the first Time in Christian Use.</p>
+<p><strong>Clement of Rome (about 96)</strong> writes from Rome to Corinth about a Dispute over Deposed Presbyters, and argues from an orderly Succession sent by the Apostles. The Letter is an early Sign of the Standing of Rome, though it is written by a Church to a Church and not by an Office to a Subject.</p>
+<p><strong>Irenaeus of Lyons (about 130-202)</strong> answers the Gnostic Claim to secret Knowledge with three public Criteria: the Canon of Scripture, the Rule of Faith, and the Succession of Bishops in Sees that can be listed. Apostolicity becomes a Test that any Enquirer can verify.</p>
+<p><strong>Cyprian of Carthage (about 200-258)</strong> produces two Formulas of lasting Weight and lasting Trouble: the Episcopate is one, of which each Bishop holds the Whole in Solidarity, which is the Root of Collegiality; and Outside the Church there is no Salvation (EENS), which will require four Centuries of Refinement before it is read as a Statement about Fidelity rather than a Sentence of Condemnation on the Nations.</p>
+<p><strong>Augustine (354-430)</strong>, against the Donatists, teaches that the Holiness of the Church rests on Christ and not on the Purity of the Minister, and that the Church in History is a Corpus Permixtum, a mixed Body of Wheat and Weeds. Against the same Opponents he defends the Validity of Sacraments celebrated by unworthy Ministers, a Principle later expressed as ex opere operato.</p>
+<h3 class="sec">B. the Great Church and the Five Patriarchates (fourth to Seventh Centuries)</h3>
+<p>The Edict of Milan (313) ends Persecution; the Church moves from the Catacomb to the Basilica, and the Basilica is a Public Hall of the Empire. Gains and Losses arrive together: Freedom to worship, and a Structure that begins to imitate the Administration of the Empire.</p>
+<p>The Councils build the Structure of Communion. Nicaea (325) recognises the Standing of Rome, Alexandria and Antioch; Constantinople (381) gives the New Rome second Place after Rome; Chalcedon (451) completes the <strong>Pentarchy</strong>: Rome, Constantinople, Alexandria, Antioch, Jerusalem. Governance in this Period is by Communion among Sees, not by Direction from one See.</p>
+<p><strong>EXAMPLE: </strong>Draw the Pentarchy on the Board as five Circles joined by Lines, and then draw the Medieval Model as one Circle with Spokes running outward. The Class will see the Change of Shape faster than they will read it in a Paragraph. Orthodox Christians still hold the first Diagram, and Unit 13 will explain why Reunion is so difficult.</p>
+<h3 class="sec">C. Medieval Centralisation (eleventh to Fifteenth Centuries)</h3>
+<p><strong>The Schism of 1054</strong> separates East and West. The immediate Cause is a Quarrel of Legates; the deeper Causes are the Filioque, the Question of Papal Authority, Language, Liturgy and Politics.</p>
+<p><strong>The Gregorian Reform.</strong> Gregory VII (Pope 1073-1085) fights the Control of Church Offices by Lay Rulers, a Battle that had to be fought. The Dictatus Papae (1075) states the Claims in twenty-seven short Propositions, among them that the Roman Pontiff alone may be called Universal and that he may depose Emperors. Reform of Freedom produces Centralisation of Power.</p>
+<p><strong>Unam Sanctam (1302)</strong> of Boniface VIII marks the outer Limit of the Claim, declaring Submission to the Roman Pontiff necessary for Salvation for every Human Creature. The Bull is issued in the middle of a Political Quarrel with the King of France, which is why Historical Context belongs to Doctrinal Reading.</p>
+<p><strong>Conciliarism</strong> arises from Crisis. During the Western Schism, when three Claimants held the Papacy at once, the Council of Constance issued Haec Sancta (1415), asserting that a General Council holds Authority immediately from Christ, and Frequens (1417), requiring Councils at fixed Intervals. The Council ended the Schism. Vatican I later rejected the Conciliarist Thesis; Vatican II recovered its legitimate Concern in the Doctrine of Collegiality.</p>
+<h3 class="sec">D. Reformation and Counter-reformation (sixteenth Century)</h3>
+<p>The Reformation is an Ecclesiological Event before it is anything else. Martin Luther (1483-1546) locates the Church where the Gospel is rightly preached and the Sacraments rightly administered, teaches the Priesthood of all the Baptised, and denies that the visible Roman Structure is constitutive. John Calvin (1509-1564) adds Discipline as a Mark. The Question is no longer how the Church is governed but where the Church is.</p>
+<p>The Council of Trent (1545-1563) answers on Sacraments, Justification, Scripture and Tradition, Seminaries and the Residence of Bishops, but never produces a Treatise on the Church. That Gap is filled by Controversy. <strong>Robert Bellarmine (1542-1621)</strong> defines the Church as the Assembly of Wo/Men bound together by the Profession of the same Christian Faith, the Communion of the same Sacraments, under the Governance of legitimate Pastors and above all of the Roman Pontiff, and adds that this Assembly is as visible and palpable as the Republic of Venice.</p>
+<p>Three Consequences follow from the Definition of Bellarmine. It is <strong>Visible</strong>, which answers the Reformers. It is <strong>Juridical</strong>, listing three Bonds of Membership. It is <strong>Complete without Mystery</strong>: Faith, Sacraments and Governance are named, while the Holy Spirit, Grace, Holiness and Mission are not. This is the Ecclesiology that the Manuals will teach for three hundred and fifty Years and that Vatican II will reopen.</p>
+<h3 class="sec">E. Vatican I (1869-1870) and Its Unfinished Business</h3>
+<p>The First Vatican Council met under the Shadow of the Loss of the Papal States, the Rise of Nationalism, Rationalism and Liberalism. It produced two Constitutions: Dei Filius on Faith and Reason, and <strong>Pastor Aeternus</strong> on the Church of Christ.</p>
+<p>Pastor Aeternus defines two Doctrines. First, the <strong>Primacy of Jurisdiction</strong>: the Roman Pontiff possesses ordinary, immediate and truly episcopal Power over all the Churches and all the Faithful. Second, the <strong>Infallibility</strong> of the Roman Pontiff when he speaks ex cathedra on Faith and Morals for the Universal Church, with the Intention to define. The Conditions will be examined in Unit 12.</p>
+<p>The decisive Historical Fact is that the Council never finished. Italian Troops entered Rome on 20 September 1870 and the Council was suspended. The Schema on the Church remained incomplete, and only the Chapter about the Papacy was promulgated. The Result is a Constitution on the Church that speaks about the Pope and says almost nothing about Bishops, Laity, Local Churches or Mission. Vatican II is, in this exact Sense, the Completion of Vatican I.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>It is inaccurate to teach that Vatican I invented Papal Primacy or that the Council was a Triumph of one Party. A significant Minority of Bishops opposed the Definition as inopportune, and many left Rome before the final Vote. The Definition itself is narrower than Popular Opinion assumes. Teach the narrowness; it protects Students from both Triumphalism and Contempt.</p>
+<h3 class="sec">The Four Ills of Pre-conciliar Ecclesiology</h3>
+<p><strong>1. Triumphalism.</strong> The Church presented as the Perfect Society, victorious, without Wound and without Need of Reform.</p>
+<p><strong>2. Clericalism.</strong> The Clergy as the active Church; the Laity as the Object of Pastoral Care. The Church described as an unequal Society of Shepherds and Sheep.</p>
+<p><strong>3. Juridicism.</strong> The Church understood chiefly through Law, Jurisdiction and Validity, with Mystery and Grace treated as Decoration.</p>
+<p><strong>4. Patriarchalism.</strong> Governance, Language and Imagery formed by a single Male and European Pattern, with Wo/Men present in Service and absent in Decision.</p>
+<p>Balance is owed to the same Period. <strong>Gains</strong>: Doctrinal Clarity, Institutional Endurance through Revolution and Persecution, Missionary Expansion on every Continent, and a Reformed Seminary System that produced generations of Educated Clergy. Loss and Gain sit in the same Ledger.</p>
+<h3 class="sec">The Seeds of Renewal (1825 to 1950)</h3>
+<p>Vatican II did not arrive from Nowhere. <strong>Johann Adam Mohler (1796-1838)</strong> of Tubingen recovered the Church as an Organism animated by the Spirit. <strong>John Henry Newman (1801-1890)</strong> wrote on consulting the Faithful in Matters of Doctrine (1859), retrieving the Sensus Fidelium. <strong>Yves Congar (1904-1995)</strong> wrote on true and false Reform and on the Laity. <strong>Henri de Lubac (1896-1991)</strong> recovered the Social Nature of Catholicism from the Fathers. The Biblical, Liturgical, Patristic and Ecumenical Movements converged, and Pius XII gave the Body of Christ Image official Standing in Mystici Corporis (1943).</p>
+<p><strong>Ressourcement</strong> = Return to the Sources. <strong>Aggiornamento</strong> = Updating. Vatican II is the Meeting of these two Words, and neither works without the other.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> India lived this whole History in a compressed and colonial Form. The Synod of Diamper (1599) subjected the ancient Thomas Christian Community of Kerala to Latin Usages, and the Revolt at the Coonan Cross (1653) followed. Under the Padroado the Missionary Church was tied to the Crown of Portugal, and the Hierarchy was formally established in India only in 1886. A Church whose Structures arrived with Ships carries a special Duty of Discernment about which Elements are Apostolic and which are merely Imported. Roberto de Nobili (1577-1656) at Madurai and Constanzo Beschi in Tamil Country attempted a different Path, and paid for it.</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Name the five Patriarchal Sees and explain what the Pentarchy implies about Governance by Communion.</li>
+<li>Give the Definition of the Church by Bellarmine and state three Things it omits.</li>
+<li>Explain why Vatican I is called an unfinished Council and how Vatican II completes it.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-6-the-models-of-the-church-accordin">
+<h2>Unit 6: The Models of the Church According to Avery Dulles</h2>
+<p>Avery Dulles (1918-2008) published Models of the Church in 1974 and gave Ecclesiology its most useful Teaching Instrument. His Argument is simple and disciplined: the Church is a Mystery, and a Mystery cannot be captured in a Definition; it can only be approached through Images which, when developed systematically, become Models.</p>
+<p>A Model <strong>discloses</strong> and a Model <strong>conceals</strong>. Whoever uses one Model only will see one Set of Truths clearly and will be blind to the rest. The Test of a Model is fivefold: its Basis in Scripture and Tradition, its Capacity to give Christians an Identity, its Support for the Mission of the Church, its Correspondence with the Experience of Believers, and its Fruitfulness in Theology.</p>
+<p><strong>Mnemonic: SHIMS.</strong> <strong>S</strong>ervant, <strong>H</strong>erald, <strong>I</strong>nstitution, <strong>M</strong>ystical Communion, <strong>S</strong>acrament. A Shim is a thin Wedge placed under a Table to steady it. Each Model steadies the Table; no single Shim carries the Weight.</p>
+<h3 class="sec">1. the Church as Institution</h3>
+<p>Governing Image: the Perfect Society with visible Structures of Teaching, Sanctifying and Governing. Representative: Bellarmine and the Manual Tradition. <strong>Strengths</strong>: clear Identity, Continuity across Centuries, defined Accountability, capacity to act in the World. <strong>Weaknesses</strong>: makes Grace Institutional, reduces the Laity to Subjects, tends towards Clericalism and Legalism, and identifies the Church with the Kingdom. Dulles regards this Model as legitimate but insufficient as the primary Model.</p>
+<h3 class="sec">2. the Church as Mystical Communion</h3>
+<p>Governing Image: the Body of Christ and the People of God, understood as an interior Communion of Grace and Friendship. Representative: Mohler, de Lubac, and the Communion Ecclesiology of the Twentieth Century. <strong>Strengths</strong>: biblically rich, personal, gives the Laity a full Place, connects the Church with the Trinity. <strong>Weaknesses</strong>: can become sentimental, may under-value visible Structure, and can make Small-Group Warmth the Test of Ecclesial Life.</p>
+<h3 class="sec">3. the Church as Sacrament</h3>
+<p>Governing Image: the Church as the Sign and Instrument of the Grace of Christ in the World. Representative: Rahner, Semmelroth, and Lumen Gentium itself (LG 1, 9, 48). <strong>Strengths</strong>: unites the visible and the invisible, avoids both Legalism and Vagueness, grounds Mission, and matches the Conciliar Vocabulary. <strong>Weaknesses</strong>: abstract for Ordinary Believers, weak in Prophetic Edge, and unfamiliar outside the Catholic and Orthodox Traditions.</p>
+<h3 class="sec">4. the Church as Herald</h3>
+<p>Governing Image: the Assembly gathered by the Proclamation of the Word; the Church is the Community that hears and announces. Representative: Karl Barth and the Word-Centred Traditions. <strong>Strengths</strong>: places the Word at the Centre, is powerfully missionary, and keeps the Church under Judgement rather than over it. <strong>Weaknesses</strong>: may reduce the Church to a Loudspeaker, under-values Sacrament and visible Communion, and can separate Proclamation from Service.</p>
+<h3 class="sec">5. the Church as Servant</h3>
+<p>Governing Image: the Church as Diakonos of the World, reading the Signs of the Times and serving Human Dignity, Justice and Peace. Representative: Gaudium et Spes, the Social Teaching Tradition, and the Theologies of Liberation. <strong>Strengths</strong>: credible to Unbelievers, faithful to the Washing of the Feet (Jn 13), and joins Faith to Justice. <strong>Weaknesses</strong>: Ecclesial Identity can dissolve into Social Work, and the Church risks becoming a Development Agency with a Chapel attached.</p>
+<h3 class="sec">6. the Church as Community of Disciples</h3>
+<p>In the expanded Edition (1987) Dulles proposed this as an integrating Model. The Church is the Company of those who follow Jesus, learn from Him, and are sent by Him. It holds Communion and Mission together, it is thoroughly Biblical, and it fits a Church that is a Minority in a Non-Christian Society. For India this Model deserves particular Attention.</p>
+<p><strong>EXAMPLE: </strong>Apply the six Models to one concrete Question, for example the Building of a new Parish Hall. Institution asks whether Permissions and Accounts are in order. Communion asks whether the People were consulted and whether the Hall will gather them. Sacrament asks whether the Building signifies anything of God. Herald asks whether the Gospel will be preached there. Servant asks whether the Money would have been better spent on the Hostel for Poor Children. Community of Disciples asks whether the Parish will grow in following Christ. A good Parish Priest asks all six Questions and in that Order.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> The Indian Church tends to be strong in the Institution Model, since Schools, Hospitals and Social Centres are the most visible Face of Catholicism in this Country and are widely respected. The Danger is that the Institution becomes the whole Identity, so that when Institutions are attacked or regulated the Church feels she is losing her Existence. The Basic Christian Communities of the Asian Bishops, and the ASIPA Method of the FABC, are an attempt to strengthen the Communion and Discipleship Models without abandoning the Institutions.</p>
+<p>Which Model does the Parish of Your Deacon Year actually run on? And which Model does the Sunday Homily preach?</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>State the five Criteria by which Dulles tests a Model of the Church.</li>
+<li>Give the Strengths and Weaknesses of the Sacrament Model and connect it to LG 1.</li>
+<li>Argue for or against the Claim that the Community of Disciples Model is the most suitable for the Church in India.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-7-the-convocation-of-the-second-vat">
+<h2>Unit 7: The Convocation of the Second Vatican Council</h2>
+<p>An Ecumenical Council is the Church assembled to discern. Twenty-one such Councils are counted in the Catholic Tradition, from Nicaea (325) to Vatican II (1962-1965). A Council is the Collegiality of the Episcopal Order in Act, and therefore the Study of a Council belongs to Ecclesiology and not only to History.</p>
+<h3 class="sec">Why Councils at All?</h3>
+<p><strong>A. The Legal Answer.</strong> A Council is a Legislative Organ that settles Disputes. True, and thin.</p>
+<p><strong>B. The Historical Answer.</strong> Councils occur when a Crisis exceeds the Capacity of the ordinary Structures. Nicaea answered Arius; Chalcedon answered Christological Confusion; Trent answered the Reformation. Also true.</p>
+<p><strong>C. The Theological Answer.</strong> A Council is the Church exercising her Nature as Communion. The Assembly at Jerusalem (Acts 15) sets the Pattern: Testimony, Debate, Scripture, and the Formula that it has seemed good to the Holy Spirit and to us (15:28). Karl Rahner argued that a Council is a Structural Necessity for a Church that is both Universal and Historical, since only the College gathered can express the Faith of the whole Church in a new Situation.</p>
+<p>Vatican II differs from every previous Council in one decisive Respect: it defined no Dogma and condemned no Heretic. It was called Pastoral. Some concluded that it was therefore not Binding. That Conclusion is false: a Council that teaches is teaching, and Pastoral does not mean Optional.</p>
+<h3 class="sec">The Story in Dates</h3>
+<p><strong>25 January 1959.</strong> John XXIII announces the Council at the Basilica of Saint Paul Outside the Walls, to the Astonishment of the Cardinals present.</p>
+<p><strong>11 October 1962.</strong> The Council opens with the Address Gaudet Mater Ecclesia, in which John XXIII rejects the Prophets of Doom, distinguishes the Deposit of Faith from the Manner in which it is expressed, and prescribes the Medicine of Mercy rather than Condemnation.</p>
+<p><strong>Four Sessions, 1962 to 1965.</strong> About two thousand five hundred Bishops attend, together with Theological Experts, Observers from other Churches, and, from the second Session onward, Lay Auditors, including Wo/Men from the third Session.</p>
+<p><strong>3 June 1963.</strong> John XXIII dies. Paul VI continues the Council, and carries the heavier Burden of steering it to a Conclusion and of implementing it.</p>
+<p><strong>8 December 1965.</strong> The Council closes, having produced sixteen Documents in the 4-9-3 Sort.</p>
+<p>One Episode explains the Character of the Council. In November 1962 the Assembly effectively rejected the prepared Schema on the Sources of Revelation, which had been drafted in the older Manual Style. The Bishops were declining to rubber-stamp Texts written for them. From that Moment the Council became an Assembly that thought rather than an Assembly that approved.</p>
+<h3 class="sec">The Council as the First Act of the World Church</h3>
+<p>Karl Rahner offered the Reading that has proved most durable: Vatican II was the first Occasion on which the Church acted as a genuinely World Church rather than as a European Church with Missions attached. Bishops from Africa, Asia and Latin America were present in Numbers, many of them Local Men rather than Missionaries. The Consequence is Structural: if the Church is genuinely World Church, then Local Churches must be Subjects of Theology and not merely Recipients of it.</p>
+<p><strong>Two Words govern the Method of the Council.</strong> <strong>Ressourcement</strong> = the Return to the Sources, to Scripture, the Fathers and the Liturgy. <strong>Aggiornamento</strong> = the Updating of the Language and the Forms of the Church for the present Age. Ressourcement without Aggiornamento produces Archaeology. Aggiornamento without Ressourcement produces Fashion.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> Paul VI came to Bombay in December 1964 for the Thirty-Eighth International Eucharistic Congress, the first Visit of a Pope to India and one of the earliest Papal Journeys outside Italy in modern Times. The Visit belongs to Ecclesiology and not merely to Chronicle: a Pope travelling to Asia during a Council enacted in his own Body the Claim that the Church is a World Church. The Indian Fathers of the Council, formed in a Land of many Religions, contributed to the Openness of Nostra Aetate and of the Declaration on Religious Liberty.</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Give three Answers to the Question why Councils are held, and show which one is Theological.</li>
+<li>Explain the Meaning of Ressourcement and Aggiornamento with one Example of each from the Council.</li>
+<li>What does Rahner mean by calling Vatican II the first Act of the World Church, and what follows for the Church in India?</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-8-the-shifts-of-vision-and-the-rece">
+<h2>Unit 8: The Shifts of Vision and the Reception of the Council</h2>
+<p>This Unit answers one Question: what actually changed? Not the Furniture, and not only the Language of the Liturgy, but the governing Vision of what the Church is. Ten Shifts summarise the Change. Learn them as a Table; they are the most examinable Content of the Course.</p>
+<h3 class="sec">Ten Shifts of Vision</h3>
+<p><strong>1. Identity.</strong> From Perfect Society to Pilgrim People of God (LG 8, 48-51).</p>
+<p><strong>2. Membership.</strong> From Layers of Rank to Baptismal Equality, with Office as Service inside the People (LG 32).</p>
+<p><strong>3. Scripture.</strong> From a Store of Proof Texts to the Soul of Theology and the Table from which the Faithful are fed (DV 21, 24).</p>
+<p><strong>4. Other Christians.</strong> From Outsiders in Error to Separated Brethren in real though imperfect Communion (UR 3).</p>
+<p><strong>5. The Laity.</strong> From passive Recipients to Sharers in the Priestly, Prophetic and Kingly Office of Christ, with a proper Vocation in the World (LG 31; AA 2).</p>
+<p><strong>6. Liturgy.</strong> From a Rite performed for the People to the Action of the whole Assembly with full, conscious and active Participation (SC 14).</p>
+<p><strong>7. Authority.</strong> From sole Jurisdiction to Collegiality, Subsidiarity and Consultation (LG 22-23; CD 4-5).</p>
+<p><strong>8. Kingdom.</strong> From an Identification of Church and Kingdom to the Church as Seed and Beginning of a Kingdom wider than herself (LG 5, 9).</p>
+<p><strong>9. Method.</strong> From Deductive Scholastic Manuals to a reading of the Signs of the Times in the Light of the Gospel (GS 4, 11).</p>
+<p><strong>10. The World.</strong> From a Fortress against Modernity to Dialogue and Service, with the Joys and the Hopes, the Griefs and the Anxieties of the Wo/Men of this Age taken as the Joys and Hopes of the Disciples of Christ (GS 1).</p>
+<p><strong>EXAMPLE: </strong>A quick Test of whether the Shifts have been received: walk into a Parish and count. Who reads the Scripture. Who decides how Money is spent. Who speaks at the Funeral of a Poor Family. Who is consulted before the Feast is planned. The Answers describe a real Ecclesiology, whatever the Notice Board says.</p>
+<h3 class="sec">How a Council is Received</h3>
+<p><strong>Reception</strong> is a Theological Concept, not a Public Relations Exercise. A Council is received when its Teaching becomes the actual Faith, Prayer and Practice of the Churches. Reception takes Generations. Nicaea required more than fifty Years and a second Council; Trent required a Century and a new Seminary System.</p>
+<p>Four Attitudes towards Vatican II can be distinguished, and Students should be able to name them without Caricature.</p>
+<p><strong>A. Rejection.</strong> A Minority holds that the Council itself broke with Tradition. The Coetus Internationalis Patrum organised the Opposition during the Council; afterwards the Movement of Archbishop Marcel Lefebvre led to a Rupture, and the Episcopal Ordinations of 1988 without Papal Mandate produced a Canonical Break.</p>
+<p><strong>B. Minimising.</strong> The Council is accepted verbally and read as though nothing significant had changed. This is the quietest Form of Non-Reception and the most common.</p>
+<p><strong>C. Maximising.</strong> The Spirit of the Council is invoked against its Texts, so that anything desired is claimed as Conciliar. Reform then loses its Anchor.</p>
+<p><strong>D. Reception in Continuity and Reform.</strong> The Documents are read as a Whole, with their Development acknowledged and their Continuity with Tradition maintained. Benedict XVI set out this Reading in the Address to the Roman Curia of 22 December 2005, contrasting a Hermeneutic of Rupture with a Hermeneutic of Reform.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Present the Debate about Continuity and Rupture fairly. Those who stress Continuity are guarding against the Idea that the Church can reinvent herself; those who stress Newness are guarding against the Pretence that nothing happened. The Council itself did both: it developed Doctrine and claimed to be handing on the same Faith. A Student who can hold both Statements without Anxiety has understood the Unit.</p>
+<p>Peter Phan adds a Question that Asia must ask: whose Reception is being described? A Council received in Rome or in Bavaria is not thereby received in Ranchi or in Barrackpore. Reception is always Local, or it is only Paperwork.</p>
+<h3 class="sec">What the Council Left Open</h3>
+<p>Honest Teaching names the Unfinished Items. The exact Bond between Papal Primacy and Episcopal Collegiality was affirmed without being fully worked out. The Authority of Episcopal Conferences was left imprecise. The Place of Wo/Men in Ministry and Governance was barely touched. The Manner of Doctrinal Development was not clarified. The Practice of Subsidiarity in the Church was recommended but not structured. Unit 11, Unit 12 and Unit 14 return to these Items.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> The Indian Reception of the Council has a Date and a Place: the All India Seminar, Church in India Today, held at Bangalore in May 1969, which gathered Bishops, Priests, Religious and Laity, including Wo/Men, to plan the Renewal of the Church in this Country. It was one of the earliest and most participative national Receptions of Vatican II anywhere in the World, and it already contained, in Practice, what would later be called Synodality. The Federation of Asian Bishops Conferences, founded in 1970 after the Visit of Paul VI to Manila, gave Asia its own Method: the Triple Dialogue with the Cultures, with the Religions, and with the Poor of Asia.</p>
+<p>Fifty Years after Bangalore, has the Church in India received the Council, or filed it?</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Write the Ten Shifts of Vision as a Table with a Conciliar Citation for at least six of them.</li>
+<li>Distinguish the four Attitudes towards the Reception of Vatican II and evaluate one of them.</li>
+<li>Describe the Contribution of the All India Seminar of 1969 and of the Triple Dialogue of the FABC to the Indian Reception of the Council.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-9-lumen-gentium-part-one-mystery-sa">
+<h2>Unit 9: Lumen Gentium, Part One: Mystery, Sacrament, People of God</h2>
+<p>Lumen Gentium, the Dogmatic Constitution on the Church, was promulgated on 21 November 1964. It is the Magna Carta of Catholic Ecclesiology, and this Course requires that the Student know its Structure, its Vocabulary and at least ten of its Article Numbers by Heart.</p>
+<h3 class="sec">The Order of the Chapters is Itself a Teaching</h3>
+<p>Eight Chapters: 1. The Mystery of the Church. 2. The People of God. 3. The Hierarchical Constitution of the Church and the Episcopate. 4. The Laity. 5. The Universal Call to Holiness. 6. Religious. 7. The Eschatological Character of the Pilgrim Church. 8. The Blessed Virgin Mary.</p>
+<p>The first Draft placed the Hierarchy immediately after the Mystery, with the People of God appearing later, and the Laity later still. The Council reversed the Order. Mystery comes first, then the whole People, and only afterwards the Ministries that serve the People. The Sequence teaches Four Things: the Church is of God before she is of Wo/Men; Baptism precedes Ordination; Office exists inside the People and not above it; and Holiness is the Vocation of everybody, not the Speciality of a Class.</p>
+<h3 class="sec">The Church as Mystery (lg 1-4)</h3>
+<p>Mysterion (Gk) = the Plan of God hidden through the Ages and now disclosed in Christ (Eph 3:3-9); Rahasya (Skt) = that which is hidden and given to the Disciple. Mystery does not mean a Puzzle that Reason cannot solve. Mystery means a Reality so full of God that it can be entered but never exhausted.</p>
+<p>The Church is Trinitarian in her Origin. She is planned by the Father, founded by the Son, and made holy and one by the Holy Spirit. The Constitution takes over the Formula of Cyprian: the universal Church appears as a People made one by the Unity of the Father, the Son and the Holy Spirit (LG 4).</p>
+<p>Two Consequences. First, the Church can never be adequately described in Sociological Terms alone, although Sociological Description remains legitimate and useful. Second, Disunity in the Church is not merely inefficient; it contradicts the Trinitarian Origin of the Church.</p>
+<h3 class="sec">The Church as Sacrament (lg 1, 9, 48)</h3>
+<p>The opening Sentence of the Constitution sets the whole Programme: Christ is the Light of the Nations, and the Church is in Christ as a Sacrament, that is, a Sign and Instrument of intimate Union with God and of the Unity of all Humankind (LG 1).</p>
+<p><strong>Sign and Instrument.</strong> A Sign points; an Instrument effects. The Church both shows what God is doing and serves as a Means by which God does it. She is neither a mere Symbol nor the Source of Grace herself. Sacramentum (Lt) here translates Mysterion (Gk), which is why the Sacramental Language and the Mystery Language are the same Language.</p>
+<p><strong>Three Consequences of the Sacrament Model.</strong> The Church is <strong>for others</strong>: a Sign exists to be read by somebody outside itself, so an Introverted Church contradicts her own Nature. The Church is <strong>accountable</strong>: a Sign can be obscured, and Scandal is not merely a Sin but an Ecclesiological Failure. The Church is <strong>not the Kingdom</strong>: she is the Seed and Beginning of the Kingdom on Earth (LG 5, 9), and a Sign must never be confused with the Reality it signifies.</p>
+<p><strong>EXAMPLE: </strong>A Road Sign that reads Barrackpore is useful only if the Road actually leads there. A Church that preaches Justice and practises Caste is a Signboard pointing down a Road that does not exist. The Council calls this Counter-Witness, and it is the deepest Reason why Ecclesiology and Ethics cannot be separated.</p>
+<h3 class="sec">Subsistit in: The Most Studied Verb in the Council (lg 8)</h3>
+<p>The Draft said that the Church of Christ <strong>is</strong> the Catholic Church. The final Text says that the Church of Christ <strong>subsists in</strong> the Catholic Church, and adds that many Elements of Sanctification and Truth are found outside her visible Structure (LG 8).</p>
+<p>The Change from Est to Subsistit in does three Things. It maintains that the Church of Christ is fully and abidingly present in the Catholic Church, so the Claim is not surrendered. It recognises that Baptism, Scripture, Faith, Hope, Charity and the Gifts of the Spirit are genuinely present in other Christian Communities. It thereby makes Ecumenism theologically possible rather than merely diplomatic. Unit 13 will build on this Verb.</p>
+<h3 class="sec">The Church as People of God (lg Chapter 2)</h3>
+<p>The Image is Biblical and Historical: Laos tou Theou, the People that God gathers from Abraham through Israel to the Church, on the March through History towards the Kingdom. It says four Things that no other Image says so well.</p>
+<p><strong>1. Priority of Baptism.</strong> All the Baptised share in the one Priesthood of Christ. The common Priesthood of the Faithful and the ministerial Priesthood differ in Essence and not only in Degree, yet they are ordered to each other, and both share in the one Priesthood of Christ (LG 10). Ministerial Priesthood exists for the sake of the common Priesthood, not the reverse.</p>
+<p><strong>2. Sensus Fidei.</strong> The whole Body of the Faithful, anointed by the Holy One, cannot err in Matters of Belief, and manifests this Property through the supernatural Sense of the Faith of the whole People, from the Bishops to the last of the Faithful (LG 12). This Article is the Charter of Consultation, of Listening, and eventually of Synodality.</p>
+<p><strong>3. Charisms for all.</strong> The Spirit distributes special Graces among the Faithful of every Rank, making them fit to undertake Works for the Renewal of the Church (LG 12). Charism is not the Property of Founders and Congregations only.</p>
+<p><strong>4. Pilgrimage and Reform.</strong> The Church is a Pilgrim, holy yet always in need of Purification, following constantly the Path of Penance and Renewal (LG 8). The classical Phrase is Ecclesia semper purificanda, and UR 6 states that the Church on Earth is called to that continual Reformation of which she always has Need.</p>
+<h3 class="sec">Who Belongs? the Concentric Circles (lg 14-16)</h3>
+<p><strong>A. Fully incorporated (LG 14):</strong> the Catholic Faithful, joined by the Bonds of the Profession of Faith, the Sacraments, Governance and Communion. The Council adds a Warning that Membership without Charity does not save.</p>
+<p><strong>B. Linked (LG 15):</strong> other Christians, joined through Baptism, Scripture, Faith and the Life of Grace, in a Communion that is real though not full.</p>
+<p><strong>C. Related (LG 16):</strong> those who have not yet received the Gospel: the Jewish People first, then Muslims, then those who seek God in Shadows and Images, then those who without Fault do not know the Gospel but seek to do the Will of God as they know it through Conscience. Divine Providence does not deny the Help necessary for Salvation to such as these.</p>
+<p><strong>D. Mission remains (LG 17).</strong> Precisely because Grace works outside the visible Boundaries, the Church does not become Lazy: she preaches, because the Gospel is Good News and not a private Possession. The old Formula Extra Ecclesiam Nulla Salus is thereby read in its original Sense as an Appeal to Fidelity addressed to Believers, not as a Sentence passed on the Nations.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> For India this Section of Lumen Gentium is the most consequential Passage in the whole Council. It permits an Indian Catholic to say, without evasion, that the Grace of God is truly at work in the Prayer of a Hindu Neighbour, in the Fasting of a Muslim Colleague and in the Compassion of a Sikh Stranger, while still holding that Christ is the Saviour of all. Nostra Aetate 2 states that the Church rejects nothing of what is true and holy in these Traditions. This is the Basis of the Triple Dialogue of the FABC and of every Interreligious Programme in this Country. It is also the Answer to the Charge of Forced Conversion: a Church that recognises Grace outside herself has no Interest in Coercion.</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Explain why the Order of the Chapters of Lumen Gentium is itself a Doctrinal Statement.</li>
+<li>Give the Meaning and the Consequences of the Verb Subsistit in (LG 8).</li>
+<li>Set out the Concentric Circles of LG 14-16 and apply them to the Situation of Religious Pluralism in India.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-10-lumen-gentium-part-two-body-temp">
+<h2>Unit 10: Lumen Gentium, Part Two: Body, Temple and Communion</h2>
+<p>Lumen Gentium does not define the Church; it describes her through a Series of Biblical Images (LG 6), and then develops three of them at Length. This Unit takes the Body of Christ, the Temple of the Spirit and the Communion, and closes with the Local Church.</p>
+<h3 class="sec">The Biblical Images of Lg 6</h3>
+<p>Sheepfold with Christ as the Gate; Flock with Christ as the Shepherd; Field and Vineyard of God with Christ as the true Vine; Building of God with Christ as the Cornerstone; Temple, of which the Faithful are living Stones; the Jerusalem above, called our Mother; the spotless Bride of the spotless Lamb; and, in Hebrews, the Wanderers in a foreign Land looking for a lasting City.</p>
+<p>Each Image gives what the others cannot. Sheepfold gives Belonging and Care; Vine gives Organic Union; Building gives Order and Solidity; Bride gives Love and Fidelity; Pilgrim gives Provisionality and Hope. Whoever teaches only one Image will produce a distorted Church, and Congregations tend to be formed by the Image their Pastors prefer.</p>
+<h3 class="sec">The Church as Body of Christ (lg 7)</h3>
+<p>The Image is Pauline and the Council receives it with two Corrections drawn from the Debate of the previous Generation.</p>
+<p><strong>The Mystici Corporis Question.</strong> Pius XII in Mystici Corporis (1943) recovered the Body Image and gave the Church a warmer and more organic Self-Understanding than the Manuals allowed. But the Encyclical identified the Mystical Body of Christ simply with the Roman Catholic Church, which left no Vocabulary for the real Ecclesial Life of other Christians.</p>
+<p><strong>The Conciliar Correction.</strong> Lumen Gentium keeps the Body Image, adds the Verb Subsistit in at LG 8, and states that other Communities possess genuine Elements of the Church. The Body Image is thereby retained as a Statement of Union with Christ, while the Question of visible Boundaries is treated separately.</p>
+<p>Three Truths the Body Image protects. <strong>Union with Christ</strong> is real and not metaphorical, since Christ is the Head and the Faithful are Members. <strong>Difference is necessary</strong>: the Foot is not less Body than the Hand. <strong>The Weak are indispensable</strong>: the Members that seem weaker are necessary (1 Cor 12:22), which is why a Church that neglects the Poor is not merely uncharitable but is amputating herself.</p>
+<h3 class="sec">The Church as Temple of the Holy Spirit</h3>
+<p>The Christological Image needs a Pneumatological Balance, otherwise the Church becomes the Extension of the Incarnation in a Sense that leaves no Space for Freedom, for Charism or for Failure. The Spirit dwells in the Church and in the Hearts of the Faithful as in a Temple (LG 4).</p>
+<p>Three Effects follow. <strong>Charisms</strong> are given to every Rank (LG 12), so Initiative in the Church may legitimately begin from below. <strong>Freedom</strong> is protected, since the Spirit blows where He wills (Jn 3:8) and no Office controls the Spirit. <strong>Discernment</strong> becomes necessary, since not every Spirit is the Holy Spirit; hence the Council places the Judgement of Authenticity with those who preside, and warns that the Spirit is not to be quenched (1 Thess 5:19-21).</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Some older Manuals treated Charism as an Exception to Order and therefore as a Problem. Current Theology, following Congar, treats Charism and Institution as two Modes of the same Gift of Christ. Teach them as Partners. Where they are taught as Rivals, Seminarians learn to suspect Movements and Movements learn to despise the Clergy, and the Indian Church is presently paying the Cost of both Attitudes.</p>
+<h3 class="sec">Communio: The Integrating Concept</h3>
+<p>Communio (Lt) = cum + munus = a Sharing in a common Gift and a common Duty; Koinonia (Gk) = Fellowship, Participation, Sharing; Satsang (Skt) = the Company of those who hold to Truth. The Extraordinary Synod of 1985, twenty Years after the Council, judged that Communion is the central and fundamental Idea of the Documents of Vatican II.</p>
+<p><strong>Four Dimensions of Communion.</strong> With <strong>God</strong>, since Communion among Wo/Men rests on Participation in the Life of the Trinity (1 Jn 1:3). Among the <strong>Faithful</strong>, in one Baptism, one Faith, one Table. Among the <strong>Churches</strong>, since every Local Church is in Communion with all the others and with the See of Rome. Across <strong>Time</strong>, with the Apostles, the Martyrs and the Saints, which is why Apostolicity is a Form of Communion and not only a Line of Succession.</p>
+<p><strong>Communion is expressed in concrete Acts</strong> and not in Sentiment: the Naming of the Bishop in the Eucharistic Prayer, the Reception of the Eucharist, the Collection for the Poor of another Church (2 Cor 8-9), the Exchange of Personnel between Dioceses, and the Refusal to celebrate the Eucharist while a Brother has something against You (Mt 5:23-24).</p>
+<h3 class="sec">The Local Church and Eucharistic Ecclesiology (lg 23, 26)</h3>
+<p>This is the most fruitful and least understood Section of the Constitution. The Local Church, that is the Diocese gathered around its Bishop, is not an Administrative Division of a larger Organisation, in the Way that a District is a Division of a State. The Council teaches that the one, holy, catholic and apostolic Church of Christ is truly present in and formed out of the Local Churches, and that in them and out of them the one universal Church exists (LG 23).</p>
+<p>The Ground of this Teaching is Eucharistic. Wherever the Faithful gather with their Bishop or with a Priest who represents him, and the Eucharist is celebrated, there Christ is present and there the Church of Christ is truly present, however small and poor the Gathering may be (LG 26). Henri de Lubac summarised the Principle in a Sentence that has become classical: the Eucharist makes the Church, and the Church makes the Eucharist.</p>
+<p>Paul McPartlan traces the Convergence of this Eucharistic Ecclesiology in de Lubac and in the Orthodox Theologian John Zizioulas, and shows that it is the most promising Ground of Agreement between East and West.</p>
+<p><strong>The Enduring Tension:</strong> which comes first, the Universal Church or the Local Church? The Answer of the Council is that neither absorbs the other; they exist in and for each other. The Debate between Cardinal Ratzinger, who stressed the ontological Priority of the Universal Church, and Cardinal Kasper, who stressed the concrete Reality of the Local Church, has never been closed, and it lies underneath every Argument about Episcopal Conferences, Liturgical Translations and Synodal Authority.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> A Village Congregation in the Sundarbans, with sixty People, a Catechist, a Priest who comes once a Month and a Chapel with a Tin Roof, is not a Fragment of the Church. When the Eucharist is celebrated there, the whole Church of Christ is present there. Say this Sentence in a Village and watch what happens to the Faces. Eucharistic Ecclesiology is the strongest Medicine available against the Inferiority Complex of Small and Poor Congregations, and against the Habit of measuring Ecclesial Importance by the Size of the Building or the Sum in the Collection Basket.</p>
+<h3 class="sec">Holiness, Pilgrimage and Mary (lg Chapters 5, 7 and 8)</h3>
+<p><strong>The Universal Call to Holiness (LG 39-42)</strong> is the Chapter that quietly overturned four Centuries of Spirituality. All the Faithful of every Rank are called to the Fullness of Christian Life and to the Perfection of Charity. Holiness is not a higher Grade for Priests and Religious with a lower Grade for the Married and the Working.</p>
+<p><strong>The Eschatological Character (LG 48-51)</strong> places the Church between the Resurrection and the End: already holy, not yet perfected, in Communion with the Saints and with those who are being purified. This Chapter forbids both Despair at the present State of the Church and Complacency about it.</p>
+<p><strong>Mary (LG 52-69)</strong> is treated inside the Constitution on the Church and not in a separate Document, by a narrow Vote of the Council. The Decision is itself Ecclesiological: Mary is presented as Type and Model of the Church, the first Disciple, the Woman of Faith who stands at Pentecost with the Apostles (Acts 1:14). What the Church hopes to become, Mary already is.</p>
+<p>Now the Hinge of the whole Course. The Systematic Half is finished; the Half about Structures, Ecumenism and Mission begins.</p>
+<p>Is the Fire of Pentecost still falling on the Church in India, or are we tending a Lamp we inherited?</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Explain the Correction that Lumen Gentium brings to the Body of Christ Teaching of Mystici Corporis.</li>
+<li>Define Communio and set out its four Dimensions with one Scripture Reference each.</li>
+<li>State the Teaching of LG 23 and 26 on the Local Church, and apply it to a small rural Congregation in Bengal.</li>
+</ol></div>
+</section>
+<section class="chapter" id="the-seven-polarities-of-ecclesiology">
+<h2>The Seven Polarities of Ecclesiology</h2>
+<p>Every Error in Ecclesiology is a Truth that has been separated from its Partner. This short Unit stands at the Hinge of the Course. Learn the seven Pairs in the Form given: Thesis, then But, then Antithesis. In the Examination, a Student who can hold both Poles will always write a better Answer than a Student who has chosen a Side.</p>
+<p><strong>1. Institution and Charism.</strong> The Church has a permanent Structure willed by Christ: Word, Sacrament, Ministry, Succession. But, the same Christ pours out Charisms on every Rank of the Faithful, and Renewal has usually begun outside the Offices before it was received by them. Structure without Charism becomes an Administration; Charism without Structure becomes a Series of Splinters.</p>
+<p><strong>2. Unity and Plurality.</strong> The Church is one, with one Lord, one Faith, one Baptism (Eph 4:5). But, the New Testament itself contains many Ecclesiologies, the Catholic Communion contains twenty-four Churches of different Rites, and Catholicity means Fullness through Difference and not Uniformity through Erasure. Ekam sat viprah bahudha vadanti belongs here, read with Christian Discipline: the Faith is one, the Expressions are many.</p>
+<p><strong>3. Hierarchy and Baptismal Equality.</strong> The Church has a Hierarchical Constitution: Bishops, Priests and Deacons, with the Bishop of Rome as the Centre of Unity (LG 18-22). But, before any Distinction of Office all are equal in Dignity by Baptism, and the Ordained exist for the Faithful and not the Faithful for the Ordained (LG 32). Whoever would be first must be the Servant of all (Mk 10:44).</p>
+<p><strong>4. Local and Universal.</strong> The Church of Christ is truly present in every Local Church gathered around its Bishop at the Eucharist (LG 26). But, no Local Church is the whole Church, and Communion with all the Churches and with the See of Rome is constitutive of being Catholic. Neither Congregationalism nor Centralism is Catholic.</p>
+<p><strong>5. Holy and Sinful.</strong> The Church is holy, since her Head is Christ and her Soul is the Spirit, and she never ceases to produce Saints. But, she is composed of Sinners, has committed Wrongs in her History, and is always in need of Purification (LG 8; UR 6). The Fathers dared to call her Casta Meretrix, the chaste Harlot, in order to say both Things in one Phrase.</p>
+<p><strong>6. Communion and Mission.</strong> The Church exists to gather Wo/Men into Communion with God and with one another. But, she is gathered in order to be sent, and a Communion that does not become Mission decays into a Club. Ad Gentes states that the pilgrim Church is missionary by her very Nature (AG 2). Communion for Mission is the Formula planted at the Beginning of these Notes.</p>
+<p><strong>7. Doctrine and Mercy.</strong> The Church must guard the Truth entrusted to her, since Mercy without Truth becomes Sentiment that abandons People to their Wounds. But, the Truth is a Person who ate with Sinners, and Doctrine without Mercy becomes an Instrument of Exclusion. Pope Francis states that the Church is not a Customs House and that the Confessional is not a Torture Chamber (EG 47, 44).</p>
+<p>The Aphorism to close the Unit: <strong>Whatever the Church holds in Doctrine she must be able to hold in the Arms of a real Human Being. Whatever she cannot hold in the Arms, she has not yet understood in Doctrine.</strong></p>
+</section>
+<section class="chapter" id="unit-11-hierarchy-collegiality-and-prima">
+<h2>Unit 11: Hierarchy, Collegiality and Primacy</h2>
+<p>Chapter Three of Lumen Gentium is the longest Chapter of the Constitution and the most fought over. It carries the whole Weight of the Unfinished Business of Vatican I.</p>
+<h3 class="sec">Vocabulary First</h3>
+<p><strong>Hierarchia</strong> (Gk) = hieros + arche = sacred Origin or sacred Governance. <strong>Episkopos</strong> = Overseer. <strong>Presbyteros</strong> = Elder. <strong>Diakonos</strong> = Servant, one who waits at Table. <strong>Potestas Ordinis</strong> = the Power of Order, the sacramental Capacity received in Ordination. <strong>Potestas Iurisdictionis</strong> = the Power of Jurisdiction, the Authority to govern a determined Portion of the People of God. The Manuals kept these two Powers almost separate; the Council reunited them by teaching that Episcopal Consecration itself confers the Fullness of the Sacrament of Order, together with the Offices of Sanctifying, Teaching and Governing (LG 21).</p>
+<p>That Sentence of LG 21 is a Recovery of the first Rank. Before it, the Bishop could be presented as a Priest with extra Powers of Jurisdiction delegated from Rome. After it, the Bishop is a Bishop by Sacrament, and his Authority is proper and immediate in his own Church, not borrowed.</p>
+<h3 class="sec">The Threefold Ministry (lg 18-29)</h3>
+<p><strong>The Episcopate.</strong> Bishops are Successors of the Apostles, not as Individuals inheriting a Chair but as Members of a Body succeeding a Body: the College of Bishops succeeds the College of the Apostles (LG 22). Each Bishop is Shepherd of his own Church and, as a Member of the College, bears Solicitude for the whole Church (LG 23).</p>
+<p><strong>The Presbyterate.</strong> Priests are Co-Workers of the Episcopal Order, sharing in the one Priesthood of Christ, forming with the Bishop one Presbyterium, and made present in each local Congregation as those who represent the Bishop (LG 28). The Priest is therefore not a Solo Agent with a Territory but a Member of a Body with a Charge.</p>
+<p><strong>The Diaconate.</strong> The Council restored the Diaconate as a proper and permanent Grade of the Hierarchy, open in Principle to married Men, ordained not to the Priesthood but to Service, that is to the Ministry of the Liturgy, of the Word and of Charity (LG 29). This is a genuine Recovery of an Order of the ancient Church.</p>
+<h3 class="sec">Collegiality (lg 22-23)</h3>
+<p><strong>Definition.</strong> The College of Bishops, together with its Head the Roman Pontiff and never without that Head, is the Subject of supreme and full Power over the universal Church (LG 22).</p>
+<p><strong>Three Arguments of the Council.</strong> <em>Biblical</em>: the Twelve act as a Group, and Peter stands with the Eleven (Acts 2:14). <em>Theological</em>: Episcopal Consecration incorporates a Man into the Order of Bishops, which is a Body and not a Set of Individuals. <em>Historical</em>: the Church has held Councils and Synods from Acts 15 onwards, and Bishops have always acted collegially in a Region long before Modern Structures existed.</p>
+<p><strong>Three Modes of Exercise.</strong> In an <strong>Ecumenical Council</strong>, which is the fullest and rarest Form. In <strong>united Action while dispersed</strong>, when Bishops throughout the World, in Communion with the Pope, agree on a Point of Faith or Morals. In <strong>Partial or Regional Forms</strong>: Synods of Bishops, Episcopal Conferences, Particular Councils and Patriarchal Synods.</p>
+<p><strong>The Nota Praevia Explicativa.</strong> A Preliminary Explanatory Note was attached to Lumen Gentium in November 1964 by Higher Authority, clarifying that the College never acts apart from its Head and that the Pope may always exercise his Power freely. The Note protects Primacy. The Debate about how far it also restricts Collegiality has continued ever since, and an honest Teacher will say so rather than pretend the Question is closed.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Some Textbooks present Collegiality as a Concession that changes nothing, and others present it as a Charter of Church Democracy. Both are wrong. Collegiality is a sacramental Reality that flows from Episcopal Consecration; it is not a Delegation from the Pope, and it is not a System of Voting. The exact juridical Expression of that sacramental Reality remains the great unfinished Task, and the Synod on Synodality has reopened it.</p>
+<h3 class="sec">The Structures in Practice</h3>
+<p><strong>Synod of Bishops.</strong> Established by Paul VI with the Motu Proprio Apostolica Sollicitudo on 15 September 1965, in the middle of the Council, as a permanent Body representing the whole Episcopate, meeting periodically to assist the Roman Pontiff. Consultative in Nature, though the Pope may grant it deliberative Power.</p>
+<p><strong>Episcopal Conferences.</strong> Bodies of the Bishops of a Nation or Region exercising certain Functions together (CD 37-38). Their exact Theological Standing and Teaching Authority were treated by John Paul II in Apostolos Suos (1998), which required, for Doctrinal Declarations, either Unanimity or a two thirds Majority together with the Recognitio of the Holy See.</p>
+<p><strong>Councils within the Local Church.</strong> The Presbyteral Council and the College of Consultors, the Diocesan Pastoral Council, the Diocesan Finance Council, and at the Parish Level the Parish Pastoral Council and the Parish Finance Committee. These are the Places where Collegiality and Consultation either become real or become Minutes filed in a Cupboard.</p>
+<p><strong>Subsidiarity</strong> = what can be decided at a lower Level should not be taken over by a higher Level, and the higher Level exists to assist the lower. The Principle comes from the Social Teaching of the Church (Quadragesimo Anno 79) and its Application inside the Church has been recommended repeatedly and structured seldom.</p>
+<h3 class="sec">The Laity in the Structure (lg Chapter 4)</h3>
+<p>The Lay Faithful share, in their own Manner, in the Priestly, Prophetic and Kingly Office of Christ (LG 31). Their proper Field is the Ordering of Temporal Affairs according to the Will of God: Family, Work, Politics, Economy, Culture, Education, Media. They are also entitled and sometimes obliged to make known their Opinion on Matters concerning the Good of the Church, with Reverence towards their Pastors (LG 37).</p>
+<p>Two Distortions are common in Practice. The first treats the Layperson as a Substitute for the Priest where Priests are scarce, so that Lay Vocation is measured by Sanctuary Duties. The second treats the Layperson as Audience and Donor. The Council teaches a third Thing: the Laity are the Church in the World, and most of the Mission of the Church happens where no Priest is present.</p>
+<h3 class="sec">Papal Primacy as Petrine Ministry</h3>
+<p><strong>The Development in Five Steps.</strong> <em>Early Church</em>: Rome is honoured as the See of Peter and Paul and is appealed to in Disputes, without a Language of Jurisdiction over all the Churches. <em>Leo the Great (Pope 440-461)</em>: the Doctrine of Petrine Succession is articulated with Clarity. <em>Gregory VII (1073-1085)</em>: the Claims are radicalised in the Struggle for the Freedom of the Church. <em>Vatican I (1870)</em>: Primacy is defined as ordinary, immediate and truly episcopal Jurisdiction. <em>Vatican II</em>: the same Primacy is placed inside the College and described as a Ministry of Unity and Service.</p>
+<p><strong>Ut Unum Sint (25 May 1995).</strong> John Paul II acknowledged that the Office of the Bishop of Rome constitutes a Difficulty for most other Christians, and invited the Leaders and Theologians of other Churches to a patient and fraternal Dialogue on how this Ministry might be exercised so as to serve Unity rather than obstruct it (UUS 95-96). No Pope had ever made such a Request. The Question is now formally open.</p>
+<p><strong>EXAMPLE: </strong>Distinguish the Office from the Style. Primacy is Doctrine; the Manner of exercising it has changed many times and can change again. A Pope who travels, a Pope who lives in a Guest House, a Pope who consults before deciding: none of this touches the Definition of 1870, and all of it changes what other Christians see when they look at the Papacy.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> India is the clearest living Illustration of Communion in Plurality. Three sui iuris Churches exist here in full Communion with Rome: the Latin Church, the Syro-Malabar Church and the Syro-Malankara Church, each with its own Liturgy, Law and Synodal Governance. Alongside them stand the Conference Structures: the CBCI for all three Rites together, and the CCBI for the Latin Bishops. The Disputes over Jurisdiction of the Eastern Churches outside their traditional Territories, and the long Liturgical Controversy in the Syro-Malabar Church, are Ecclesiological Questions before they are Administrative Ones. They ask precisely the Question of this Unit: how do Autonomy of a Church and Communion of all the Churches live together?</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Explain the Significance of LG 21 for the Understanding of the Episcopal Office.</li>
+<li>Name the three Modes in which Collegiality is exercised and give one Structure for each.</li>
+<li>State the Invitation of Ut Unum Sint 95-96 and assess its Importance for Ecumenism.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-12-magisterium-and-infallibility">
+<h2>Unit 12: Magisterium and Infallibility</h2>
+<p>Magisterium comes from Magister = Teacher. In Medieval Usage there were two Magisteria, that of the Chair of the Bishop and that of the Chair of the Theologian. In modern Usage the Word means the Teaching Office of the Pope and the Bishops. Both Meanings are worth remembering, because the Seminarian in this Room will one day teach, and will need to know which Chair he is sitting on.</p>
+<h3 class="sec">The Governing Principle (dv 10)</h3>
+<p>Everything in this Unit stands under one Sentence of the Council: the Teaching Office is not above the Word of God but serves it, teaching only what has been handed on, listening to it devoutly, guarding it with Dedication and expounding it faithfully (DV 10).</p>
+<p>Three Consequences. The Magisterium is a <strong>Servant</strong> and not a Source. It cannot invent Doctrine; it can only draw out what is contained in Revelation. And it is accountable to the Deposit of Faith, which is why an Appeal to Scripture and Tradition against a merely current Opinion is not Disobedience but Method.</p>
+<h3 class="sec">The Types of Magisterium</h3>
+<p><strong>A. Extraordinary Magisterium.</strong> Exercised when the Pope defines a Doctrine ex cathedra, or when an Ecumenical Council solemnly defines. Rare, solemn, and irreformable in its Formulation.</p>
+<p><strong>B. Ordinary and Universal Magisterium.</strong> Exercised when the Bishops of the World, dispersed but in Communion with the Pope, teach a Doctrine of Faith or Morals as definitively to be held (LG 25). It is not solemn, and it can nevertheless be infallible.</p>
+<p><strong>C. Ordinary Papal and Episcopal Magisterium.</strong> The daily Teaching of Encyclicals, Exhortations, Pastoral Letters, Homilies and Catechesis. Authoritative, binding in the Manner proper to it, and reformable.</p>
+<h3 class="sec">The Four Degrees of Assent</h3>
+<p><strong>1. Divinely revealed Truths (de fide credenda).</strong> The Trinity, the Incarnation, the Resurrection, the Real Presence. Response: the Assent of divine and catholic Faith. Denial is Heresy.</p>
+<p><strong>2. Truths definitively proposed (de fide tenenda).</strong> Truths necessarily connected with Revelation, held definitively though not proposed as revealed. Response: firm Acceptance. The Profession of Faith of 1989 and the Motu Proprio Ad Tuendam Fidem (1998) formalised this Category.</p>
+<p><strong>3. Authentic non-definitive Teaching.</strong> The ordinary Teaching of Pope and Bishops. Response: religious Submission of Will and Intellect, the Obsequium Religiosum of LG 25. This is not the same as the Assent of Faith, and the Distinction matters.</p>
+<p><strong>4. Prudential and Disciplinary Judgements.</strong> Applications, Policies, Directives. Response: Respect and Obedience in Practice, with legitimate Room for Discussion about their Fittingness.</p>
+<h3 class="sec">Infallibility: The Four Conditions</h3>
+<p>Pastor Aeternus (1870) defines that the Roman Pontiff teaches infallibly when: <strong>1.</strong> he speaks ex cathedra, that is as Shepherd and Teacher of all Christians; <strong>2.</strong> he uses his supreme apostolic Authority; <strong>3.</strong> he teaches on Faith or Morals; <strong>4.</strong> he defines a Doctrine to be held by the whole Church. Mnemonic: <strong>Chair, Authority, Faith and Morals, Definition.</strong></p>
+<p>The Conditions are narrow. Two Definitions are commonly listed as certain Exercises of this Charism in modern Times: the Immaculate Conception (Ineffabilis Deus, 1854) and the Assumption (Munificentissimus Deus, 1950). Most Papal Teaching is not infallible, and the Popes themselves say so.</p>
+<h3 class="sec">Four Distinctions That Prevent Misunderstanding</h3>
+<p><strong>Infallibility is not Revelation.</strong> No new Revelation is given; public Revelation closed with the Apostolic Age (DV 4).</p>
+<p><strong>Infallibility is not Inspiration.</strong> Inspiration produced the Scriptures; Infallibility is a negative Protection from Error in a defined Act, not a positive Dictation of Words.</p>
+<p><strong>Infallibility is not Impeccability.</strong> The Charism concerns Teaching, not Holiness of Life. Church History supplies painful Proof of the Difference.</p>
+<p><strong>Infallibility is not Omniscience.</strong> It does not make the Pope an Authority on Astronomy, Economics or Cricket.</p>
+<h3 class="sec">Who is Infallible?</h3>
+<p><strong>The whole Church first.</strong> The Body of the Faithful as a Whole cannot err in Believing (LG 12). Pope Francis calls this the Infallibility in Credendo of the People of God (EG 119). Teaching Infallibility exists to serve this prior Reality, not to replace it.</p>
+<p><strong>The College of Bishops</strong> in an Ecumenical Council, and in the ordinary universal Magisterium described above.</p>
+<p><strong>The Roman Pontiff</strong> under the four Conditions.</p>
+<p>Note the Order in which these three should be taught. If the People are taught first, Infallibility appears as what it is: the Church protected in her Faith. If the Pope is taught first, Infallibility appears as a Personal Privilege, which is precisely the Caricature that has done such Damage.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Hans Kung published Infallible? An Inquiry in 1970, arguing that the Category should be replaced by the Indefectibility of the Church in Truth. In 1979 his Mandate to teach as a Catholic Theologian was withdrawn, though he remained a Priest and continued to write. Present the Debate accurately: the Question he raised about the Reception and Formulation of Doctrine has continued in Catholic Theology, and Students meet it in Ecumenical Dialogue. A Teacher who caricatures the Objection leaves the Class defenceless when they meet a serious Version of it.</p>
+<h3 class="sec">Development of Doctrine</h3>
+<p>John Henry Newman, in the Essay on the Development of Christian Doctrine (1845), showed that a living Idea grows as a Body grows: it preserves its Type, continues its Principles, assimilates new Material, follows logically, anticipates its Future, conserves its Past, and endures with Vigour. Growth is not Corruption when these Marks are present. Dei Verbum receives the Insight: there is a Growth in the Understanding of the Realities and the Words that have been handed on (DV 8).</p>
+<p>Hence Doctrine can develop without contradicting itself, and this is the Ground on which the Church has changed her Teaching on Religious Liberty, on Slavery, on Usury and on the Death Penalty, while claiming Continuity of Principle.</p>
+<h3 class="sec">Conscience and Honest Dissent</h3>
+<p>Conscience is the most secret Core and Sanctuary of a Person, where one is alone with God (GS 16). Conscience must be formed, and formation includes serious Attention to the Teaching of the Church. Where a Believer, after Prayer, Study and Consultation, cannot in Conscience accept a non-definitive Teaching, the Tradition allows for respectful Difficulty expressed within the Communion. What it does not allow is Contempt, Publicity Hunting, or the Setting up of a private Magisterium.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> Two Indian Episodes make this Unit concrete. First, the Twelve Points of Adaptation for the Liturgy, approved for India in 1969, permitted Indian Postures, Gestures, Oil Lamps, Aarti and Anjali, a Sign of Ecclesial Authority serving Inculturation. Second, the Notification concerning the Work of Jacques Dupuis on Religious Pluralism, issued in 2001, which did not condemn him but required Clarifications. Both Episodes show a Magisterium engaging Indian Theological Work. The Lesson for the future Priest and Theologian is the same in both Cases: the Path of Fruitful Theology in India runs through patient Communion, not through Rupture, and not through Silence either.</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>State DV 10 and explain what it implies about the Nature of the Teaching Office.</li>
+<li>Give the four Degrees of Assent with the Response proper to each.</li>
+<li>List the four Conditions for an ex cathedra Definition and distinguish Infallibility from Inspiration and Impeccability.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-13-ecumenism">
+<h2>Unit 13: Ecumenism</h2>
+<p>Oikoumene (Gk) = the whole inhabited Earth. Ecumenism is the Movement for the Restoration of Unity among all Christians. It is not Diplomacy, not Politeness, and not the Reduction of Faith to a Common Minimum. It is Obedience to a Prayer of Jesus: that they may all be one, so that the World may believe (Jn 17:21).</p>
+<p>Note the Purpose Clause. Unity is not sought for the Comfort of Christians but for the Credibility of the Gospel. Division is not merely a Scandal within; it is a Wound in the Mission.</p>
+<h3 class="sec">How the Divisions Happened</h3>
+<p><strong>Fifth Century.</strong> After the Councils of Ephesus (431) and Chalcedon (451) the Churches of the East divided over Christological Language, producing the Assyrian Church of the East and the Oriental Orthodox Churches. Later Dialogue has shown that much of the Division rested on different Uses of the same Greek Words.</p>
+<p><strong>1054.</strong> East and West separate over the Filioque, Papal Authority, Liturgical Usage, Language and Politics. The mutual Excommunications of 1054 were lifted by Paul VI and Athenagoras I in 1965, during the Council.</p>
+<p><strong>Sixteenth Century.</strong> The Reformation divides the West over Justification, the Authority of Scripture and Tradition, the Nature of Priesthood and the Sacraments, and the Papacy. The Anglican Separation follows a different Path, more Political in Origin and more Liturgical in Continuity.</p>
+<p><strong>Modern Period.</strong> The Missionary Movement itself exported the Divisions of Europe to Asia and Africa, which is why the modern Ecumenical Movement began on the Mission Field, at the World Missionary Conference of Edinburgh (1910). The World Council of Churches was formed at Amsterdam in 1948.</p>
+<h3 class="sec">Unitatis Redintegratio: The Catholic Principles</h3>
+<p>The Decree on Ecumenism was promulgated on the same Day as Lumen Gentium, 21 November 1964, and must be read with it.</p>
+<p><strong>1. Real though imperfect Communion.</strong> Those who believe in Christ and have been properly baptised are put in a certain, though imperfect, Communion with the Catholic Church (UR 3). Baptism is the Bond, and it is not undone by Division.</p>
+<p><strong>2. Elements of Sanctification outside the visible Boundaries.</strong> The written Word of God, the Life of Grace, Faith, Hope and Charity, and other interior Gifts of the Holy Spirit exist outside the visible Confines of the Catholic Church, and the Spirit uses these Communities as Means of Salvation (UR 3).</p>
+<p><strong>3. Shared Guilt.</strong> Wo/Men of both Sides were to blame for the Divisions, and those born into these Communities today cannot be charged with the Sin of Separation (UR 3). The Council therefore asks Pardon of God and of the separated Brethren (UR 7).</p>
+<p><strong>4. Hierarchy of Truths.</strong> In Catholic Doctrine there exists an Order or Hierarchy of Truths, since they vary in their Connection with the Foundation of the Christian Faith (UR 11). The Trinity and the Resurrection do not stand at the same Level as a particular Devotional Practice. This Principle makes Dialogue possible without any Truth being abandoned.</p>
+<p><strong>5. Spiritual Ecumenism is the Soul.</strong> Change of Heart, Holiness of Life, private and public Prayer for Unity: this is the Soul of the whole Ecumenical Movement (UR 8). Ecumenism begins on the Knees and not at the Conference Table.</p>
+<p><strong>6. Reform of the Church herself.</strong> Every Renewal of the Church consists essentially in an increase of Fidelity to her own Calling, and Christ summons the Church to that continual Reformation of which she always has Need (UR 6).</p>
+<p><strong>EXAMPLE: </strong>The Hierarchy of Truths in Practice: a Catholic and a Lutheran who agree about the Trinity, the Incarnation, the Resurrection, Baptism and Scripture, and who disagree about the Number of Sacraments, are not disagreeing at the same Depth on both Sets of Items. Naming the Depth of a Disagreement is half the Work of Dialogue. The Joint Declaration on the Doctrine of Justification, signed by the Catholic Church and the Lutheran World Federation at Augsburg on 31 October 1999, is the classical Fruit of this Method.</p>
+<h3 class="sec">The Four Forms of Dialogue</h3>
+<p>The same four Forms serve both Ecumenical and Interreligious Work, and they were set out for the Church in Dialogue and Proclamation (1991).</p>
+<p><strong>Dialogue of Life:</strong> living as good Neighbours, sharing Joys and Sorrows, Festivals and Funerals.</p>
+<p><strong>Dialogue of Action:</strong> working together for Justice, Development, Relief, Education and the Care of Creation.</p>
+<p><strong>Dialogue of Theological Exchange:</strong> Specialists deepening the Understanding of the Traditions of the Other.</p>
+<p><strong>Dialogue of Religious Experience:</strong> sharing Prayer, Silence, Contemplation and the Ways of seeking God.</p>
+<p>Most Christians in India will do the first two all their Lives, a few will do the third, and the Saints will do the fourth.</p>
+<h3 class="sec">Ecumenism and Interreligious Dialogue are Not the Same</h3>
+<p><strong>Ecumenism</strong> concerns Relations among Christians who share Baptism and Faith in Christ, and its Goal is the visible Unity of the one Church. <strong>Interreligious Dialogue</strong> concerns Relations with Believers of other Religions, and its Goal is not one Religion but Understanding, Collaboration and mutual Enrichment in the Search for God. Nostra Aetate 2 states that the Church rejects nothing of what is true and holy in these Religions. Confusing the two produces bad Theology and, in India, bad Politics as well.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> India is one of the most ecumenically instructive Countries in the World. The Church of South India was inaugurated on 27 September 1947, uniting Anglican, Methodist, Congregational, Presbyterian and Reformed Traditions, and the Church of North India followed on 29 November 1970: Unions of a Kind not achieved in Europe. The National Council of Churches in India brings together the Protestant and Orthodox Churches, and the CBCI works with it on Bible Translation, Relief, Education and the common Defence of Religious Freedom. Three Reasons make Ecumenism urgent in this Country. We are a small Minority, about two and a third per cent of the Population, and Division makes us smaller still. Our Neighbours do not distinguish our Denominations, so our Quarrels are read as the Quarrels of Christians. And the great Questions before us, Communal Violence, the Rights of Dalit Christians, Freedom of Conscience and Anti-Conversion Legislation, cannot be faced by any one Church alone.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>Statistics about the Number of Christian Denominations in India vary greatly between Sources, depending on how an independent Congregation is counted. Use the Figure of a small Minority with many Denominations rather than a precise Count, unless a Census Figure is being quoted directly. The same Caution applies to Casualty Figures in Reports of Communal Violence, where Government, Church and Civil Society Estimates differ.</p>
+<h3 class="sec">The Present Situation: Advance and Impasse</h3>
+<p><strong>Advances:</strong> the Lifting of the Excommunications of 1054; formal Dialogues with the Orthodox, Anglican, Lutheran, Reformed, Methodist and Pentecostal Communities; the Joint Declaration on Justification (1999); the mutual Recognition of Baptism in many Places; and a Habit of common Prayer that was unthinkable a Century ago.</p>
+<p><strong>Impasses:</strong> the Ministry of the Bishop of Rome; the Ordination of Wo/Men in several Communions; recent Divergence on Questions of Marriage and Sexuality; the Standing of the Ordained Ministry and the Eucharist; and the rapid Growth of Independent and Pentecostal Groups that have no Structure with which a Dialogue can be conducted. Cardinal Walter Kasper described the Situation as an Ecumenism that has moved from Springtime to a demanding Middle Season.</p>
+<p>The Ecumenism of Blood remains the strongest Argument. Those who persecute Christians in Odisha, in Nigeria or in Iraq do not first ask which Denomination the Victim belongs to. If we are one in Suffering, what prevents us from being one at the Table?</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Explain real but imperfect Communion and the Hierarchy of Truths with Citations from Unitatis Redintegratio.</li>
+<li>Distinguish Ecumenism from Interreligious Dialogue and give one Indian Example of each.</li>
+<li>Name the four Forms of Dialogue and describe how a Parish in Bengal could practise the first two.</li>
+</ol></div>
+</section>
+<section class="chapter" id="unit-14-the-synodal-church">
+<h2>Unit 14: The Synodal Church</h2>
+<p>The last Unit brings the Course to the Present. It has two Halves: the Ecclesiology of Pope Francis, which set the Agenda, and the present Stage of that Agenda under Pope Leo XIV, which the Student will live and serve as a Priest.</p>
+<p><strong>CORRECTION NOTE: </strong>The Syllabus and the Source Material for this Unit were written while Pope Francis was reigning, and they speak of him in the present Tense. These Notes update the Unit. Pope Francis died in 2025, and Cardinal Robert Francis Prevost was elected on 8 May 2025, taking the Name Leo XIV, the first Pope born in the United States of America. The Doctrinal Content of the Unit stands unchanged; the current Section has been added and the Tenses corrected. Verify the latest Developments before teaching, since this Material moves quickly.</p>
+<h3 class="sec">Evangelii Gaudium as the Programme (24 November 2013)</h3>
+<p>Evangelii Gaudium, published on the Solemnity of Christ the King in 2013, is the Programmatic Document of the Pontificate of Francis, and it is an Ecclesiological Document from Beginning to End.</p>
+<p><strong>Missionary Conversion (EG 25-33).</strong> Not a Programme of Activities but a Conversion of Structures. Every Custom, Structure, Timetable and Style is to be assessed by one Question: does it help the Proclamation of the Gospel, or does it exist for Self-Preservation? Francis states that he dreams of a missionary Option capable of transforming everything, so that the Structures of the Church become suitable channels for Evangelisation rather than for Self-Preservation (EG 27).</p>
+<p><strong>The Church going forth (EG 20-24).</strong> Five Verbs describe the Community that evangelises: it takes the first Step, it involves itself, it accompanies, it bears Fruit, it celebrates. Learn the five Verbs; they make an excellent Structure for a Parish Plan.</p>
+<p><strong>The Field Hospital.</strong> The Image comes from the Interview of 2013 and recurs throughout the Pontificate: after a Battle one does not begin by asking a Wounded Man about his Cholesterol Level; one stops the Bleeding. Francis prefers a Church bruised and dirty from being out on the Streets to a Church unwell from being closed in on itself (EG 49).</p>
+<h3 class="sec">Three Pillars</h3>
+<p><strong>1. A poor Church for the Poor.</strong> The Preferential Option for the Poor is a theological Category before it is a social or political one (EG 198). The Poor have much to teach the Church, and Evangelisation without a concrete Social Consequence is not the Gospel of Jesus. Laudato Si (24 May 2015, Solemnity of Pentecost) joins the Cry of the Earth to the Cry of the Poor and makes Ecology an Ecclesiological Matter.</p>
+<p><strong>2. A listening Church.</strong> The whole People of God is infallible in Believing (EG 119), and therefore the Pastor must sometimes walk behind the Flock, since the Flock has its own Nose for finding new Paths. Sensus Fidei ceases to be a Footnote in the Manuals and becomes a Method of Governance.</p>
+<p><strong>3. A merciful Church.</strong> The Extraordinary Jubilee of Mercy (2015-2016), the Reform of the Marriage Nullity Process (Mitis Iudex, 2015), and the eighth Chapter of Amoris Laetitia (2016) on Accompaniment and Discernment. The Confessional is not a Torture Chamber, and the Eucharist is not a Prize for the Perfect but Nourishment for the Weak (EG 44, 47).</p>
+<h3 class="sec">Structural Reform</h3>
+<p><strong>The Council of Cardinals</strong> was established in 2013 to assist the Pope in the Governance of the Church and in the Reform of the Curia. <strong>Praedicate Evangelium</strong> (19 March 2022) replaced the previous Constitution of the Roman Curia, placed Evangelisation at the Head of the Dicasteries, and provided that any Member of the Faithful, including Lay Wo/Men, may preside over a Dicastery, since Authority in the Curia is exercised by Delegation from the Pope rather than by Ordination. <strong>Wo/Men in Office</strong>: Appointments of Wo/Men as Secretaries and Prefects in the Curia followed, and in the Assembly of 2023 non-Bishops, including Wo/Men, were made Members of the Synod with a Vote.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>That last Point deserves careful Teaching. Voting Membership for non-Bishops in a Synod of Bishops raises the exact Question left open by Vatican II: what is the Bond between Episcopal Collegiality, which is sacramental, and ecclesial Synodality, which involves the whole People of God? The Question is genuinely open in current Theology. Present it as open; do not settle it in a Classroom by Preference.</p>
+<h3 class="sec">Synodality: The Word, the Doctrine, the Method</h3>
+<p><strong>Synodos</strong> (Gk) = syn (together) + hodos (way, path) = Walking Together. The Hindi Panchayat and the Gram Sabha give the nearest Indian Image: those concerned sit together under the Tree until a common Mind is reached, and the Decision is then carried by those who bear Responsibility.</p>
+<p>The International Theological Commission, in Synodality in the Life and Mission of the Church (2018), teaches that Synodality is a constitutive Dimension of the Church and not an occasional Event. The Formula of the Fathers is quoted: the Church is the Name for Walking Together. Synodality is therefore the Modus Vivendi et Operandi of the People of God.</p>
+<p><strong>The Theme of the Synod of 2021 to 2024: Communion, Participation, Mission.</strong> Learn this Triad. Communion is the Nature of the Church, Participation is the Manner of her Life, Mission is her Purpose. Remove Mission and Synodality becomes an internal Conversation; remove Communion and it becomes a Parliament.</p>
+<p><strong>The All, the Some and the One.</strong> The whole People of God is consulted; a Group is convened to discern on behalf of all; the One, that is the Bishop in his Church and the Pope in the universal Church, confirms and decides. All three are necessary. This is the classical Answer to the Objection that Synodality is Democracy by another Name.</p>
+<p><strong>Conversation in the Spirit</strong> is the Method. Each Person speaks once without Interruption; Silence follows; each speaks again of what struck him in what others said; then the Group seeks what the Spirit is saying to this Church. Debate is postponed so that Listening can happen. The Method is simple, it can be taught in a Village, and it is the most practical Thing in this whole Course.</p>
+<p><strong>The Path in Dates.</strong> The Synod on Synodality opened in October 2021 with a Diocesan Phase, passed through National and Continental Stages, and held two Assemblies in Rome in October 2023 and October 2024. The Final Document of October 2024 was received by Pope Francis and given Standing in the ordinary Magisterium without a separate Post-Synodal Exhortation, itself an unusual and significant Act.</p>
+<h3 class="sec">The Present Stage Under Pope Leo Xiv</h3>
+<p>Pope Leo XIV, elected on 8 May 2025, took as his Episcopal Motto In Illo uno unum, In the One we are one, drawn from Augustine and pointing to Jn 17. Continuity with the synodal Path has been explicit.</p>
+<p><strong>Dilexi Te</strong>, the first Apostolic Exhortation, signed on 4 October 2025, the Feast of Saint Francis of Assisi, takes up a Text begun by Pope Francis and continues the Teaching on the Poor, ordered around Conversion, Communion and Solidarity.</p>
+<p><strong>Magnifica Humanitas</strong>, the first Encyclical, signed on 15 May 2026, the one hundred and thirty-fifth Anniversary of Rerum Novarum, and released on 25 May 2026, treats the Safeguarding of the Human Person in the Time of Artificial Intelligence. Its two governing Images are Babel and the Rebuilding of Jerusalem under Nehemiah. The ecclesiological Point for this Course is that the Encyclical proposes Synodality not only as a Church Method but as a Way for a plural Society to build together, so that Plurality becomes a Resource rather than Confusion.</p>
+<p><strong>The Implementation Path.</strong> The Synodal Process continues towards an Ecclesial Assembly at the Vatican in October 2028, confirmed and promoted by Pope Leo XIV, in four Stages: Recollecting in the first half of 2027, Interpreting in the second half of 2027, Orienting in the early Months of 2028, and Celebrating in October 2028. Dioceses, Episcopal Conferences and Continental Bodies are asked to assess how far Synodality has taken Root.</p>
+<p>Commentators observe that the present Pontificate stresses <strong>episcopal collegial Synodality</strong>, that is the Collegiality of Bishops with the Pope, alongside the wider ecclesial Synodality of the whole People. The Task named for this Pontificate is to show that a synodal Church can also be a governable Church. That Sentence is the Examination Question of the next twenty Years, and the Students in this Room will answer it with their Lives and not with their Answer Scripts.</p>
+<h3 class="sec">Honest Questions About Synodality</h3>
+<p><strong>Is it Democracy?</strong> No, if Discernment of the Will of God is the Aim rather than the Aggregation of Preferences. But the Objection has Force wherever Listening is organised and Decision is not, so that People are consulted and then hear Nothing further.</p>
+<p><strong>Who decides?</strong> The One who bears Responsibility, after Listening. The unresolved Matter is what Weight a Consultation carries and what a Pastor owes to a Consultation he sets aside.</p>
+<p><strong>Does it slow the Church down?</strong> Yes. Discernment is slower than Decree. The Answer is that a Decision received by the whole Body is implemented faster than a Decree that nobody owns.</p>
+<p><strong>Does it touch Doctrine?</strong> Synodality is a Method of Discernment inside the Faith, not a Mechanism for altering the Deposit. Development of Doctrine, treated in Unit 12, follows its own Criteria.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> India entered the synodal Process through Diocesan Consultations and the National Syntheses prepared by the CBCI and the CCBI. Three Realities determine whether Synodality will be genuine in this Country. First, <strong>Caste</strong>: a Consultation in which Dalit Catholics, who form a large Proportion of the Catholic Faithful in India, do not speak freely is not a Consultation. The CBCI Policy of Dalit Empowerment in the Catholic Church in India, released in December 2016, remains the Test Document, and the Question is Implementation. Second, <strong>the Place of Wo/Men</strong>, above all the Wo/Men Religious who run the Schools, Dispensaries and Social Centres of this Church and who have rarely been present where Decisions are made. Third, <strong>the Habit of Deference</strong>: in a Culture where Juniors do not contradict Seniors in Public, Conversation in the Spirit needs deliberate Training, or the Consultation will simply reproduce the Voice of the Parish Priest with more Signatures under it.</p>
+<p>The Bengal Church knows the Cost and the Promise of this. A Minority in a Land of many Faiths, served by Congregations of many Origins, with Migrant Labour leaving the Villages and returning with new Questions, cannot govern itself by Notices on a Board. It can only walk together, or fail together.</p>
+<h3 class="sec">Review Questions</h3>
+<div class="review"><h4>Review Questions</h4><ol>
+<li>Give the Etymology of Synodality and state the Triad of the Synod of 2021 to 2024 with a short Explanation of each Term.</li>
+<li>Explain the Formula of the All, the Some and the One, and answer the Objection that Synodality is Democracy.</li>
+<li>Describe the four Stages of the Path towards the Ecclesial Assembly of October 2028 and one Indian Condition for the Success of that Path.</li>
+</ol></div>
+</section>
+<section class="chapter" id="closing-unit-the-church-of-the-open-door">
+<h2>Closing Unit: The Church of the Open Door</h2>
+<p>The Course began in an Upper Room with the Doors shut, and it ends in the Street. That Movement is the whole of Ecclesiology.</p>
+<p>Return to Acts 2. The House where they were sitting is filled with the Sound of a mighty Wind (2:2). Fire rests on each one, not on a Committee (2:3). They go out, and a Crowd of Strangers hears each in his own Tongue (2:6). Three Thousand are baptised (2:41). They hold Teaching, Fellowship, Bread and Prayer (2:42). They sell what they have for whoever is in Need (2:45). And the Lord added daily to their Number those who were being saved (2:47).</p>
+<p>Every Unit of this Course is in that Paragraph. <strong>Communion for Mission</strong>, planted in the first Pages, is harvested here: the Community is gathered in order to be sent, and the Sending is not an Activity of the Church but the Nature of the Church. <strong>The Open Door</strong>, planted in the same Place, is harvested here too: a Church that keeps the Doors of the Upper Room shut, whether out of Fear, out of Comfort or out of Caste, is not persecuted; she is merely absent.</p>
+<h3 class="sec">The Four Tasks and the Four Marks</h3>
+<p>The Four Tasks of the Community, from Acts 2:42, in the classical Vocabulary: <strong>Marturia</strong> (Witness), <strong>Koinonia</strong> (Communion), <strong>Leitourgia</strong> (Worship), <strong>Diakonia</strong> (Service). The Four Marks of the Creed: <strong>One, Holy, Catholic, Apostolic</strong>. The Marks are Gifts before they are Achievements, and each is also a Task: One and yet divided, therefore Ecumenism; Holy and yet sinful, therefore Penance and Reform; Catholic and yet provincial, therefore Inculturation; Apostolic and yet forgetful, therefore Fidelity to the Word.</p>
+<p>Arrow Chain for the whole Course: <strong>Gift =&gt; Gathering =&gt; Formation =&gt; Sending =&gt; Service =&gt; Praise.</strong></p>
+<h3 class="sec">The Church That India Needs</h3>
+<p>A Church in Dialogue with Hindu, Muslim, Sikh, Buddhist and Jain Neighbours, without Fear and without Aggression. A Church standing with the Dalit and the Adivasi, not on their Behalf but at their Side. A Church led by a Laity that is trusted with more than the Collection. A Church at Home in Indian Speech, Music, Silence and Symbol. A Church prophetic where the Poor are robbed and the Earth is stripped. A Church of small Communities where the Eucharist makes the whole Church present under a Tin Roof. A Church that walks together because it has no Choice and no Wish to walk otherwise.</p>
+<p><em>Sarve bhavantu sukhinah, sarve santu niramayah;</em></p>
+<p><em>sarve bhadrani pashyantu, ma kashchit duhkhabhag bhavet.</em></p>
+<p>May all be happy, may all be free from Illness, may all see what is good, may no one suffer. The ancient Prayer of this Land is not a Rival to the Prayer of Jesus but a Preparation for it: that they may all be one, so that the World may believe (Jn 17:21). Vasudhaiva Kutumbakam, the World is one Family, is what Catholicity looks like when it is spoken in Sanskrit.</p>
+<h3 class="sec">A Last Word to the Seminarian</h3>
+<p>You will be ordained into a Church that is holy and wounded, ancient and unfinished, glorious in her Saints and embarrassing in her Records. Do not join the Party of those who only praise her, and do not join the Party of those who only accuse her. Join the smaller and harder Company of those who love her enough to reform her, beginning with the Parish they are given and the Habits they carry.</p>
+<p>The Fire of Pentecost was distributed and rested on each one of them (Acts 2:3). Not on the Structure. On each one. On You.</p>
+<p>The Door of the Upper Room is open. What are we still doing inside?</p>
+</section>
+<section class="chapter" id="select-bibliography">
+<h2>Select Bibliography</h2>
+<h3 class="sec">Magisterial Sources</h3>
+<p>Second Vatican Council. Lumen Gentium: Dogmatic Constitution on the Church. 21 November 1964.</p>
+<p>Second Vatican Council. Unitatis Redintegratio: Decree on Ecumenism. 21 November 1964.</p>
+<p>Second Vatican Council. Dei Verbum: Dogmatic Constitution on Divine Revelation. 18 November 1965.</p>
+<p>Second Vatican Council. Gaudium et Spes: Pastoral Constitution on the Church in the Modern World. 7 December 1965.</p>
+<p>Second Vatican Council. Christus Dominus: Decree on the Pastoral Office of Bishops. 28 October 1965.</p>
+<p>Second Vatican Council. Nostra Aetate: Declaration on the Relation of the Church to Non-Christian Religions. 28 October 1965.</p>
+<p>First Vatican Council. Pastor Aeternus: Dogmatic Constitution on the Church of Christ. 18 July 1870.</p>
+<p>Pius XII. Mystici Corporis Christi: Encyclical Letter on the Mystical Body of Christ. 29 June 1943.</p>
+<p>Paul VI. Apostolica Sollicitudo: Motu Proprio Establishing the Synod of Bishops. 15 September 1965.</p>
+<p>John Paul II. Ut Unum Sint: Encyclical Letter on Commitment to Ecumenism. 25 May 1995.</p>
+<p>John Paul II. Apostolos Suos: Motu Proprio on the Theological and Juridical Nature of Episcopal Conferences. 21 May 1998.</p>
+<p>Pontifical Council for Interreligious Dialogue and Congregation for the Evangelization of Peoples. Dialogue and Proclamation. 19 May 1991.</p>
+<p>Francis. Evangelii Gaudium: Apostolic Exhortation on the Proclamation of the Gospel in Today World. 24 November 2013.</p>
+<p>Francis. Laudato Si: Encyclical Letter on Care for Our Common Home. 24 May 2015.</p>
+<p>Francis. Amoris Laetitia: Post-Synodal Apostolic Exhortation on Love in the Family. 19 March 2016.</p>
+<p>Francis. Veritatis Gaudium: Apostolic Constitution on Ecclesiastical Universities and Faculties. 8 December 2017.</p>
+<p>Francis. Querida Amazonia: Post-Synodal Apostolic Exhortation. 2 February 2020.</p>
+<p>Francis. Praedicate Evangelium: Apostolic Constitution on the Roman Curia. 19 March 2022.</p>
+<p>International Theological Commission. Synodality in the Life and Mission of the Church. 2 March 2018.</p>
+<p>General Secretariat of the Synod. Final Document of the XVI Ordinary General Assembly of the Synod of Bishops. October 2024.</p>
+<p>General Secretariat of the Synod. The Path of Implementation of the Synod: Towards the Assemblies 2027-2028. May 2026.</p>
+<p>Leo XIV. Dilexi Te: Apostolic Exhortation on Love for the Poor. 4 October 2025.</p>
+<p>Leo XIV. Magnifica Humanitas: Encyclical Letter on Safeguarding the Human Person in the Time of Artificial Intelligence. 15 May 2026.</p>
+<h3 class="sec">Books and Studies</h3>
+<p>Bockmuehl, Markus, and Michael B. Thompson, eds. A Vision for the Church: Studies in Early Christian Ecclesiology. Edinburgh: T&amp;T Clark, 1997.</p>
+<p>Brown, Raymond E. The Churches the Apostles Left Behind. New York: Paulist Press, 1984.</p>
+<p>Coloe, Mary L. Dwelling in the Household of God: Johannine Ecclesiology and Spirituality. Collegeville, MN: Liturgical Press, 2007.</p>
+<p>Congar, Yves. Vraie et fausse reforme dans l Eglise. Paris: Cerf, 1950.</p>
+<p>de Lubac, Henri. Catholicism: Christ and the Common Destiny of Man. Translated by Lancelot C. Sheppard and Elizabeth Englund. San Francisco: Ignatius Press, 1988.</p>
+<p>Dulles, Avery. Models of the Church. Expanded edition. New York: Image Books, 2002.</p>
+<p>Faggioli, Massimo. True Reform: Liturgy and Ecclesiology in Sacrosanctum Concilium. Collegeville, MN: Liturgical Press, 2012.</p>
+<p>Ferguson, Everett. The Church of Christ: A Biblical Ecclesiology for Today. Grand Rapids, MI: Eerdmans, 1996.</p>
+<p>Gaillardetz, Richard R. Ecclesiology for a Global Church: A People Called and Sent. Maryknoll, NY: Orbis Books, 2008.</p>
+<p>Karkkainen, Veli-Matti. An Introduction to Ecclesiology: Ecumenical, Historical and Global Perspectives. Downers Grove, IL: InterVarsity Press, 2002.</p>
+<p>Kung, Hans. The Church. Translated by Ray and Rosaleen Ockenden. London: Burns and Oates, 1967.</p>
+<p>Lennan, Richard. The Ecclesiology of Karl Rahner. Oxford: Clarendon Press, 1995.</p>
+<p>Mansini, Guy. Ecclesiology. Washington, DC: Catholic University of America Press, 2021.</p>
+<p>McPartlan, Paul. The Eucharist Makes the Church: Henri de Lubac and John Zizioulas in Dialogue. Edinburgh: T&amp;T Clark, 1993.</p>
+<p>Minear, Paul S. Images of the Church in the New Testament. Philadelphia: Westminster Press, 1960.</p>
+<p>Newman, John Henry. An Essay on the Development of Christian Doctrine. London: Longmans, Green, 1909.</p>
+<p>Phan, Peter C. In Our Own Tongues: Perspectives from Asia on Mission and Inculturation. Maryknoll, NY: Orbis Books, 2003.</p>
+<p>Prusak, Bernard P. The Church Unfinished: Ecclesiology through the Centuries. New York: Paulist Press, 2004.</p>
+<p>Rahner, Karl. Theological Investigations. Volume 20. Translated by Edward Quinn. New York: Crossroad, 1981.</p>
+<p>Ratzinger, Joseph. Church, Ecumenism and Politics: New Endeavors in Ecclesiology. San Francisco: Ignatius Press, 2008.</p>
+<p>Zizioulas, John D. Being as Communion: Studies in Personhood and the Church. Crestwood, NY: St Vladimir Seminary Press, 1985.</p>
+<h3 class="sec">Indian and Asian Sources</h3>
+<p>Catholic Bishops Conference of India. Church in India Today: Report of the All India Seminar, Bangalore 1969. New Delhi: CBCI Centre, 1969.</p>
+<p>Catholic Bishops Conference of India. Policy of Dalit Empowerment in the Catholic Church in India. New Delhi: CBCI Centre, 2016.</p>
+<p>Federation of Asian Bishops Conferences. For All the Peoples of Asia: Documents from 1970 to the Present. Edited by Gaudencio Rosales and C. G. Arevalo. Quezon City: Claretian Publications, various volumes.</p>
+<p>Amaladoss, Michael. Making All Things New: Dialogue, Pluralism and Evangelization in Asia. Maryknoll, NY: Orbis Books, 1990.</p>
+<p>Soares-Prabhu, George M. The Dharma of Jesus. Edited by Francis X. D Sa. Maryknoll, NY: Orbis Books, 2003.</p>
+<p>Wilfred, Felix. Margins: Site of Asian Theologies. Delhi: ISPCK, 2008.</p>
+</section>
+</main>
+
+<footer class="page">
+  Class notes for the Bachelor of Theology Programme, Morning Star Regional Seminary, Barrackpore &mdash; affiliated to Jnana-Deepa Pontifical Athenaeum, Pune. STUDENT EDITION. Text only, no diagrams &mdash; hierarchy carried by heading levels, bold, italic and colour.
+</footer>
