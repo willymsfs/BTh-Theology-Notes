@@ -1,0 +1,2158 @@
+{
+  "nodes": [
+    {
+      "id": "g0",
+      "type": "group",
+      "label": "Minority, Curia & Religious Liberty",
+      "x": 0,
+      "y": 0,
+      "width": 880,
+      "height": 620,
+      "color": "1"
+    },
+    {
+      "id": "n_alfredo_ottaviani",
+      "type": "file",
+      "file": "Alfredo Ottaviani.md",
+      "x": 20,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_marcel_lefebvre",
+      "type": "file",
+      "file": "Archbishop Marcel Lefebvre.md",
+      "x": 220,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_achille_lienart",
+      "type": "file",
+      "file": "Cardinal Achille Li\u00e9nart (Lille).md",
+      "x": 420,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_josef_frings",
+      "type": "file",
+      "file": "Cardinal Josef Frings (Cologne).md",
+      "x": 20,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_leo_josef_suenens",
+      "type": "file",
+      "file": "Cardinal Leo Josef Suenens (Malines-Brussels).md",
+      "x": 220,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_coetus_internationalis_patrum",
+      "type": "file",
+      "file": "Coetus Internationalis Patrum.md",
+      "x": 420,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_dignitatis_humanae",
+      "type": "file",
+      "file": "Dignitatis Humanae (Religious Liberty).md",
+      "x": 20,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_doctrinal_commission",
+      "type": "file",
+      "file": "Doctrinal  Theological Commission.md",
+      "x": 220,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_vatican_i",
+      "type": "file",
+      "file": "First Vatican Council (1869-1870).md",
+      "x": 420,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_francis_spellman",
+      "type": "file",
+      "file": "Francis Spellman.md",
+      "x": 20,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_graph_insights",
+      "type": "file",
+      "file": "Graph Insights.md",
+      "x": 220,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_john_courtney_murray",
+      "type": "file",
+      "file": "John Courtney Murray.md",
+      "x": 420,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_religious_liberty",
+      "type": "file",
+      "file": "Religious Liberty.md",
+      "x": 20,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_sspx",
+      "type": "file",
+      "file": "Society of St Pius X (SSPX).md",
+      "x": 220,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_vatican_ii_moc",
+      "type": "file",
+      "file": "Vatican II MOC.md",
+      "x": 420,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "label": "The 16 Documents & Curial Bodies",
+      "x": 960,
+      "y": 0,
+      "width": 880,
+      "height": 620,
+      "color": "2"
+    },
+    {
+      "id": "n_ad_gentes",
+      "type": "file",
+      "file": "Ad Gentes (Missionary Activity).md",
+      "x": 980,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_augustin_bea",
+      "type": "file",
+      "file": "Augustin Bea.md",
+      "x": 1180,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_christus_dominus",
+      "type": "file",
+      "file": "Christus Dominus.md",
+      "x": 1380,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_documents_index",
+      "type": "file",
+      "file": "Documents Index.md",
+      "x": 980,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_gravissimum_educationis",
+      "type": "file",
+      "file": "Gravissimum Educationis.md",
+      "x": 1180,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_inter_mirifica",
+      "type": "file",
+      "file": "Inter Mirifica.md",
+      "x": 1380,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_nostra_aetate",
+      "type": "file",
+      "file": "Nostra Aetate (Non-Christian Religions).md",
+      "x": 980,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_optatam_totius",
+      "type": "file",
+      "file": "Optatam Totius.md",
+      "x": 1180,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orientalium_ecclesiarum",
+      "type": "file",
+      "file": "Orientalium Ecclesiarum.md",
+      "x": 1380,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_perfectae_caritatis",
+      "type": "file",
+      "file": "Perfectae Caritatis.md",
+      "x": 980,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_presbyterorum_ordinis",
+      "type": "file",
+      "file": "Presbyterorum Ordinis.md",
+      "x": 1180,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_sacrosanctum_concilium",
+      "type": "file",
+      "file": "Sacrosanctum Concilium (Sacred Liturgy).md",
+      "x": 1380,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_vatican_ii",
+      "type": "file",
+      "file": "Second Vatican Council (1962-1965).md",
+      "x": 980,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_secretariat_christian_unity",
+      "type": "file",
+      "file": "Secretariat for Christian Unity.md",
+      "x": 1180,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unitatis_redintegratio",
+      "type": "file",
+      "file": "Unitatis Redintegratio (Ecumenism).md",
+      "x": 1380,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "Council Launch & Aggiornamento",
+      "x": 1920,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "3"
+    },
+    {
+      "id": "n_aggiornamento",
+      "type": "file",
+      "file": "Aggiornamento (updating).md",
+      "x": 1940,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_class_notes_vatican_ii",
+      "type": "file",
+      "file": "Class Notes \u2014 Vatican II.md",
+      "x": 2140,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_dei_verbum",
+      "type": "file",
+      "file": "Dei Verbum (Divine Revelation).md",
+      "x": 2340,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_gaudet_mater_ecclesia",
+      "type": "file",
+      "file": "Gaudet Mater Ecclesia (opening address).md",
+      "x": 1940,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_jean_guitton",
+      "type": "file",
+      "file": "Jean Guitton.md",
+      "x": 2140,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_nouvelle_theologie",
+      "type": "file",
+      "file": "Nouvelle Th\u00e9ologie.md",
+      "x": 2340,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_athenagoras",
+      "type": "file",
+      "file": "Patriarch Athenagoras.md",
+      "x": 1940,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_john_xxiii",
+      "type": "file",
+      "file": "Pope John XXIII (Angelo Roncalli).md",
+      "x": 2140,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_paul_vi",
+      "type": "file",
+      "file": "Pope Paul VI (Card. Montini).md",
+      "x": 2340,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ressourcement",
+      "type": "file",
+      "file": "Ressourcement (return to the sources).md",
+      "x": 1940,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "label": "Ecclesiology, Laity & Black Week",
+      "x": 2880,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "4"
+    },
+    {
+      "id": "n_apostolicam_actuositatem",
+      "type": "file",
+      "file": "Apostolicam Actuositatem (Laity).md",
+      "x": 2900,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_black_week",
+      "type": "file",
+      "file": "Black Week (14-21 Nov 1964).md",
+      "x": 3100,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_gerard_philips",
+      "type": "file",
+      "file": "G\u00e9rard Philips.md",
+      "x": 3300,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_lay_apostolate",
+      "type": "file",
+      "file": "Lay Apostolate.md",
+      "x": 2900,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_lumen_gentium",
+      "type": "file",
+      "file": "Lumen Gentium (the Church).md",
+      "x": 3100,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_nota_praevia",
+      "type": "file",
+      "file": "Nota Explicativa Praevia.md",
+      "x": 3300,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_patrick_keegan",
+      "type": "file",
+      "file": "Patrick Keegan.md",
+      "x": 2900,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_people_of_god",
+      "type": "file",
+      "file": "People of God (Populus Dei).md",
+      "x": 3100,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_subsistit_in",
+      "type": "file",
+      "file": "Subsistit in.md",
+      "x": 3300,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_triple_office",
+      "type": "file",
+      "file": "Triple Office of Christ (Priest, Prophet, King).md",
+      "x": 2900,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "label": "Progressive Wing (Concilium)",
+      "x": 0,
+      "y": 700,
+      "width": 880,
+      "height": 520,
+      "color": "5"
+    },
+    {
+      "id": "n_collegiality",
+      "type": "file",
+      "file": "Collegiality.md",
+      "x": 20,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_concilium",
+      "type": "file",
+      "file": "Concilium journalschool.md",
+      "x": 220,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_edward_schillebeeckx",
+      "type": "file",
+      "file": "Edward Schillebeeckx.md",
+      "x": 420,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_gaudium_et_spes",
+      "type": "file",
+      "file": "Gaudium et Spes (Church in the Modern World).md",
+      "x": 20,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_hans_kung",
+      "type": "file",
+      "file": "Hans K\u00fcng.md",
+      "x": 220,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_karl_rahner",
+      "type": "file",
+      "file": "Karl Rahner.md",
+      "x": 420,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_marie_dominique_chenu",
+      "type": "file",
+      "file": "Marie-Dominique Chenu.md",
+      "x": 20,
+      "y": 940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_progressive_neo_thomist",
+      "type": "file",
+      "file": "Progressive  Neo-Thomist tendency.md",
+      "x": 220,
+      "y": 940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_signs_of_the_times",
+      "type": "file",
+      "file": "Signs of the Times.md",
+      "x": 420,
+      "y": 940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_yves_congar",
+      "type": "file",
+      "file": "Yves Congar.md",
+      "x": 20,
+      "y": 1020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g5",
+      "type": "group",
+      "label": "Ressourcement Wing (Communio)",
+      "x": 960,
+      "y": 700,
+      "width": 660,
+      "height": 420,
+      "color": "6"
+    },
+    {
+      "id": "n_communio",
+      "type": "file",
+      "file": "Communio journalschool.md",
+      "x": 980,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_hans_urs_von_balthasar",
+      "type": "file",
+      "file": "Hans Urs von Balthasar.md",
+      "x": 1180,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_henri_de_lubac",
+      "type": "file",
+      "file": "Henri de Lubac.md",
+      "x": 1380,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_hermeneutic_of_continuity",
+      "type": "file",
+      "file": "Hermeneutic of Continuity  Reform.md",
+      "x": 980,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_hermeneutic_of_rupture",
+      "type": "file",
+      "file": "Hermeneutic of Rupture  Discontinuity.md",
+      "x": 1180,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_jean_danielou",
+      "type": "file",
+      "file": "Jean Dani\u00e9lou.md",
+      "x": 1380,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_joseph_ratzinger",
+      "type": "file",
+      "file": "Joseph Ratzinger.md",
+      "x": 980,
+      "y": 940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_benedict_xvi",
+      "type": "file",
+      "file": "Pope Benedict XVI.md",
+      "x": 1180,
+      "y": 940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ressourcement_neo_augustinian",
+      "type": "file",
+      "file": "Ressourcement  Neo-Augustinian tendency.md",
+      "x": 1380,
+      "y": 940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g6",
+      "type": "group",
+      "label": "Ecumenical Councils in History",
+      "x": 1920,
+      "y": 700,
+      "width": 660,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_chalcedon",
+      "type": "file",
+      "file": "Council of Chalcedon (451).md",
+      "x": 1940,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ephesus",
+      "type": "file",
+      "file": "Council of Ephesus (431).md",
+      "x": 2140,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_trent",
+      "type": "file",
+      "file": "Council of Trent (1545-1563).md",
+      "x": 2340,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ecumenical_councils",
+      "type": "file",
+      "file": "Ecumenical Councils (21).md",
+      "x": 1940,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_constantinople_i",
+      "type": "file",
+      "file": "First Council of Constantinople (381).md",
+      "x": 2140,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_nicaea_i",
+      "type": "file",
+      "file": "First Council of Nicaea (325).md",
+      "x": 2340,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g7",
+      "type": "group",
+      "label": "Observers & Reception Schools",
+      "x": 2880,
+      "y": 700,
+      "width": 660,
+      "height": 400,
+      "color": "2"
+    },
+    {
+      "id": "n_arcic",
+      "type": "file",
+      "file": "Anglican-Roman Catholic International Commission (ARCIC).md",
+      "x": 2900,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_bologna_school",
+      "type": "file",
+      "file": "Bologna School.md",
+      "x": 3100,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_giuseppe_alberigo",
+      "type": "file",
+      "file": "Giuseppe Alberigo.md",
+      "x": 3300,
+      "y": 780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_john_moorman",
+      "type": "file",
+      "file": "John Moorman (Anglican, Bishop of Ripon).md",
+      "x": 2900,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_oscar_cullmann",
+      "type": "file",
+      "file": "Oscar Cullmann (Lutheran observer).md",
+      "x": 3100,
+      "y": 860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g8",
+      "type": "group",
+      "label": "Cardinal Bernard Alfrink (Utrecht)",
+      "x": 0,
+      "y": 1300,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_bernard_alfrink",
+      "type": "file",
+      "file": "Cardinal Bernard Alfrink (Utrecht).md",
+      "x": 20,
+      "y": 1380,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g9",
+      "type": "group",
+      "label": "Edmund Schlink (Protestant observer)",
+      "x": 960,
+      "y": 1300,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_edmund_schlink",
+      "type": "file",
+      "file": "Edmund Schlink (Protestant observer).md",
+      "x": 980,
+      "y": 1380,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g10",
+      "type": "group",
+      "label": "Cardinal Ernesto Ruffini (Palermo)",
+      "x": 1920,
+      "y": 1300,
+      "width": 600,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_ernesto_ruffini",
+      "type": "file",
+      "file": "Cardinal Ernesto Ruffini (Palermo).md",
+      "x": 1940,
+      "y": 1380,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g11",
+      "type": "group",
+      "label": "Cardinal Franz K\u00f6nig (Vienna)",
+      "x": 2880,
+      "y": 1300,
+      "width": 600,
+      "height": 400,
+      "color": "6"
+    },
+    {
+      "id": "n_franz_konig",
+      "type": "file",
+      "file": "Cardinal Franz K\u00f6nig (Vienna).md",
+      "x": 2900,
+      "y": 1380,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g12",
+      "type": "group",
+      "label": "Gertrud Heinzelmann",
+      "x": 0,
+      "y": 1780,
+      "width": 600,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_gertrud_heinzelmann",
+      "type": "file",
+      "file": "Gertrud Heinzelmann.md",
+      "x": 20,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g13",
+      "type": "group",
+      "label": "Cardinal Giuseppe Siri (Genoa)",
+      "x": 960,
+      "y": 1780,
+      "width": 600,
+      "height": 400,
+      "color": "2"
+    },
+    {
+      "id": "n_giuseppe_siri",
+      "type": "file",
+      "file": "Cardinal Giuseppe Siri (Genoa).md",
+      "x": 980,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g14",
+      "type": "group",
+      "label": "Cardinal Julius D\u00f6pfner (Munich)",
+      "x": 1920,
+      "y": 1780,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_julius_dopfner",
+      "type": "file",
+      "file": "Cardinal Julius D\u00f6pfner (Munich).md",
+      "x": 1940,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g15",
+      "type": "group",
+      "label": "Karl Barth",
+      "x": 2880,
+      "y": 1780,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_karl_barth",
+      "type": "file",
+      "file": "Karl Barth.md",
+      "x": 2900,
+      "y": 1860,
+      "width": 180,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_vatican_ii_achille_lienart",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_achille_lienart",
+      "label": "day_one_intervention [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_alfredo_ottaviani",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_alfredo_ottaviani",
+      "label": "dominated_preparatory_phase [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_jean_guitton",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_jean_guitton",
+      "label": "first_lay_auditor_of [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_john_moorman",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_john_moorman",
+      "label": "chief_anglican_observer [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_john_xxiii",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_john_xxiii",
+      "label": "convened [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_josef_frings",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_josef_frings",
+      "label": "day_one_intervention [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_oscar_cullmann",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_oscar_cullmann",
+      "label": "lutheran_observer [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_patrick_keegan",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_patrick_keegan",
+      "label": "only_layperson_to_address_assembly [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_paul_vi",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_paul_vi",
+      "label": "reconvened [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_ad_gentes",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_ad_gentes",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_aggiornamento",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_aggiornamento",
+      "label": "driven_by [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_apostolicam_actuositatem",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_apostolicam_actuositatem",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_christus_dominus",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_christus_dominus",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_collegiality",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_collegiality",
+      "label": "championed [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_dei_verbum",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_dei_verbum",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_dignitatis_humanae",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_dignitatis_humanae",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_ecumenical_councils",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_gaudium_et_spes",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_gaudium_et_spes",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_gravissimum_educationis",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_gravissimum_educationis",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_inter_mirifica",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_inter_mirifica",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_lumen_gentium",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_lumen_gentium",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_nostra_aetate",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_nostra_aetate",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_optatam_totius",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_optatam_totius",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_orientalium_ecclesiarum",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_orientalium_ecclesiarum",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_perfectae_caritatis",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_perfectae_caritatis",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_presbyterorum_ordinis",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_presbyterorum_ordinis",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_ressourcement",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_ressourcement",
+      "label": "driven_by [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_sacrosanctum_concilium",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_sacrosanctum_concilium",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_trent",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_trent",
+      "label": "continues [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_unitatis_redintegratio",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_unitatis_redintegratio",
+      "label": "promulgated [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_ii_vatican_i",
+      "fromNode": "n_vatican_ii",
+      "toNode": "n_vatican_i",
+      "label": "completes_unfinished_ecclesiology_of [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_i_alfredo_ottaviani",
+      "fromNode": "n_vatican_i",
+      "toNode": "n_alfredo_ottaviani",
+      "label": "sought_to_complete_agenda_of [EXTRACTED]"
+    },
+    {
+      "id": "e_vatican_i_collegiality",
+      "fromNode": "n_vatican_i",
+      "toNode": "n_collegiality",
+      "label": "centralized_authority_balanced_by [INFERRED]"
+    },
+    {
+      "id": "e_vatican_i_ecumenical_councils",
+      "fromNode": "n_vatican_i",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_trent_ecumenical_councils",
+      "fromNode": "n_trent",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_nicaea_i_constantinople_i",
+      "fromNode": "n_nicaea_i",
+      "toNode": "n_constantinople_i",
+      "label": "preceded [EXTRACTED]"
+    },
+    {
+      "id": "e_nicaea_i_ecumenical_councils",
+      "fromNode": "n_nicaea_i",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_constantinople_i_ecumenical_councils",
+      "fromNode": "n_constantinople_i",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_ephesus_ecumenical_councils",
+      "fromNode": "n_ephesus",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_chalcedon_ecumenical_councils",
+      "fromNode": "n_chalcedon",
+      "toNode": "n_ecumenical_councils",
+      "label": "part_of [EXTRACTED]"
+    },
+    {
+      "id": "e_ecumenical_councils_john_xxiii",
+      "fromNode": "n_ecumenical_councils",
+      "toNode": "n_john_xxiii",
+      "label": "described [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_aggiornamento",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_aggiornamento",
+      "label": "championed [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_alfredo_ottaviani",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_alfredo_ottaviani",
+      "label": "appointed [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_augustin_bea",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_augustin_bea",
+      "label": "appointed [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_dei_verbum",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_dei_verbum",
+      "label": "withdrew_revelation_schema_forming [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_gaudet_mater_ecclesia",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_gaudet_mater_ecclesia",
+      "label": "delivered [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_henri_de_lubac",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_henri_de_lubac",
+      "label": "rehabilitated [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_jean_guitton",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_jean_guitton",
+      "label": "invited [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_paul_vi",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_paul_vi",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_john_xxiii_marcel_lefebvre",
+      "fromNode": "n_john_xxiii",
+      "toNode": "n_marcel_lefebvre",
+      "label": "appointed_by [EXTRACTED]"
+    },
+    {
+      "id": "e_paul_vi_athenagoras",
+      "fromNode": "n_paul_vi",
+      "toNode": "n_athenagoras",
+      "label": "met_lifting_1054_excommunications [EXTRACTED]"
+    },
+    {
+      "id": "e_paul_vi_jean_guitton",
+      "fromNode": "n_paul_vi",
+      "toNode": "n_jean_guitton",
+      "label": "expanded_lay_auditors_after [EXTRACTED]"
+    },
+    {
+      "id": "e_paul_vi_leo_josef_suenens",
+      "fromNode": "n_paul_vi",
+      "toNode": "n_leo_josef_suenens",
+      "label": "appointed_moderator [EXTRACTED]"
+    },
+    {
+      "id": "e_paul_vi_lumen_gentium",
+      "fromNode": "n_paul_vi",
+      "toNode": "n_lumen_gentium",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_paul_vi_unitatis_redintegratio",
+      "fromNode": "n_paul_vi",
+      "toNode": "n_unitatis_redintegratio",
+      "label": "modified [EXTRACTED]"
+    },
+    {
+      "id": "e_benedict_xvi_hermeneutic_of_continuity",
+      "fromNode": "n_benedict_xvi",
+      "toNode": "n_hermeneutic_of_continuity",
+      "label": "championed [EXTRACTED]"
+    },
+    {
+      "id": "e_sacrosanctum_concilium_dei_verbum",
+      "fromNode": "n_sacrosanctum_concilium",
+      "toNode": "n_dei_verbum",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_sacrosanctum_concilium_documents_index",
+      "fromNode": "n_sacrosanctum_concilium",
+      "toNode": "n_documents_index",
+      "label": "part_of_type [EXTRACTED]"
+    },
+    {
+      "id": "e_sacrosanctum_concilium_inter_mirifica",
+      "fromNode": "n_sacrosanctum_concilium",
+      "toNode": "n_inter_mirifica",
+      "label": "promulgated_with [EXTRACTED]"
+    },
+    {
+      "id": "e_sacrosanctum_concilium_lumen_gentium",
+      "fromNode": "n_sacrosanctum_concilium",
+      "toNode": "n_lumen_gentium",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_ad_gentes",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_ad_gentes",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_apostolicam_actuositatem",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_apostolicam_actuositatem",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_christus_dominus",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_christus_dominus",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_class_notes_vatican_ii",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_collegiality",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_collegiality",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_documents_index",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_edward_schillebeeckx",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_edward_schillebeeckx",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_gaudium_et_spes",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_gaudium_et_spes",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_gerard_philips",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_gerard_philips",
+      "label": "shaped_by [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_henri_de_lubac",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_henri_de_lubac",
+      "label": "influenced_by [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_joseph_ratzinger",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_joseph_ratzinger",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_karl_rahner",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_karl_rahner",
+      "label": "influenced_by [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_black_week",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_black_week",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_dei_verbum",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_dei_verbum",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_people_of_god",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_people_of_god",
+      "label": "term_in [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_yves_congar",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_yves_congar",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_nota_praevia",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_nota_praevia",
+      "label": "appended_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_patrick_keegan",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_patrick_keegan",
+      "label": "addressed_connection_to [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_perfectae_caritatis",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_perfectae_caritatis",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_lumen_gentium_subsistit_in",
+      "fromNode": "n_lumen_gentium",
+      "toNode": "n_subsistit_in",
+      "label": "term_in [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_alfredo_ottaviani",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_alfredo_ottaviani",
+      "label": "co_chaired_mixed_commission_for [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_apostolicam_actuositatem",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_apostolicam_actuositatem",
+      "label": "promulgated_with [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_augustin_bea",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_augustin_bea",
+      "label": "shaped_by [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_class_notes_vatican_ii",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_joseph_ratzinger",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_joseph_ratzinger",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_ressourcement",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_ressourcement",
+      "label": "embodies [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_documents_index",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_dei_verbum_oscar_cullmann",
+      "fromNode": "n_dei_verbum",
+      "toNode": "n_oscar_cullmann",
+      "label": "praised_scripture_rediscovery_in [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_class_notes_vatican_ii",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_dignitatis_humanae",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_dignitatis_humanae",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_documents_index",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_edward_schillebeeckx",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_edward_schillebeeckx",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_henri_de_lubac",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_henri_de_lubac",
+      "label": "shaped_then_criticized [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_joseph_ratzinger",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_joseph_ratzinger",
+      "label": "tendency_read [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_marie_dominique_chenu",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_marie_dominique_chenu",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_nostra_aetate",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_nostra_aetate",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_signs_of_the_times",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_signs_of_the_times",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_yves_congar",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_yves_congar",
+      "label": "influenced_by [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_gravissimum_educationis",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_gravissimum_educationis",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_karl_rahner",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_karl_rahner",
+      "label": "tendency_read [EXTRACTED]"
+    },
+    {
+      "id": "e_gaudium_et_spes_leo_josef_suenens",
+      "fromNode": "n_gaudium_et_spes",
+      "toNode": "n_leo_josef_suenens",
+      "label": "conceptual_birthplace_via_ad_extra [EXTRACTED]"
+    },
+    {
+      "id": "e_inter_mirifica_apostolicam_actuositatem",
+      "fromNode": "n_inter_mirifica",
+      "toNode": "n_apostolicam_actuositatem",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_inter_mirifica_documents_index",
+      "fromNode": "n_inter_mirifica",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_orientalium_ecclesiarum_documents_index",
+      "fromNode": "n_orientalium_ecclesiarum",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_orientalium_ecclesiarum_unitatis_redintegratio",
+      "fromNode": "n_orientalium_ecclesiarum",
+      "toNode": "n_unitatis_redintegratio",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_unitatis_redintegratio_augustin_bea",
+      "fromNode": "n_unitatis_redintegratio",
+      "toNode": "n_augustin_bea",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_unitatis_redintegratio_documents_index",
+      "fromNode": "n_unitatis_redintegratio",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_unitatis_redintegratio_john_moorman",
+      "fromNode": "n_unitatis_redintegratio",
+      "toNode": "n_john_moorman",
+      "label": "associated_with [EXTRACTED]"
+    },
+    {
+      "id": "e_unitatis_redintegratio_nostra_aetate",
+      "fromNode": "n_unitatis_redintegratio",
+      "toNode": "n_nostra_aetate",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_unitatis_redintegratio_secretariat_christian_unity",
+      "fromNode": "n_unitatis_redintegratio",
+      "toNode": "n_secretariat_christian_unity",
+      "label": "produced [INFERRED]"
+    },
+    {
+      "id": "e_christus_dominus_collegiality",
+      "fromNode": "n_christus_dominus",
+      "toNode": "n_collegiality",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_christus_dominus_presbyterorum_ordinis",
+      "fromNode": "n_christus_dominus",
+      "toNode": "n_presbyterorum_ordinis",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_christus_dominus_documents_index",
+      "fromNode": "n_christus_dominus",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_christus_dominus_edward_schillebeeckx",
+      "fromNode": "n_christus_dominus",
+      "toNode": "n_edward_schillebeeckx",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_perfectae_caritatis_documents_index",
+      "fromNode": "n_perfectae_caritatis",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_perfectae_caritatis_optatam_totius",
+      "fromNode": "n_perfectae_caritatis",
+      "toNode": "n_optatam_totius",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_optatam_totius_documents_index",
+      "fromNode": "n_optatam_totius",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_optatam_totius_presbyterorum_ordinis",
+      "fromNode": "n_optatam_totius",
+      "toNode": "n_presbyterorum_ordinis",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_presbyterorum_ordinis_documents_index",
+      "fromNode": "n_presbyterorum_ordinis",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_apostolicam_actuositatem_lay_apostolate",
+      "fromNode": "n_apostolicam_actuositatem",
+      "toNode": "n_lay_apostolate",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_apostolicam_actuositatem_patrick_keegan",
+      "fromNode": "n_apostolicam_actuositatem",
+      "toNode": "n_patrick_keegan",
+      "label": "spoke_on_laity_schema [EXTRACTED]"
+    },
+    {
+      "id": "e_apostolicam_actuositatem_triple_office",
+      "fromNode": "n_apostolicam_actuositatem",
+      "toNode": "n_triple_office",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_apostolicam_actuositatem_documents_index",
+      "fromNode": "n_apostolicam_actuositatem",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_ad_gentes_nostra_aetate",
+      "fromNode": "n_ad_gentes",
+      "toNode": "n_nostra_aetate",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_ad_gentes_documents_index",
+      "fromNode": "n_ad_gentes",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_ad_gentes_jean_danielou",
+      "fromNode": "n_ad_gentes",
+      "toNode": "n_jean_danielou",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_ad_gentes_yves_congar",
+      "fromNode": "n_ad_gentes",
+      "toNode": "n_yves_congar",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_gravissimum_educationis_documents_index",
+      "fromNode": "n_gravissimum_educationis",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_nostra_aetate_augustin_bea",
+      "fromNode": "n_nostra_aetate",
+      "toNode": "n_augustin_bea",
+      "label": "shaped [EXTRACTED]"
+    },
+    {
+      "id": "e_nostra_aetate_dignitatis_humanae",
+      "fromNode": "n_nostra_aetate",
+      "toNode": "n_dignitatis_humanae",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_nostra_aetate_documents_index",
+      "fromNode": "n_nostra_aetate",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_dignitatis_humanae_black_week",
+      "fromNode": "n_dignitatis_humanae",
+      "toNode": "n_black_week",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_dignitatis_humanae_class_notes_vatican_ii",
+      "fromNode": "n_dignitatis_humanae",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_dignitatis_humanae_john_courtney_murray",
+      "fromNode": "n_dignitatis_humanae",
+      "toNode": "n_john_courtney_murray",
+      "label": "drafted [EXTRACTED]"
+    },
+    {
+      "id": "e_dignitatis_humanae_religious_liberty",
+      "fromNode": "n_dignitatis_humanae",
+      "toNode": "n_religious_liberty",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_dignitatis_humanae_documents_index",
+      "fromNode": "n_dignitatis_humanae",
+      "toNode": "n_documents_index",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_dignitatis_humanae_marcel_lefebvre",
+      "fromNode": "n_dignitatis_humanae",
+      "toNode": "n_marcel_lefebvre",
+      "label": "rejected [EXTRACTED]"
+    },
+    {
+      "id": "e_karl_rahner_concilium",
+      "fromNode": "n_karl_rahner",
+      "toNode": "n_concilium",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_karl_rahner_edward_schillebeeckx",
+      "fromNode": "n_karl_rahner",
+      "toNode": "n_edward_schillebeeckx",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_karl_rahner_hans_kung",
+      "fromNode": "n_karl_rahner",
+      "toNode": "n_hans_kung",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_karl_rahner_henri_de_lubac",
+      "fromNode": "n_karl_rahner",
+      "toNode": "n_henri_de_lubac",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_karl_rahner_progressive_neo_thomist",
+      "fromNode": "n_karl_rahner",
+      "toNode": "n_progressive_neo_thomist",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_karl_rahner_yves_congar",
+      "fromNode": "n_karl_rahner",
+      "toNode": "n_yves_congar",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_communio",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_communio",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_hans_kung",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_hans_kung",
+      "label": "opposed [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_hans_urs_von_balthasar",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_hans_urs_von_balthasar",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_jean_danielou",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_jean_danielou",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_joseph_ratzinger",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_joseph_ratzinger",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_people_of_god",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_people_of_god",
+      "label": "developed [EXTRACTED]"
+    },
+    {
+      "id": "e_henri_de_lubac_ressourcement_neo_augustinian",
+      "fromNode": "n_henri_de_lubac",
+      "toNode": "n_ressourcement_neo_augustinian",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_communio",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_communio",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_hans_kung",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_hans_kung",
+      "label": "opposed [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_jean_danielou",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_jean_danielou",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_josef_frings",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_josef_frings",
+      "label": "peritus_for [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_hans_urs_von_balthasar",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_hans_urs_von_balthasar",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_ressourcement",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_ressourcement",
+      "label": "advanced [EXTRACTED]"
+    },
+    {
+      "id": "e_joseph_ratzinger_ressourcement_neo_augustinian",
+      "fromNode": "n_joseph_ratzinger",
+      "toNode": "n_ressourcement_neo_augustinian",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_john_courtney_murray_francis_spellman",
+      "fromNode": "n_john_courtney_murray",
+      "toNode": "n_francis_spellman",
+      "label": "appointed_by [EXTRACTED]"
+    },
+    {
+      "id": "e_john_courtney_murray_religious_liberty",
+      "fromNode": "n_john_courtney_murray",
+      "toNode": "n_religious_liberty",
+      "label": "advocated [EXTRACTED]"
+    },
+    {
+      "id": "e_marie_dominique_chenu_concilium",
+      "fromNode": "n_marie_dominique_chenu",
+      "toNode": "n_concilium",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_marie_dominique_chenu_edward_schillebeeckx",
+      "fromNode": "n_marie_dominique_chenu",
+      "toNode": "n_edward_schillebeeckx",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_marie_dominique_chenu_progressive_neo_thomist",
+      "fromNode": "n_marie_dominique_chenu",
+      "toNode": "n_progressive_neo_thomist",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_marie_dominique_chenu_signs_of_the_times",
+      "fromNode": "n_marie_dominique_chenu",
+      "toNode": "n_signs_of_the_times",
+      "label": "developed [EXTRACTED]"
+    },
+    {
+      "id": "e_marie_dominique_chenu_yves_congar",
+      "fromNode": "n_marie_dominique_chenu",
+      "toNode": "n_yves_congar",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_edward_schillebeeckx_concilium",
+      "fromNode": "n_edward_schillebeeckx",
+      "toNode": "n_concilium",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_edward_schillebeeckx_collegiality",
+      "fromNode": "n_edward_schillebeeckx",
+      "toNode": "n_collegiality",
+      "label": "stressed [EXTRACTED]"
+    },
+    {
+      "id": "e_edward_schillebeeckx_progressive_neo_thomist",
+      "fromNode": "n_edward_schillebeeckx",
+      "toNode": "n_progressive_neo_thomist",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_edward_schillebeeckx_hans_kung",
+      "fromNode": "n_edward_schillebeeckx",
+      "toNode": "n_hans_kung",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_edward_schillebeeckx_yves_congar",
+      "fromNode": "n_edward_schillebeeckx",
+      "toNode": "n_yves_congar",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_yves_congar_class_notes_vatican_ii",
+      "fromNode": "n_yves_congar",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "cites [EXTRACTED]"
+    },
+    {
+      "id": "e_yves_congar_hans_kung",
+      "fromNode": "n_yves_congar",
+      "toNode": "n_hans_kung",
+      "label": "co_founder_with [EXTRACTED]"
+    },
+    {
+      "id": "e_yves_congar_collegiality",
+      "fromNode": "n_yves_congar",
+      "toNode": "n_collegiality",
+      "label": "championed [EXTRACTED]"
+    },
+    {
+      "id": "e_yves_congar_concilium",
+      "fromNode": "n_yves_congar",
+      "toNode": "n_concilium",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_yves_congar_people_of_god",
+      "fromNode": "n_yves_congar",
+      "toNode": "n_people_of_god",
+      "label": "championed [EXTRACTED]"
+    },
+    {
+      "id": "e_yves_congar_progressive_neo_thomist",
+      "fromNode": "n_yves_congar",
+      "toNode": "n_progressive_neo_thomist",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_hans_kung_concilium",
+      "fromNode": "n_hans_kung",
+      "toNode": "n_concilium",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_hans_kung_collegiality",
+      "fromNode": "n_hans_kung",
+      "toNode": "n_collegiality",
+      "label": "pushed [EXTRACTED]"
+    },
+    {
+      "id": "e_jean_danielou_communio",
+      "fromNode": "n_jean_danielou",
+      "toNode": "n_communio",
+      "label": "allied_with [EXTRACTED]"
+    },
+    {
+      "id": "e_jean_danielou_ressourcement_neo_augustinian",
+      "fromNode": "n_jean_danielou",
+      "toNode": "n_ressourcement_neo_augustinian",
+      "label": "tendency [EXTRACTED]"
+    },
+    {
+      "id": "e_augustin_bea_alfredo_ottaviani",
+      "fromNode": "n_augustin_bea",
+      "toNode": "n_alfredo_ottaviani",
+      "label": "opposed [EXTRACTED]"
+    },
+    {
+      "id": "e_augustin_bea_secretariat_christian_unity",
+      "fromNode": "n_augustin_bea",
+      "toNode": "n_secretariat_christian_unity",
+      "label": "headed [EXTRACTED]"
+    },
+    {
+      "id": "e_hans_urs_von_balthasar_communio",
+      "fromNode": "n_hans_urs_von_balthasar",
+      "toNode": "n_communio",
+      "label": "founded_by [EXTRACTED]"
+    },
+    {
+      "id": "e_hans_urs_von_balthasar_graph_insights",
+      "fromNode": "n_hans_urs_von_balthasar",
+      "toNode": "n_graph_insights",
+      "label": "discusses [EXTRACTED]"
+    },
+    {
+      "id": "e_josef_frings_achille_lienart",
+      "fromNode": "n_josef_frings",
+      "toNode": "n_achille_lienart",
+      "label": "allied_with [EXTRACTED]"
+    },
+    {
+      "id": "e_josef_frings_alfredo_ottaviani",
+      "fromNode": "n_josef_frings",
+      "toNode": "n_alfredo_ottaviani",
+      "label": "clashed_with [EXTRACTED]"
+    },
+    {
+      "id": "e_josef_frings_leo_josef_suenens",
+      "fromNode": "n_josef_frings",
+      "toNode": "n_leo_josef_suenens",
+      "label": "allied_in_majority [INFERRED]"
+    },
+    {
+      "id": "e_alfredo_ottaviani_doctrinal_commission",
+      "fromNode": "n_alfredo_ottaviani",
+      "toNode": "n_doctrinal_commission",
+      "label": "led [EXTRACTED]"
+    },
+    {
+      "id": "e_alfredo_ottaviani_marcel_lefebvre",
+      "fromNode": "n_alfredo_ottaviani",
+      "toNode": "n_marcel_lefebvre",
+      "label": "related_to [EXTRACTED]"
+    },
+    {
+      "id": "e_alfredo_ottaviani_graph_insights",
+      "fromNode": "n_alfredo_ottaviani",
+      "toNode": "n_graph_insights",
+      "label": "discusses [EXTRACTED]"
+    },
+    {
+      "id": "e_marcel_lefebvre_coetus_internationalis_patrum",
+      "fromNode": "n_marcel_lefebvre",
+      "toNode": "n_coetus_internationalis_patrum",
+      "label": "led [EXTRACTED]"
+    },
+    {
+      "id": "e_marcel_lefebvre_collegiality",
+      "fromNode": "n_marcel_lefebvre",
+      "toNode": "n_collegiality",
+      "label": "opposed [EXTRACTED]"
+    },
+    {
+      "id": "e_marcel_lefebvre_religious_liberty",
+      "fromNode": "n_marcel_lefebvre",
+      "toNode": "n_religious_liberty",
+      "label": "opposed [EXTRACTED]"
+    },
+    {
+      "id": "e_marcel_lefebvre_sspx",
+      "fromNode": "n_marcel_lefebvre",
+      "toNode": "n_sspx",
+      "label": "founded [EXTRACTED]"
+    },
+    {
+      "id": "e_john_moorman_arcic",
+      "fromNode": "n_john_moorman",
+      "toNode": "n_arcic",
+      "label": "chaired_commission_leading_to [EXTRACTED]"
+    },
+    {
+      "id": "e_john_moorman_oscar_cullmann",
+      "fromNode": "n_john_moorman",
+      "toNode": "n_oscar_cullmann",
+      "label": "see_also [EXTRACTED]"
+    },
+    {
+      "id": "e_oscar_cullmann_bologna_school",
+      "fromNode": "n_oscar_cullmann",
+      "toNode": "n_bologna_school",
+      "label": "anticipated_event_reading_of [EXTRACTED]"
+    },
+    {
+      "id": "e_aggiornamento_ressourcement",
+      "fromNode": "n_aggiornamento",
+      "toNode": "n_ressourcement",
+      "label": "depends_on [EXTRACTED]"
+    },
+    {
+      "id": "e_aggiornamento_signs_of_the_times",
+      "fromNode": "n_aggiornamento",
+      "toNode": "n_signs_of_the_times",
+      "label": "semantically_similar_to [INFERRED]"
+    },
+    {
+      "id": "e_aggiornamento_class_notes_vatican_ii",
+      "fromNode": "n_aggiornamento",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "addresses [EXTRACTED]"
+    },
+    {
+      "id": "e_ressourcement_class_notes_vatican_ii",
+      "fromNode": "n_ressourcement",
+      "toNode": "n_class_notes_vatican_ii",
+      "label": "addresses [EXTRACTED]"
+    }
+  ]
+}
