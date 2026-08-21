@@ -1,0 +1,345 @@
+<title>Vatican II — TEACHER EDITION</title>
+<style>
+  :root {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+      --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+      --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52; color-scheme: light;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+  }
+  :root[data-theme="light"] {
+    --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+    --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+    --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--wine-soft); }
+  h1, h2, h3, h4, .display {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "URW Palladio", serif;
+    text-wrap: balance; font-weight: 400; color: var(--gold); margin: 0;
+  }
+  p { margin: 0 0 1.1em; max-width: 42em; }
+  strong { color: var(--ink); font-weight: 700; }
+  em { color: var(--wine); font-style: italic; }
+  a { color: var(--wine); }
+
+  header.hero { padding: 60px 24px 44px; text-align: center; border-bottom: 1px solid var(--line); }
+  header.hero .eyebrow { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wine); margin-bottom: 12px; }
+  header.hero h1 { font-size: clamp(30px, 4.6vw, 44px); max-width: 20ch; margin: 0 auto 8px; font-style: italic; }
+  header.hero .sub { max-width: 46em; margin: 0 auto 16px; color: var(--ink-soft); font-size: 18px; }
+  header.hero .inst { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+  header.hero .edition {
+    display: inline-block; margin: 12px 0 10px; padding: 4px 14px; border: 1px solid var(--gold);
+    border-radius: 20px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+  }
+  header.hero .meta { font-size: 13.5px; color: var(--muted); margin-top: 8px; }
+  header.hero .leitmotif-line { font-size: 14.5px; color: var(--wine); font-style: italic; margin-top: 10px; }
+
+  nav.chapters {
+    position: sticky; top: 0; z-index: 10; display: flex; gap: 2px; overflow-x: auto;
+    background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 12px;
+  }
+  nav.chapters a {
+    flex: none; padding: 12px 13px; font-size: 13px; text-decoration: none; color: var(--muted);
+    white-space: nowrap; border-bottom: 2px solid transparent;
+  }
+  nav.chapters a:hover { color: var(--wine); border-color: var(--wine-soft); }
+
+  main { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }
+
+  section.chapter { padding: 52px 0 34px; border-bottom: 1px solid var(--line); scroll-margin-top: 50px; }
+  section.chapter:last-of-type { border-bottom: none; }
+  section.chapter h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 18px; font-style: italic; }
+
+  h3.sec { font-size: 20px; color: var(--gold); margin: 28px 0 10px; }
+
+  ul.plain, ol { padding-left: 1.3em; margin: 0 0 1.1em; max-width: 42em; }
+  ul.plain li, ol li { margin-bottom: 9px; }
+
+  .review { margin-top: 24px; background: var(--gold-soft); border: 1px solid var(--line); border-radius: 3px; padding: 18px 22px; }
+  .review h4 { margin: 0 0 10px; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+  .review ol { margin: 0; padding-left: 1.2em; font-size: 16.5px; color: var(--ink-soft); }
+
+  .cue {
+    background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--gold);
+    border-radius: 3px; padding: 14px 18px; margin: 18px 0;
+  }
+  .cue p { margin: 0; font-size: 16.5px; color: var(--ink-soft); }
+  .cue strong { color: var(--gold); }
+
+  footer.page { max-width: 780px; margin: 0 auto; padding: 34px 24px 60px; font-size: 13.5px; color: var(--muted); }
+</style>
+
+<header class="hero">
+  <p class="eyebrow">BTh &middot; Morning Star Regional Seminary</p>
+  <h1>Vatican II</h1>
+  <p class="sub">History, Documents, and Controversies</p>
+  <div class="inst">Morning Star Regional Seminary, Barrackpore<br/>Affiliated to Jnana-Deepa Vidyapeeth, Pune</div>
+  <div class="edition">TEACHER EDITION</div>
+  
+  
+</header>
+
+<nav class="chapters">
+  <a href="#welcome-you-are-entering-the-house-of-th">Welcome: You are Entering the House of the New Pentecost</a>
+  <a href="#unit-1-the-world-and-the-church-before-t">Unit 1: The World and the Church Before the Council</a>
+  <a href="#unit-2-the-theological-currents-that-mad">Unit 2: The Theological Currents That Made the Council Possible</a>
+  <a href="#unit-3-preparation-from-announcement-to-">Unit 3: Preparation, from Announcement to Opening (1959-1962)</a>
+  <a href="#unit-4-the-four-sessions-history-as-dram">Unit 4: The Four Sessions, History as Drama (1962-1965)</a>
+  <a href="#unit-5-the-sixteen-documents-the-4-9-3-s">Unit 5: The Sixteen Documents, the 4-9-3 Sort</a>
+  <a href="#unit-6-schemas-and-drafts-from-curial-ma">Unit 6: Schemas and Drafts, from Curial Manuscript to Conciliar Text</a>
+  <a href="#unit-7-liberals-and-conservatives-the-tw">Unit 7: Liberals and Conservatives, the Two Camps</a>
+  <a href="#unit-8-divisions-controversies-and-scand">Unit 8: Divisions, Controversies, and Scandals</a>
+  <a href="#unit-9-reading-the-council-itself-the-hi">Unit 9: Reading the Council Itself, the Historiographical War</a>
+  <a href="#unit-10-the-indian-context-vatican-ii-an">Unit 10: The Indian Context, Vatican II and the Church in India</a>
+  <a href="#unit-11-how-should-you-study-vatican-ii">Unit 11: How Should You Study Vatican II</a>
+  <a href="#unit-12-closing-one-council-one-new-pent">Unit 12: Closing, One Council, One New Pentecost</a>
+  <a href="#bibliography">Bibliography</a>
+</nav>
+
+<main>
+<section class="chapter" id="welcome-you-are-entering-the-house-of-th">
+<h2>Welcome: You are Entering the House of the New Pentecost</h2>
+<p>You are about to study the single most consequential event in the life of the Catholic Church in the last four hundred years, the Second Vatican Council (1962-1965). Every seminary you will ever teach in, every liturgy you will ever celebrate, every pastoral letter you will ever write stands inside the House that this Council built. To understand your own priesthood, you must first understand the room you are standing in.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Open by asking the class a blunt question before any content: Were you born after 1965? If yes, tell them, then the Council is not History to you, it is the Air you have always breathed. Vatican II is not a topic like the Council of Trent that we study from outside. We study it from inside its own house.</p></div>
+<p>When Angelo Roncalli was elected Pope in 1958 at the age of seventy-six, the College of Cardinals expected a caretaker, a transitional figure between two longer pontificates. He surprised the whole Church. Ninety days into his pontificate, on 25 January 1959, at the close of the Church Unity Octave in the Basilica of Saint Paul Outside the Walls, he announced to a small group of cardinals his intention to call an Ecumenical Council. The cardinals present, by his own later account, received the announcement in silence.</p>
+<p>Before you open a single document, name the Virtue Triad that this unit demands of you: Patience with slow-moving history, Discernment between rival readings of the same event, and Honesty about the fact that this Council remains, sixty years on, an open and contested question in the living Church, not a closed file. A student who wants the Council to be simple, either simply a Rupture or simply a Continuity, has not yet begun to study it.</p>
+<h3 class="sec">The Leitmotif: A New Pentecost (acts 2)</h3>
+<p>Pope John XXIII himself supplied the biblical key to his own Council. In the Apostolic Constitution Humanae Salutis (25 December 1961), by which he solemnly convoked the Council, he closed with the ancient prayer of the Church, composed for the success of the Council by the Apostolic Penitentiary in 1959: &quot;Renew Your wonders in this our day, as by a new Pentecost.&quot;</p>
+<p>Acts 2 will be our leitmotif for this entire unit of study, exactly as the Pentecost narrative was John XXIII own chosen narrative for the Council he convoked. Read it multi-angle, and let each angle seed a later section of these notes.</p>
+<p><strong>EXAMPLE: </strong>Acts 2:1 (they were all together in one place) opens toward Collegiality: 2,500 Bishops from every Continent gathered as one body with the Bishop of Rome, the largest assembly of Church Fathers in the history of any Council. Acts 2:4 (they began to speak in other tongues) opens toward Aggiornamento and Inculturation: the move from a single sacral Latin toward the vernacular, and toward a Church that speaks the Language, literally and culturally, of every People. Acts 2:5-11 (devout Jews from every nation under heaven) opens toward Catholicity: for the first time bishops from Asia, Africa, and Latin America, not only Europe, sat as full voting members and shaped the Documents. Acts 2:17 (I will pour out my Spirit... your young men shall see visions) opens toward Renewal: the recurring conciliar word Renovatio, the Church examining Her own Face in the mirror of the Gospel. Acts 2:42 (they devoted themselves to the teaching, to fellowship, to the breaking of bread, and to the prayers) opens toward the Four Constitutions themselves: Dei Verbum is the Teaching, Lumen Gentium is the Fellowship or Koinonia, Sacrosanctum Concilium is the Breaking of Bread, and Gaudium et Spes is the Prayer offered on behalf of, and in dialogue with, the whole human family.</p>
+<p>Keep this fivefold mapping in your notebook. It will return at the hinge into the Indian Unit below, and it will seal the close of these notes.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>A note on the phrase New Pentecost itself. The prayer is genuinely conciliar in origin (Apostolic Penitentiary, 1959, adopted by John XXIII), but the phrase has since become a contested term. Charismatic and progressive readers hear in it the promise of a Church remade by the Spirit. Traditionalist critics, including the Society of Saint Pius X tradition associated with Archbishop Marcel Lefebvre, use the same phrase polemically, to argue that the Council in practice produced not a renewal but a rupture. Teach the phrase honestly: it belongs to John XXIII before it belongs to any camp.</p>
+</section>
+<section class="chapter" id="unit-1-the-world-and-the-church-before-t">
+<h2>Unit 1: The World and the Church Before the Council</h2>
+<p>No Council falls from the sky. Vatican II answered a particular World and a particular Church. Set both scenes before you touch a single document.</p>
+<h3 class="sec">A. the World of 1959</h3>
+<ul class="plain">
+<li>The Cold War: a bipolar world of Nuclear Powers, the Church seeking a voice that was neither Western capitalist nor Eastern communist.</li>
+<li>Decolonization: India (1947), much of Africa through the late 1950s and 1960s, a World Church waking up to the fact that most of Her members would soon live outside Europe.</li>
+<li>A confident, expanding Secular Modernity: existentialism, the social sciences, mass media, a widening gap between the language of the Catechism and the language of the street.</li>
+<li>The unfinished trauma of two World Wars and the Shoah, which pressed urgently on the Church question of Her relation to the Jewish People, the seed of Nostra Aetate.</li>
+</ul>
+<h3 class="sec">B. the Church Under Pius XII (1939-1958)</h3>
+<p>Pius XII was a Pope of paradox. On one hand, he governed a highly centralised Church, doctrinally cautious, suspicious of theological innovation. His encyclical Humani Generis (1950) censured, without naming individuals, a cluster of positions associated with the ressourcement theologians below, and led directly to the temporary silencing of Yves Congar, Henri de Lubac, and Marie-Dominique Chenu.</p>
+<p>On the other hand, the same Pius XII opened two doors that Vatican II would later walk through. Divino Afflante Spiritu (1943) permitted Catholic exegetes to use the historical-critical method on Scripture, seeding Dei Verbum. Mediator Dei (1947) affirmed the Liturgical Movement and named the Liturgy itself, not only private devotion, as the summit of Christian life, seeding Sacrosanctum Concilium.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> At exactly this moment, the Indian Church was also stirring. The years of Pius XII overlap precisely with the birth of Independent India (1947) and the framing of a Constitution that guaranteed religious freedom to a Christian minority inside a plural, majority Hindu nation. The Indian bishops who would later sit in Saint Peter Basilica in 1962 had already, at home, lived the question that Dignitatis Humanae would only pose to the universal Church years later: how does the Church speak and witness inside a State that does not establish Her.</p>
+<h3 class="sec">C. the Election of John XXIII (1958)</h3>
+<p>Angelo Giuseppe Roncalli, elected on 28 October 1958, was a career diplomat, Apostolic Delegate in Bulgaria and Turkey, Nuncio in Paris, then Patriarch of Venice. He was not a systematic theologian. He was, by every account, a pastor with an instinct for the pastoral moment, and this instinct, more than any developed theological programme, is what set the Council in motion.</p>
+</section>
+<section class="chapter" id="unit-2-the-theological-currents-that-mad">
+<h2>Unit 2: The Theological Currents That Made the Council Possible</h2>
+<p>A Council does not manufacture theology out of nothing. Vatican II drew on four rivers that had been running, often underground and under suspicion, for thirty years before 1962. Learn all four by name; they are the intellectual DNA of every conciliar document you will read.</p>
+<h3 class="sec">1. Ressourcement = Return to the Sources</h3>
+<p>Ressourcement, French for return to the sources, named the project of by-passing the manualist neo-scholastic textbooks of the previous three centuries and returning directly to Scripture, the Fathers of the Church, and the Liturgy. Its home was the French Jesuit and Dominican houses of study, and its flagship publishing project was the patristic series Sources Chretiennes, founded in 1942 by Jean Danielou and Henri de Lubac.</p>
+<p>Key names: Henri de Lubac (Surnaturel, 1946, on Nature and Grace), Yves Congar (Vraie et Fausse Reforme dans l Eglise, 1950, True and False Reform in the Church), Marie-Dominique Chenu, Jean Danielou. Every one of these men was under a cloud of suspicion by 1950. Every one of these men became, twelve years later, a peritus, an official theological expert, of the very Council whose documents now bear the deep mark of their thought.</p>
+<h3 class="sec">2. Nouvelle Theologie = the New Theology</h3>
+<p>La Nouvelle Theologie was, at first, not a compliment. It was a pejorative label pinned on the ressourcement theologians by their neo-scholastic opponents, chief among them the Dominican Reginald Garrigou-Lagrange, who accused the movement of relativising doctrine by relativising the fixed Latin categories in which doctrine had been expressed since Trent. Humani Generis (1950), without naming the label, condemned tendencies associated with it: a dissolving of the distinction between Nature and the Supernatural, and an excessive openness to modern philosophy.</p>
+<p>The vindication of the New Theology is itself one of the great ironies of twentieth century Church History: the very men silenced in 1950 were invited by John XXIII to serve as periti in 1962, and both Congar and de Lubac were created Cardinals by John Paul II after the Council. What the Magisterium once suspected, the Magisterium later crowned.</p>
+<h3 class="sec">3. the Liturgical and Biblical Movements</h3>
+<p>The Liturgical Movement, beginning with the Belgian Benedictine Lambert Beauduin early in the twentieth century and carried forward by Romano Guardini and Odo Casel, argued that the Liturgy is not decoration around doctrine but the primary theological act of the Church, the lex orandi that shapes the lex credendi. The Biblical Movement, freed by Divino Afflante Spiritu (1943), restored critical, historically grounded reading of Scripture to Catholic seminaries after decades of a defensive, anti-Modernist caution that had followed Pope Pius X condemnation of Modernism in 1907.</p>
+<h3 class="sec">4. Aggiornamento = Updating</h3>
+<p>Aggiornamento, Italian for bringing up to date, was the word John XXIII himself chose, and it is his single most quoted contribution to Council vocabulary. In his opening address, Gaudet Mater Ecclesia (11 October 1962), he drew the distinction that would govern the whole Council: the substance of the ancient deposit of faith is one thing, and the manner in which it is presented is another.</p>
+<p>Aggiornamento = Updating. Note carefully what it does NOT mean: it does not mean a new deposit of faith. It means a new manner of proclaiming the same deposit, so that the Gospel can be heard by a generation whose ears the old formulas no longer reached. John XXIII refused, in the same address, the counsel of what he called Prophets of Doom who saw in the modern world only ruin and calamity.</p>
+<h3 class="sec">Polarity: Ressourcement and Aggiornamento</h3>
+<p>Every theological current above resolves into a single polarity that you must be able to state from memory, because it is the deepest logic of the whole Council.</p>
+<p>Ressourcement and Aggiornamento: The Council looked backward, behind the manuals, behind Trent even, to the Scripture and the Fathers, in order to recover what was oldest and deepest in the Tradition. But, in the same breath, the Council looked forward, toward the Cold War world, decolonised Nations, and a plural Human Family, refusing to address that world in the courtroom language of anathema. Held together, the two movements produce a single conciliar method: the oldest Sources, spoken in the newest Tongues. This is Ressourcement in service of Aggiornamento, not Aggiornamento instead of Ressourcement.</p>
+<p>Pope Benedict XVI, reflecting on this same polarity forty years later, offered the formula that would become the Magisterium own preferred key for reading the whole Council: not a hermeneutic of discontinuity and rupture, but a hermeneutic of reform, of renewal in the continuity of the one subject-Church, who grows over time and matures, always remaining the same.  We will return to this Address in Unit 9 below, where the Historiographical War over the meaning of the Council is examined directly.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Ask the class to name, without looking at their notes, one theologian for Ressourcement, one condemned document for Nouvelle Theologie, one word for the Liturgical Movement gift to the Council, and John XXIII own word for the whole enterprise. If they can do this cold, the foundation of the course is secure.</p></div>
+</section>
+<section class="chapter" id="unit-3-preparation-from-announcement-to-">
+<h2>Unit 3: Preparation, from Announcement to Opening (1959-1962)</h2>
+<p>Three and a half years separate the announcement of 25 January 1959 from the opening of 11 October 1962. This is the Preparatory Phase, and it already contains, in embryo, the entire drama of Curia against Council Fathers that will run through all four sessions.</p>
+<h3 class="sec">A. the Ante-preparatory Consultation</h3>
+<p>An Ante-Preparatory Commission, under Cardinal Domenico Tardini, wrote in June 1959 to every Diocesan Bishop, every Superior General of Religious Orders, and every Catholic university faculty in the world, asking one open question: what should this Council discuss. Over two thousand written responses, called Vota, poured back into Rome by 1960, an unprecedented act of listening before legislating.</p>
+<p>Read the character of the Vota carefully: most Bishops asked for practical, disciplinary clarifications, very few anticipated the sweeping doctrinal renewal that would in fact occur. The Council that resulted exceeded, by a wide margin, the imagination of the very body that was consulted to prepare it.</p>
+<h3 class="sec">B. the Preparatory Commissions</h3>
+<p>Ten Preparatory Commissions, plus two Secretariats, were then established (1960-1962) to draft the working texts, called Schemas, that the Council Fathers would debate. Composition mattered enormously here: the great majority of Commission members were drawn from the Roman Curia and from a neo-scholastic theological formation, giving the draft Schemas, before a single Bishop had spoken a word in Saint Peter Basilica, a markedly conservative, juridical cast.</p>
+<ul class="plain">
+<li>The Theological Commission, chaired by Cardinal Alfredo Ottaviani, Secretary of the Holy Office, with Father Sebastian Tromp SJ as Secretary, drafted the Schemas on Revelation (De Fontibus Revelationis) and the Church (De Ecclesia).</li>
+<li>The Secretariat for Promoting Christian Unity, a new body created outside the normal Curial line by John XXIII himself and entrusted to the German biblical scholar Cardinal Augustin Bea SJ, became the seedbed of everything ecumenical and interreligious that the Council would later produce, including the future Unitatis Redintegratio and Nostra Aetate.</li>
+</ul>
+<p><strong>EXAMPLE: </strong>Think of the Preparatory Phase as two rival kitchens cooking for the same banquet. The Theological Commission kitchen, under Ottaviani, cooked in the old neo-scholastic recipe book. The Bea Secretariat kitchen cooked with the new ressourcement and ecumenical ingredients. Both dishes were placed before the Council Fathers in October 1962, and the Fathers, not the cooks, would decide which kitchen had prepared the meal the Church actually needed.</p>
+<h3 class="sec">C. the Draft Schemas: Seventy Become Twenty</h3>
+<p>Roughly seventy draft Schemas were prepared by the various Commissions. A Central Preparatory Commission, chaired by John XXIII in person, reduced this unmanageable mass to about twenty texts for the Fathers to debate when the Council opened. Two Schemas above all deserve to be named now, because their rejection in the first weeks of Session One is the single most important preparatory event of the whole Council.</p>
+<ul class="plain">
+<li>De Fontibus Revelationis (On the Sources of Revelation): a neo-scholastic text built on a two-source theory, Scripture and Tradition treated as two separate channels of Revelation, written in a defensive, anti-Modernist register. Rejected by the Fathers in November 1962, and rewritten from the ground up across the next three years to become Dei Verbum.De Ecclesia (On the Church): a juridical, institutional draft that opened not with Mystery but with the hierarchical structure of the Church, and that had almost nothing to say about the Laity, Collegiality, or the Church as the People of God. Rejected in essentially the same weeks, and rebuilt over three years to become Lumen Gentium.</li>
+</ul>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>These two rejections are the hinge of the entire Council. Had the Fathers accepted the Curial drafts as written in October 1962, the whole subsequent history you are about to read, the four sessions, the Black Week, the sixteen final documents, would have been unnecessary, because the Council would effectively have ended in its first month. It did not end. It had barely begun.</p>
+</section>
+<section class="chapter" id="unit-4-the-four-sessions-history-as-dram">
+<h2>Unit 4: The Four Sessions, History as Drama (1962-1965)</h2>
+<p>Do not memorise the four sessions as four equal, calm blocks of time. Each session has its own temperature, its own crisis, and its own casualties. Learn the drama, and the documents will make sense as its product, not as an abstract list.</p>
+<h3 class="sec">Session One: 11 October - 8 December 1962</h3>
+<p>The Council opened on 11 October 1962 with over 2,500 Council Fathers present in Saint Peter Basilica, the single largest gathering of Bishops in the History of the Church, together with observers from other Christian Churches for the first time in a General Council. John XXIII opening address, Gaudet Mater Ecclesia, set the tone already described in Unit 2 above.</p>
+<h3 class="sec">The Day One Revolt: 13 October 1962</h3>
+<p>Two days after the opening, on the very first working day, the Council Fathers were asked to vote, without discussion, for the pre-printed Curial slate of names to fill the sixteen elected seats on each of the ten Conciliar Commissions, the bodies that would actually draft every future text. Cardinal Achille Lienart of Lille rose, took the microphone before voting began, and asked that the election be postponed so that National and Regional Episcopal Conferences could confer and propose their own candidates rather than ratify a list prepared in advance. Cardinal Josef Frings of Cologne immediately rose in support. The Council Presidency, taken by surprise, adjourned the session within minutes, to sustained applause from the floor.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>How you narrate 13 October 1962 depends heavily on which historian you are reading, and a good teacher says so out loud. Mainstream conciliar historiography, following Wiltgen and later Alberigo and O&#x27;Malley, reads this moment as the Council Fathers rightly asserting their own collegial responsibility against a Curial attempt to pre-determine the outcome by controlling the drafting Commissions. A minority, traditionalist historiography, associated with critics of the Council such as followers of Archbishop Lefebvre, reads the identical event as an organised coup by a European Rhine Alliance of Bishops to seize control of the Council agenda from its rightful preparers. Teach both readings; the documented facts of the day (Lienart speaks, Frings seconds, the session adjourns) are not in dispute; their meaning is.</p>
+<p>What followed was months of intense, often bruising debate on the Liturgy Schema, and, decisively, the rejection in committee of De Fontibus Revelationis described above. John XXIII personally intervened to send the rejected Schema to a newly created Mixed Commission, co-chaired by Ottaviani and Bea, rather than let it die outright or stand as written, a crucial precedent for how every future stalemate in the Council would be resolved.</p>
+<h3 class="sec">The Death of John XXIII and the Election of Paul VI</h3>
+<p>John XXIII died of stomach cancer on 3 June 1963, eight months into the Council he had convoked. The College of Cardinals elected Giovanni Battista Montini, Archbishop of Milan, who took the name Paul VI, on 21 June 1963. His first public act as Pope was to announce that the Council would continue.</p>
+<h3 class="sec">Session Two: 29 September - 4 December 1963</h3>
+<p>Paul VI opened the second session with his own address, naming four purposes for the Council that would guide it to the end: a clearer awareness by the Church of Her own nature, the renewal of the Church, the restoration of unity among Christians, and a dialogue of the Church with the whole of contemporary humanity. On 4 December 1963, the Council promulgated its first two texts, Sacrosanctum Concilium, the Constitution on the Sacred Liturgy (approved 2,147 to 4), and Inter Mirifica, the Decree on Social Communications. Debate on the reworked De Ecclesia intensified, and the word that would dominate the rest of the Council, Collegiality, the shared governing authority of the College of Bishops together with and under the Pope, moved to the centre of the floor.</p>
+<h3 class="sec">Session Three: 14 September - 21 November 1964</h3>
+<p>The third session pushed forward on the hardest and most politically sensitive Schemas: the Church, Religious Liberty, and the relation of the Church to the Jewish People and other non-Christian religions. It closed in the single most turbulent week of the entire Council.</p>
+<h3 class="sec">The Black Week, 14-21 November 1964 (settimana Nera)</h3>
+<p>In the final days of the third session, three events, occurring within a matter of days, convinced a significant part of the progressive majority that the Roman Curia and Paul VI himself were applying last-minute pressure to blunt the Council achievements.</p>
+<ul class="plain">
+<li>The Nota Explicativa Praevia (Preliminary Explanatory Note): on 16 November 1964, two days before the final vote on Lumen Gentium, Archbishop Pericle Felici, Secretary General of the Council, announced by mandate of higher authority that a Note would be attached to Chapter Three of the text, on Collegiality, offering a restrictive, minimising interpretation of collegial authority in relation to Papal Primacy. The Note was presented as compulsory and not open to further amendment. It won over most of the roughly 300 Bishops of the conciliar minority; only ten of 2,144 Bishops finally voted against Lumen Gentium, but many in the majority felt the authority of the Council itself had been undermined to placate that minority.The postponement of the vote on Religious Liberty: on 19 November 1964, Cardinal Eugene Tisserant, presiding, announced without warning that the vote on the Schema on Religious Liberty, the future Dignitatis Humanae, was postponed to the following, fourth, session, despite the fact that debate on the text had concluded and a floor vote had been expected. Roughly 200 Bishops had petitioned for more discussion time, but the manner of the postponement, seen as another intervention from higher authority, provoked open anger; a group of Council Fathers, mostly American, sent a formal protest letter to Paul VI.Last-minute Papal modifications to Unitatis Redintegratio, the Decree on Ecumenism: minor changes inserted into the final text after every chapter had already been separately approved by the Fathers, again read by many as evidence that the Curial minority retained a channel of influence that bypassed the ordinary conciliar process.</li>
+</ul>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>The Black Week is not a settled story either. Progressive and moderate historians (Alberigo, O&#x27;Malley, the American Bishops who protested at the time) read it as Paul VI yielding, at least tactically, to Curial and conservative pressure at the moment of maximum leverage. Defenders of Paul VI, and more conservative historians such as Agostino Marchetto, read the same events as a Pope legitimately exercising his own supreme authority to secure the broadest possible consensus around Lumen Gentium, judging, correctly as it turned out, that near unanimity mattered more than speed. Both readings agree on the bare facts above; they disagree on the motive behind them.</p>
+<h3 class="sec">Session Four: 14 September - 8 December 1965</h3>
+<p>The fourth and final session completed everything still outstanding: the Synod of Bishops was established as a new permanent, if merely advisory, structure of collegial consultation; Dignitatis Humanae, Nostra Aetate, and Gaudium et Spes, the three texts most exposed to controversy, were finally brought to a vote and overwhelmingly approved; Ad Gentes, Presbyterorum Ordinis, and the remaining Decrees and Declarations were promulgated. The Council closed formally on 8 December 1965, the Solemnity of the Immaculate Conception. Twenty-one Council participants, including Cardinal Gregoire-Pierre Agagianian, Cardinal Joseph Ritter, and the first Cardinal from India, Valerian Gracias of Bombay, read the closing conciliar messages to the world.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> The presence of Cardinal Valerian Gracias of Bombay among the twenty-one voices chosen to deliver the closing messages of the Council on 8 December 1965 is a fact every Indian seminarian should know and be able to state. Gracias, the first Indian Cardinal (created 1953), President of the Catholic Bishops Conference of India from 1954 to 1972, was not a peripheral figure at Vatican II. He is a direct link between the Council and the Church in India that we will develop fully in Unit 10 below.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Draw a simple timeline on the board with only five dates the students must know cold: 25 Jan 1959 (announcement), 11 Oct 1962 (opening), 3 Jun 1963 (death of John XXIII), 14-21 Nov 1964 (Black Week), 8 Dec 1965 (closing). Everything else in this unit hangs off these five pegs.</p></div>
+</section>
+<section class="chapter" id="unit-5-the-sixteen-documents-the-4-9-3-s">
+<h2>Unit 5: The Sixteen Documents, the 4-9-3 Sort</h2>
+<p>Every document of Vatican II belongs to one of three ranks, in descending order of doctrinal weight: Constitution, Decree, Declaration. Four Constitutions, Nine Decrees, Three Declarations, sixteen texts in all. Learn the sort as a single number: 4-9-3.</p>
+<h3 class="sec">The Four Constitutions (the Four Pillars)</h3>
+<p>The four Constitutions carry the highest doctrinal weight and are, not coincidentally, the four texts mapped onto Acts 2:42 in the Welcome Unit above. Two are called Dogmatic Constitutions (Lumen Gentium, Dei Verbum), meaning they define Church teaching with full solemnity; one is called a Constitution on the Sacred Liturgy (Sacrosanctum Concilium); one is called a Pastoral Constitution (Gaudium et Spes), a genuinely new genre in conciliar history, teaching not by condemnation but by dialogue with the modern world.</p>
+<h3 class="sec">The Nine Decrees</h3>
+<p>Decrees apply the doctrine of the Constitutions to a particular sphere of Church life or activity. All nine presuppose Lumen Gentium and, frequently, Dei Verbum.</p>
+<h3 class="sec">The Three Declarations</h3>
+<p>Declarations, the lightest doctrinal genre, address the Church relation to realities outside Her own household: Education, other Religions, and the Political Order. The two most historically contested texts of the whole Council, Nostra Aetate and Dignitatis Humanae, are both, technically, mere Declarations, a reminder that doctrinal rank and historical controversy do not always correspond.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> The mnemonic for oral exam: 4-9-3 = sixteen. Constitutions, Decrees, Declarations. If a student can sort all sixteen abbreviations into the correct column blind, on a blackboard, the unit has done its job.</p></div>
+</section>
+<section class="chapter" id="unit-6-schemas-and-drafts-from-curial-ma">
+<h2>Unit 6: Schemas and Drafts, from Curial Manuscript to Conciliar Text</h2>
+<p>No final document of Vatican II is the text the Preparatory Commissions handed to the Fathers in 1962. Every single one passed through repeated redrafting by Mixed Commissions across four sessions, absorbing thousands of Modi, formal amendments submitted in writing by individual Bishops. This is the single fact that most decisively separates Vatican II from every earlier Council: the Fathers were not asked merely to ratify or condemn a fixed text, they co-authored it across three years.</p>
+<p>The role of the Periti, official theological experts attached to individual Bishops or Episcopal Conferences, was decisive at every stage of this rewriting. Karl Rahner and Joseph Ratzinger both served as periti to Cardinal Frings of Cologne. Yves Congar and Henri de Lubac served the French Bishops. John Courtney Murray SJ, initially excluded from the American drafting team because his prior writing on Church and State had drawn Roman censure in the 1950s, was invited into the Council only from the second session onward, precisely to help rebuild the Religious Liberty text that became Dignitatis Humanae, a striking personal reversal that mirrors the larger vindication of the ressourcement generation named in Unit 2.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> Notice the pattern across every row of the table above: nothing survived to the final vote unchanged, and the texts most exposed to redrafting, Nostra Aetate and Dignitatis Humanae, are precisely the two texts of most direct pastoral relevance to India, a land of many Religions and of a State that constitutionally does not establish any one Faith. When you teach Nostra Aetate to Indian seminarians, teach it as a text that nearly did not survive its own Council, not as a settled inheritance.</p>
+</section>
+<section class="chapter" id="unit-7-liberals-and-conservatives-the-tw">
+<h2>Unit 7: Liberals and Conservatives, the Two Camps</h2>
+<p>A Council of 2,500 voting Bishops was never a single mind. From the first working day, described in Unit 4 above, three broad tendencies crystallised on the floor. Learn them in the A/B/C schema, and remember that the labels Liberal and Conservative are historian shorthand, not titles the Fathers used of themselves.</p>
+<h3 class="sec">A. the Progressive or Reformist Bloc</h3>
+<p>Informally called the Rhine Alliance or, in the memorable title of the American Divine Word missionary and journalist Ralph Wiltgen contemporary chronicle, the current by which The Rhine Flows into the Tiber, a coalition of Bishops from Germany, France, Belgium, and the Netherlands, joined by like-minded Bishops elsewhere, that consistently pressed for Collegiality, vernacular Liturgy, Ecumenical openness, Religious Liberty, and a pastoral rather than juridical Ecclesiology.</p>
+<h3 class="sec">B. the Curial or Conservative Minority</h3>
+<p>A determined minority, concentrated in the Roman Curia and among Bishops formed in the strict neo-scholastic mould, resisted what it saw as a drift toward doctrinal imprecision and a break with the nineteenth century Magisterium condemnations of Liberalism. From 1964 this minority organised formally as the Coetus Internationalis Patrum, the International Group of Fathers, led by the French Archbishop Marcel Lefebvre and the Brazilian Bishop Antonio de Castro Mayer.</p>
+<h3 class="sec">C. the Moderate Majority</h3>
+<p>The largest bloc by far, often decisive at the actual vote, was a moderate majority whose priority was pastoral workability rather than ideological alignment with either wing. Many Bishops from mission territories, including a substantial contingent from India, sat here: their formation had been neo-scholastic, but their daily pastoral experience of religious plurality, poverty, and a young Local Church pressed them, session by session, toward the reformist positions on Collegiality, Inculturation, and interreligious respect.</p>
+<p><strong>EXAMPLE: </strong>A useful classroom image: picture the Council floor not as two trenches facing each other, but as a large slow-moving River (the Moderate Majority) with two strong currents pulling from either bank, one current pulling toward Aggiornamento and one pulling toward Continuity with the pre-conciliar Magisterium. Most final texts are the point where the River settled, not a victory for either bank.</p>
+</section>
+<section class="chapter" id="unit-8-divisions-controversies-and-scand">
+<h2>Unit 8: Divisions, Controversies, and Scandals</h2>
+<p>Study these six flashpoints as a set. Each one is a place where the Council own internal divisions became visible to the wider world, and each has a distinct afterlife in the post-conciliar Church.</p>
+<h3 class="sec">1. the Black Week (14-21 November 1964)</h3>
+<p>Already narrated in full in Unit 4 above: the Nota Praevia on Collegiality, the postponed vote on Religious Liberty, and last-minute Papal changes to the Ecumenism Decree, together, remain the paradigm case of Curial and Papal intervention shaping a text after the floor had, in the judgment of the majority, already spoken.</p>
+<h3 class="sec">2. the Religious Liberty Fight</h3>
+<p>The hardest theological problem of the whole Council. Nineteenth-century Papal teaching, above all Gregory XVI Mirari Vos (1832) and Pius IX Syllabus of Errors (1864), had condemned what those documents called Liberty of Conscience as a modern error. A century later, the American theologian John Courtney Murray SJ argued that the true development lay not in Liberty of Conscience as religious indifferentism, but in the Dignity of the Human Person as the ground of a civil, not doctrinal, right to be free from State coercion in matters of Faith.</p>
+<p>Cardinal Ottaviani and the Coetus Internationalis Patrum resisted fiercely, seeing in Dignitatis Humanae a reversal of settled Magisterium. The text survived Black Week and was finally approved, 1,997 to 224, in the fourth session, one of the widest recorded margins of genuine dissent on any single conciliar document.</p>
+<h3 class="sec">3. the Nostra Aetate Controversy</h3>
+<p>What began, at the personal urging of John XXIII after his 1960 audience with the French Jewish historian Jules Isaac, as a short statement on the Church relation to the Jewish People, repudiating the ancient collective charge of deicide, was progressively widened, then nearly abandoned under diplomatic pressure from Bishops in Arab-majority countries who feared reprisals against local Christian minorities, then widened again in the final session to include Islam, Hinduism, and Buddhism, precisely so that the text on the Jews would not stand exposed alone. The final Declaration is therefore, more than any other conciliar text, a document shaped directly by geopolitical anxiety as much as by theology.</p>
+<h3 class="sec">4. the Birth Control Question, Removed from the Floor</h3>
+<p>In June 1964, Paul VI removed the question of the morality of artificial contraception from open conciliar debate entirely, reserving it instead to a special Pontifical Study Commission that he progressively enlarged. The Council Fathers were, in effect, told this one question was not theirs to settle. Gaudium et Spes therefore treats Responsible Parenthood in general terms and is silent on the licitness of particular methods.</p>
+<p>This procedural removal is the direct seed of a later, post-conciliar crisis: when Paul VI, three years after the Council closed, issued Humanae Vitae (1968) reaffirming the traditional prohibition against the recommendation of the widened Commission majority, the resulting public dissent among theologians and Bishops became the first great post-conciliar rupture in Catholic public life, a rupture whose roots lie in this 1964 procedural decision to keep the question off the Council floor.</p>
+<h3 class="sec">5. the Lefebvre Schism (post-conciliar, Rooted in the Minority)</h3>
+<p>Archbishop Marcel Lefebvre, leader of the Coetus Internationalis Patrum minority described in Unit 7 above, never accepted key elements of Dignitatis Humanae, Nostra Aetate, and the reformed Liturgy. He founded the Society of Saint Pius X in 1970 and, after years of escalating conflict with Rome, consecrated four Bishops without Papal mandate on 30 June 1988, an act that incurred automatic excommunication under Canon Law. This remains, sixty years after the Council itself, the most durable institutional wound attributed to the conciliar minority position.</p>
+<h3 class="sec">6. Hans Kung and the Post-conciliar Sanctions on the Left</h3>
+<p>A mirror-image case on the opposite wing: Hans Kung, present at the Council as a young progressive peritus, continued after the Council to press positions, notably on Papal Infallibility, that the Congregation for the Doctrine of the Faith judged incompatible with Catholic teaching, leading in 1979 to the formal withdrawal of his canonical mandate to teach as a Catholic theologian. Teach both the Lefebvre and the Kung cases together: the Council produced durable tension on both its right and its left flank, not on one flank only.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>A note on the word Scandal in this Unit title. In strict theological usage, Scandal names an act or omission that leads another into sin, and it is not the most precise word for Black Week, Nostra Aetate, or the Kung sanction, which are properly Controversies, contested but legitimate exercises of authority and disagreement within the Church. The Lefebvre consecrations of 1988, by contrast, are properly named a Schism, a formal, canonically recognised rupture of communion. Use the vocabulary precisely when you teach: Controversy for a contested but internal argument, Schism for an actual, formal break.</p>
+</section>
+<section class="chapter" id="unit-9-reading-the-council-itself-the-hi">
+<h2>Unit 9: Reading the Council Itself, the Historiographical War</h2>
+<p>Vatican II is unusual among Church Councils in that the argument over what it actually said has become almost as important, in the sixty years since, as the sixteen documents themselves. A BTh student must know the names of the schools fighting this argument, not only the documents they are fighting about.</p>
+<h3 class="sec">A. the Bologna School: A History of Discontinuity</h3>
+<p>The Istituto per le Scienze Religiose in Bologna, under the historian Giuseppe Alberigo, produced between 1995 and 2001 the five-volume History of Vatican II, later issued in English under the general editorship of Joseph A. Komonchak. The Bologna reading is event-centred: it treats the Council less as a body of texts than as an occurrence, a living process of debate, surprise, and reversal (recall Unit 4 above) that itself constitutes the Council real meaning, often in excess of the literal wording of the final documents.</p>
+<p>Critics of this school describe its overall thrust, not always fairly, as a hermeneutic of Rupture: the Council as a genuine new beginning, discontinuous with the pre-conciliar Church in ways later, more liberal, developments are entitled to claim as their own conciliar inheritance.</p>
+<h3 class="sec">B. the Roman Counterpoint: A History of Continuity</h3>
+<p>Archbishop Agostino Marchetto, a Vatican diplomat and historian, published in 2005 a sustained critical response, translated into English in 2010 as The Second Vatican Ecumenical Council: A Counterpoint for the History of the Council. Marchetto argues the Bologna volumes read later, more radical, post-conciliar developments back into the Council itself, and that a properly textual reading of the sixteen documents, taken on their own words, supports Continuity with the prior Magisterium far more strongly than the Bologna narrative allows.</p>
+<h3 class="sec">C. Benedict XVI, the Magisterium Own Resolution</h3>
+<p>Pope Benedict XVI, in his Address to the Roman Curia of 22 December 2005, offered what has become the Magisterium own preferred adjudication of this entire debate. He named two rival hermeneutics directly: a hermeneutic of discontinuity and rupture, which he judged to have caused great confusion, set against a hermeneutic of reform, of renewal in the continuity of the one subject-Church which the Lord has given to us. The Church, he taught, is a Subject that grows in time and develops, yet always remains the same Subject, the one People of God on Pilgrimage.</p>
+<h3 class="sec">D. Two Further Voices Worth Naming</h3>
+<ul class="plain">
+<li>John W. O&#x27;Malley SJ, What Happened at Vatican II (2008): argues the decisive change was one of Genre and Rhetoric, not only doctrine. The Council chose the ancient Rhetorical style of Persuasion (a Style of Reconciliation, of Dialogue) over the Juridical style of prior Councils (a Style of condemnation and Anathema). The medium, for O Malley, is itself part of the message.Massimo Faggioli, Vatican II: The Battle for Meaning (2012): does not add a new reading of the Council so much as map the battlefield above, tracing how Bologna, Rome, and the various national receptions of the Council have each fought to own its legacy in the decades since 1965.</li>
+</ul>
+<h3 class="sec">Polarity: Continuity and Rupture</h3>
+<p>Continuity and Rupture: The Council Fathers insisted, again and again in the documents themselves, that they intended to teach no doctrine substantially new, only to express the ancient Faith afresh (recall Aggiornamento, Unit 2 above). But the pastoral tone, the vernacular Liturgy, the enthusiastic reception of Ecumenism and Religious Liberty, produced a felt, lived discontinuity in ordinary Catholic experience that no purely textual argument for Continuity can fully dissolve. Held together: what Blessed John Henry Newman, a hidden intellectual ancestor of the whole ressourcement project, called the Development of Doctrine, organic growth of a living Subject across time, is neither frozen Repetition nor unmoored Rupture.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Put both books on the desk if you own them, Alberigo one volume synthesis beside Marchetto Counterpoint, and let the students see that this argument is conducted in real, physical, footnoted scholarship, not only online polemics. That single visual does more for their formation as future teachers than another paragraph of summary.</p></div>
+</section>
+<section class="chapter" id="unit-10-the-indian-context-vatican-ii-an">
+<h2>Unit 10: The Indian Context, Vatican II and the Church in India</h2>
+<p>Return now to the hinge question seeded in the Welcome Unit: is the New Pentecost of Acts 2 beckoning the Indian Church specifically, or only the universal Church in the abstract? Approach the whole Council, one final time, from the Worm Eye View of Barrackpore rather than only the Bird Eye View of Rome.</p>
+<h3 class="sec">A. an Indian Presence at the Council Itself</h3>
+<p>India was not a silent spectator at Vatican II. Cardinal Valerian Gracias of Bombay, the first Indian Cardinal (created 1953) and President of the Catholic Bishops Conference of India from 1954 to 1972, sat through all four sessions as a Council Father and was chosen, alongside Cardinal Agagianian and Cardinal Ritter, as one of twenty-one voices to deliver the Council closing messages to the world on 8 December 1965.</p>
+<p>Historians describe Gracias personal theological temperament as cautious, even conservative, on many floor questions, a useful reminder that Indian representation at the Council does not map neatly onto the Progressive camp of Unit 7 above. Yet it was this same Gracias who, as President of the CBCI after the Council, helped overcome Roman hesitation and secure Papal approval in 1972 for the founding of the Federation of Asian Bishops Conferences (FABC), the single most important concrete, structural fruit of Collegiality (Lumen Gentium) anywhere in Asia.</p>
+<h3 class="sec">B. the Fabc as the Asian Reception of Collegiality</h3>
+<p>The FABC (founded 1972, first Plenary Assembly 1974) is best understood in your notes as Lumen Gentium teaching on Collegiality, translated from a Roman Council Chamber into a standing continental structure. Its recurring themes, triple Dialogue with the Poor, with Cultures, and with Religions, are a direct, sustained development of exactly the three conciliar impulses named across Units 2, 8, and 9 above: Gaudium et Spes solidarity with the human family, Nostra Aetate respect for other Religious Traditions, and Ad Gentes call to genuine Inculturation rather than mere Translation of the Gospel.</p>
+<h3 class="sec">C. Inculturation on the Ground: The Indian Rite Experiments</h3>
+<p>Sacrosanctum Concilium itself opened the door (SC 37-40) to legitimate adaptation of the Liturgy to the genius of different Peoples. In India, this door was walked through most visibly by the National Biblical Catechetical and Liturgical Centre (NBCLC), Bangalore, under D. S. Amalorpavadass from 1966 onward, and by the Indian Rite Mass experiments that incorporated Aarati, Bhajan-style singing, and Sanskrit categories into Eucharistic Worship, an early and still-contested test case of how far Aggiornamento (Unit 2) could travel outside its original European idiom.</p>
+<h3 class="sec">D. Indian Theologians Reading the Council</h3>
+<p>The generation of Indian theologians most familiar to you from your other courses, Michael Amaladoss, Samuel Rayan, D. S. Amalorpavadass, and later readers such as Felix Wilfred, did not simply receive Vatican II passively. They read Gaudium et Spes dialogue-with-the-world through the specific Indian realities of religious plurality and mass poverty, and read the Ecclesiology of Communion in Lumen Gentium alongside pre-existing Indian community structures, producing a genuinely Indian, not merely translated, reception of the Council.</p>
+<p><strong style="color:var(--wine)">Indian Context.</strong> Close this Unit by returning to the fivefold Acts 2 mapping from the Welcome Unit. Ask the class directly: which of the five, Collegiality, Inculturation, Catholicity, Renewal, or the Four Constitutions themselves, has travelled furthest into the actual life of the Diocese they will one day serve, and which remains, sixty years later, still mostly a text on a shelf. This question has no single correct answer, and that is precisely the point of asking it.</p>
+</section>
+<section class="chapter" id="unit-11-how-should-you-study-vatican-ii">
+<h2>Unit 11: How Should You Study Vatican II</h2>
+<p>Ten Units of content are behind you. This final Unit turns from What to study, to How. A BTh student who has memorised every date and abbreviation in this document but does not know how to keep learning after the oral exam has not yet been formed as a Theologian. Follow this sequence, in order, across your years of formation and beyond.</p>
+<h3 class="sec">Step One: Read the Primary Texts First, Not the Commentaries</h3>
+<p>Before you open a single historian, read the four Constitutions themselves, in the order SC, LG, DV, GS, in a reliable critical translation (Austin Flannery general editorship remains the standard classroom edition; Norman Tanner two-volume Decrees of the Ecumenical Councils gives the Latin alongside English for STL-level work). Read with a pencil, noting the Article number of every sentence that strikes you. A commentary read before the text it comments on will silently become your memory of the text itself; read the source first, always.</p>
+<h3 class="sec">Step Two: Build Your Own Timeline Before Reading Any Historian</h3>
+<p>Copy out, in your own hand, the five pegs from Unit 4 above, then add every promulgation date from the tables in Unit 5. Do this before you read Alberigo, Marchetto, or O Malley. A timeline you built yourself is a scaffold that later historians can hang argument on; a timeline you copied from a historian is that historian argument wearing a disguise.</p>
+<h3 class="sec">Step Three: Read One Book from Each Historiographical Camp, Back to Back</h3>
+<p>Do not read only O Malley, or only Marchetto, or only the Bologna volumes. Pair them deliberately: read a chapter of Alberigo (or the one-volume synthesis, A Brief History of Vatican II) immediately followed by the corresponding chapter of Marchetto Counterpoint, or read O Malley narrative of the Black Week alongside Benedict XVI 2005 Address. Let Bologna and Rome argue on the page of your own notebook, in your own annotations, rather than letting one school quietly become your unexamined default.</p>
+<h3 class="sec">Step Four: Track Themes Across Documents, Not Document by Document in Isolation</h3>
+<p>The Council itself thought in cross-references: Lumen Gentium on Collegiality is incomplete without Christus Dominus on the pastoral office of Bishops and Ad Gentes on mission; Dignitatis Humanae on Religious Liberty is incomplete without Nostra Aetate on other Religions. Choose four or five themes (Collegiality, Religious Liberty, Revelation and Tradition, the Laity, Inculturation) and build a single page per theme that pulls together every relevant Article number across all sixteen documents. This is precisely the kind of cross-document synthesis a tool such as NotebookLM is genuinely useful for: feed it the full text of the sixteen documents together with two or three historians of different schools, and ask it to trace one theme, such as Collegiality, across every source, producing a structured summary and a timeline you can then check by hand.</p>
+<p><strong>A NOTE FOR THE CLASSROOM: </strong>A necessary caution about that last sentence. Any AI-generated synthesis, including one produced inside NotebookLM, and including these very notes you are now reading, must be checked against the primary conciliar text and against peer-reviewed secondary scholarship before it is trusted for teaching. I could not access your four named NotebookLM notebooks directly in this conversation, since that requires the Claude Chrome Extension running on your desktop, not available in this chat. When you do generate a NotebookLM study guide or timeline from those four sources, cross-check its factual claims, dates, and quotations against O Malley, Alberigo, or Marchetto exactly as you would check a first-year seminarian footnote, before it enters your own teaching notes.</p>
+<h3 class="sec">Step Five: Reserve the Acta Synodalia for Stl and Doctoral Work</h3>
+<p>The full Acta Synodalia Sacrosancti Concilii Oecumenici Vaticani II, the official multi-volume record of every conciliar speech, written intervention, and vote, is the primary source of primary sources, but it is properly an STL and doctoral-level tool, not a BTh classroom text. At BTh level, the secondary syntheses named throughout these notes are sufficient and appropriate; point advanced students toward the Acta only once they are working on a specific, narrow research question.</p>
+<h3 class="sec">Step Six: Always Ask the Indian Question of Every Document</h3>
+<p>This is not decoration, and you already have the method for it from your own Study of the Indian Context materials: for every document and every theme, ask concretely what it meant for the Church in India in 1965, and what it means now, in West Bengal or Maharashtra, in 2026. A student who can recite the 4-9-3 sort but cannot say what Nostra Aetate means for a Catholic living beside a Durga Puja pandal has memorised the Council without yet studying it theologically.</p>
+<h3 class="sec">Step Seven: Keep Two Columns, What the Council Said and What It Was Later Said to Have Said</h3>
+<p>Given the Historiographical War of Unit 9, discipline your own note-taking permanently into two columns: one column for the literal wording of the Article you are studying, a second column for how a given post-conciliar interpreter, whether Bologna, Rome, or a papal Address, has since read that Article. This habit alone will protect you, and eventually your own students, from mistaking the loudest interpretation of the Council for the Council itself.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Close this Unit with a direct charge to the class: the Council you have just studied is not a finished monument. It is closer, in Newman phrase behind the Continuity and Rupture polarity of Unit 9, to a living idea still working itself out. You, ordained a few years from now, will be among those who decide, in a small Parish or a Seminary classroom, what the Council still means. Study it, therefore, as your own inheritance to administer, not merely an examination to pass.</p></div>
+</section>
+<section class="chapter" id="unit-12-closing-one-council-one-new-pent">
+<h2>Unit 12: Closing, One Council, One New Pentecost</h2>
+<p>Return, to close, to the Upper Room of Acts 2 with which these notes began.</p>
+<p>They were all together in one place, and suddenly there came a sound from Heaven, and there appeared tongues as of fire, distributed and resting on each one of them. And they were all filled with the Holy Spirit and began to speak (Acts 2:1-4).</p>
+<p>The Fathers of Vatican II were themselves, quite literally, all together in one place, more of them than had ever gathered in the History of any Council, drawn from every Continent and language under Heaven, exactly as the crowd of Acts 2:5-11 was drawn from every nation under Heaven. They too were sent out, at the close of four long Sessions, to speak, each in the Tongue of his own People, the ancient Faith made new. This is the sense in which the prayer John XXIII placed at the very door of his own Council remains, for you, not History but Vocation: Divine Spirit, renew Your wonders in this our day, as by a new Pentecost.</p>
+<p>Go, therefore, and teach this Council neither as a Rupture to be feared nor as a Continuity to be assumed, but as a New Pentecost still, sixty years on, asking to be received by every Diocese, every Seminary, and every Believer who has ears to hear.</p>
+</section>
+<section class="chapter" id="bibliography">
+<h2>Bibliography</h2>
+<p>Alberigo, Giuseppe, ed. History of Vatican II. 5 vols. English version ed. Joseph A. Komonchak. Maryknoll, NY: Orbis Books; Leuven: Peeters, 1995-2006.</p>
+<p>Benedict XVI. &quot;Address to the Roman Curia Offering Them His Christmas Greetings.&quot; 22 December 2005. Vatican.va.</p>
+<p>Boersma, Hans. Nouvelle Theologie and Sacramental Ontology: A Return to Mystery. Oxford: Oxford University Press, 2009.</p>
+<p>Faggioli, Massimo. Vatican II: The Battle for Meaning. Mahwah, NJ: Paulist Press, 2012.</p>
+<p>Flannery, Austin, ed. Vatican Council II: The Basic Sixteen Documents. Northport, NY: Costello Publishing, 1996.</p>
+<p>Hebblethwaite, Peter. Paul VI: The First Modern Pope. New York: Paulist Press, 1993.</p>
+<p>John XXIII. Gaudet Mater Ecclesia. Opening Address to the Second Vatican Council, 11 October 1962.</p>
+<p>John XXIII. Humanae Salutis. Apostolic Constitution convoking the Second Vatican Council, 25 December 1961.</p>
+<p>Komonchak, Joseph A. &quot;John Courtney Murray and Dignitatis Humanae.&quot; In Vatican II: Renewal Within Tradition, edited by Matthew L. Lamb and Matthew Levering, 191-206. Oxford: Oxford University Press, 2008.</p>
+<p>Marchetto, Agostino. The Second Vatican Ecumenical Council: A Counterpoint for the History of the Council. Translated by Kenneth D. Whitehead. Scranton, PA: University of Scranton Press, 2010.</p>
+<p>McClory, Robert. Turning Point: The Inside Story of the Papal Birth Control Commission. New York: Crossroad, 1995.</p>
+<p>McManus, Frederick R. &quot;Interpreting Vatican II: A New Pentecost.&quot; Theological Studies (2006): 3-33.</p>
+<p>Mettepenningen, Jurgen. Nouvelle Theologie, New Theology: Inheritor of Modernism, Precursor of Vatican II. London: T&amp;T Clark, 2010.</p>
+<p>Murray, John Courtney. &quot;The Problem of Religious Freedom.&quot; Theological Studies 25 (1964): 503-575.</p>
+<p>O&#x27;Malley, John W. What Happened at Vatican II. Cambridge, MA: Belknap Press of Harvard University Press, 2008.</p>
+<p>Pius XII. Humani Generis. Encyclical Letter, 12 August 1950. AAS 42 (1950): 561-578.</p>
+<p>Tanner, Norman P., ed. Decrees of the Ecumenical Councils. Vol. 2, Trent to Vatican II. London: Sheed and Ward; Washington, DC: Georgetown University Press, 1990.</p>
+<p>Wiltgen, Ralph M. The Rhine Flows into the Tiber: A History of Vatican II. New York: Hawthorn Books, 1967.</p>
+</section>
+</main>
+
+<footer class="page">
+  Class notes for the Bachelor of Theology Programme, Morning Star Regional Seminary, Barrackpore &mdash; affiliated to Jnana-Deepa Pontifical Athenaeum, Pune. TEACHER EDITION. Text only, no diagrams &mdash; hierarchy carried by heading levels, bold, italic and colour.
+</footer>
