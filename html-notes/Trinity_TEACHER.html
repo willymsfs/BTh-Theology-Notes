@@ -1,0 +1,381 @@
+<title>The Theology of the Trinity — TEACHER EDITION</title>
+<style>
+  :root {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+      --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+      --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52; color-scheme: light;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #ede3cf; --ink-soft: #cdbfa4; --paper: #211c16; --paper-raised: #2a241c;
+    --line: rgba(237,227,207,0.16); --wine: #c17a4d; --wine-soft: #c17a4d1c;
+    --gold: #d6ad5c; --gold-soft: #d6ad5c1a; --muted: #a3947a;
+  }
+  :root[data-theme="light"] {
+    --ink: #2a2318; --ink-soft: #4d4330; --paper: #f4ecdb; --paper-raised: #ffffff;
+    --line: rgba(42,35,24,0.15); --wine: #9c4f27; --wine-soft: #9c4f2714;
+    --gold: #8a6414; --gold-soft: #8a641414; --muted: #7a6c52;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--wine-soft); }
+  h1, h2, h3, h4, .display {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "URW Palladio", serif;
+    text-wrap: balance; font-weight: 400; color: var(--gold); margin: 0;
+  }
+  p { margin: 0 0 1.1em; max-width: 42em; }
+  strong { color: var(--ink); font-weight: 700; }
+  em { color: var(--wine); font-style: italic; }
+  a { color: var(--wine); }
+  header.hero { padding: 60px 24px 44px; text-align: center; border-bottom: 1px solid var(--line); }
+  header.hero .eyebrow { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--wine); margin-bottom: 12px; }
+  header.hero h1 { font-size: clamp(30px, 4.6vw, 44px); max-width: 20ch; margin: 0 auto 8px; font-style: italic; }
+  header.hero .sub { max-width: 46em; margin: 0 auto 16px; color: var(--ink-soft); font-size: 18px; }
+  header.hero .inst { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 6px; }
+  header.hero .edition {
+    display: inline-block; margin: 12px 0 10px; padding: 4px 14px; border: 1px solid var(--gold);
+    border-radius: 20px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+  }
+  header.hero .meta { font-size: 13.5px; color: var(--muted); margin-top: 8px; }
+  header.hero .leitmotif-line { font-size: 14.5px; color: var(--wine); font-style: italic; margin-top: 10px; }
+  nav.chapters {
+    position: sticky; top: 0; z-index: 10; display: flex; gap: 2px; overflow-x: auto;
+    background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 12px;
+  }
+  nav.chapters a {
+    flex: none; padding: 12px 13px; font-size: 13px; text-decoration: none; color: var(--muted);
+    white-space: nowrap; border-bottom: 2px solid transparent;
+  }
+  nav.chapters a:hover { color: var(--wine); border-color: var(--wine-soft); }
+  main { max-width: 780px; margin: 0 auto; padding: 0 24px 40px; }
+  section.chapter { padding: 52px 0 34px; border-bottom: 1px solid var(--line); scroll-margin-top: 50px; }
+  section.chapter:last-of-type { border-bottom: none; }
+  section.chapter h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 18px; font-style: italic; }
+  h3.sec { font-size: 20px; color: var(--gold); margin: 28px 0 10px; }
+  ul.plain, ol { padding-left: 1.3em; margin: 0 0 1.1em; max-width: 42em; }
+  ul.plain li, ol li { margin-bottom: 9px; }
+  blockquote {
+    margin: 18px 0; padding: 6px 0 6px 18px; border-left: 3px solid var(--gold);
+    font-style: italic; color: var(--ink-soft); max-width: 40em;
+  }
+  .review { margin-top: 24px; background: var(--gold-soft); border: 1px solid var(--line); border-radius: 3px; padding: 18px 22px; }
+  .review h4 { margin: 0 0 10px; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+  .review ol { margin: 0; padding-left: 1.2em; font-size: 16.5px; color: var(--ink-soft); }
+  .cue {
+    background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--gold);
+    border-radius: 3px; padding: 14px 18px; margin: 18px 0;
+  }
+  .cue p { margin: 0; font-size: 16.5px; color: var(--ink-soft); }
+  .cue strong { color: var(--gold); }
+  footer.page { max-width: 780px; margin: 0 auto; padding: 34px 24px 60px; font-size: 13.5px; color: var(--muted); }
+</style>
+
+<header class="hero">
+  <p class="eyebrow">BTh &middot; Morning Star Regional Seminary</p>
+  <h1>The Theology of the Trinity</h1>
+  <p class="sub">One Substance, Three Persons — Class Notes for the Bachelor of Theology Programme</p>
+  <div class="inst">Morning Star Regional Seminary, Barrackpore<br/>Affiliated to Jnana-Deepa Pontifical Athenaeum, Pune</div>
+  <div class="edition">TEACHER EDITION</div>
+  <p class="meta">Second Year BTh &nbsp;|&nbsp; 4 Credits &nbsp;|&nbsp; 60 Contact Hours &nbsp;|&nbsp; 22 Weeks &nbsp;|&nbsp; 10 Units</p>
+  <p class="leitmotif-line">Leitmotif of the Course: "As You, Father, Are in Me, and I in You" (John 17)</p>
+</header>
+
+<nav class="chapters">
+  <a href="#welcome">Welcome</a>
+  <a href="#leitmotif">The Leitmotif</a>
+  <a href="#aim">Aim, Architecture, Assessment</a>
+  <a href="#unit1">Unit 1</a>
+  <a href="#unit2">Unit 2</a>
+  <a href="#unit3">Unit 3</a>
+  <a href="#unit4">Unit 4</a>
+  <a href="#unit5">Unit 5</a>
+  <a href="#unit6">Unit 6</a>
+  <a href="#unit7">Unit 7</a>
+  <a href="#unit8">Unit 8</a>
+  <a href="#unit9">Unit 9</a>
+  <a href="#unit10">Unit 10</a>
+  <a href="#closing">Closing</a>
+  <a href="#bibliography">Bibliography</a>
+</nav>
+
+<main>
+
+<section class="chapter" id="welcome">
+<h2>Welcome: You Are Already Inside the Life You Are About to Study</h2>
+<p>You are not approaching the Trinity as a Spectator approaches a Puzzle. Baptism has already placed You inside the Name — <em>"in the Name of the Father and of the Son and of the Holy Spirit"</em> (Mt 28:19), one Name with three Owners. Every Sign of the Cross You have made since Childhood has been a small Confession of the Doctrine You are now going to study formally. You do not begin this Course as an Outsider gathering Data about a distant God; You begin it as Someone already spoken over, already indwelt.</p>
+<p>Three Virtues are asked of You in this Course: <strong>Patience</strong> before a Mystery that no Analogy exhausts, <strong>Precision</strong> in the Technical Vocabulary the Fathers fought entire Careers to secure, and <strong>Wonder</strong> that does not evaporate once the Vocabulary is mastered. A Warning stands at the head of these Notes, in Augustine's own words: <em>"if you understand, it is not God."</em> Every Diagram, every technical Term, every Council Decree in this Course exists only to protect a Mystery, never to dissolve it into a solved Problem.</p>
+</section>
+
+<section class="chapter" id="leitmotif">
+<h2>The Leitmotif of the Course: "As You, Father, Are in Me, and I in You" (John 17)</h2>
+<p>Every Course needs one Text to which it returns until the Text becomes a Habit of Mind. This Course returns to the High Priestly Prayer, John 17:20&ndash;26, where Jesus prays not a Doctrine but a Relationship, and prays that Relationship outward to include Us.</p>
+<h3 class="sec">Eight Readings of John 17:20&ndash;26</h3>
+<ul class="plain">
+<li><strong>1. Mutual Indwelling.</strong> "That they may all be one; even as You, Father, are in Me, and I in You" (17:21). The Son's own Words are the earliest and simplest Statement of what the Fathers will later call <em>perichoresis</em>.</li>
+<li><strong>2. Glory Before the World Existed.</strong> "Father, glorify Me... with the Glory which I had with You before the World existed" (17:5). The Son does not become divine in Time; He asks to receive back what was already His.</li>
+<li><strong>3. Unity as the Pattern for the Church.</strong> "That they may be one, even as We are one" (17:22). The inner Life of God is not merely believed; it is the Pattern the Church is commanded to imitate.</li>
+<li><strong>4. The Revealed Name.</strong> "I have made known to them Your Name" (17:26). Compare Matthew 28:19: one Name, three Owners. The Trinity is not a philosophical Deduction; it is a Name given.</li>
+<li><strong>5. Shared Glory as Participation.</strong> "The Glory which You have given Me I have given to them" (17:22). This is the seed of the Doctrine of Deification, unfolded fully in Unit 10.</li>
+<li><strong>6. Mission Flowing from Communion.</strong> "That the World may know that You sent Me" (17:23). The Economy of Salvation is not separate from the inner Life of God; it flows from it.</li>
+<li><strong>7. Knowledge Through the Son Alone.</strong> "Righteous Father, even though the World does not know You, I know You" (17:25). The unique Access of the Son to the Father is the Ground of every later Statement about the Only-Begotten.</li>
+<li><strong>8. Perfected Oneness as the Goal.</strong> "I in them and You in Me, that they may become perfectly one" (17:23). The Trinity is not merely a Doctrine to be defended; it is a Communion into which the Believer is drawn.</li>
+</ul>
+<p><strong>Indian Context:</strong> the Ashram at Shantivanam, founded by Jules Monchanin and Henri Le Saux (Abhishiktananda), was named <em>Saccidananda</em> — Sat-Cit-Ananda, Being-Consciousness-Bliss — and its Community prayed to the Father as <em>sat</em>, the Son as <em>cit</em>, the Spirit as <em>ananda</em>. Long before that Ashram, Keshab Chunder Sen had already correlated Father, Son and Spirit with <em>sat, cit, ananda</em>, and Brahmabandhab Upadhyay composed the Sanskrit Hymn <em>Vande Saccidanandam</em> using Thomistic Categories to refine the Analogy. This Course returns to Saccidananda fully in Unit 10; keep it in view from the first Class.</p>
+</section>
+
+<section class="chapter" id="aim">
+<h2>Aim, Architecture and Assessment</h2>
+<h3 class="sec">Aim of the Course</h3>
+<p>To lead the Student from a merely Verbal Recitation of "Three Persons, One God" to a working theological Grasp of how the Church came to that Formula, what each technical Term guards against, and why the Doctrine is, in LaCugna's words, <em>"not ultimately a teaching about God but a teaching about God's life with us and our life with each other."</em></p>
+<h3 class="sec">The Four Movements of the Course</h3>
+<p><strong>Movement A</strong> (Units 1&ndash;2): the scriptural Seedbed, Old Testament and New. <strong>Movement B</strong> (Units 3&ndash;5): the patristic and scholastic Construction of the Doctrine, ending in Aquinas. <strong>Movement C</strong> (Units 6&ndash;7): the Heresies that forced Precision, and the Magisterium that fixed it. <strong>Movement D</strong> (Units 8&ndash;10): the inner Grammar of the Doctrine (Perichoresis, Missions), its Renewal in the Twentieth Century, and its Indian and global Reception.</p>
+<h3 class="sec">Evaluation</h3>
+<p>Continuous Assessment (Class Tests, Seminar Presentation): 40%. End-Semester Examination: 60%, including one compulsory Integration Question requiring the Student to trace one trinitarian Theme across at least three Units.</p>
+<h3 class="sec">Primary Texts to Be Kept Open</h3>
+<p>The Nicene-Constantinopolitan Creed &middot; the Catechism of the Catholic Church, §§232&ndash;267 &middot; Gilles Emery and Matthew Levering, eds., <em>The Oxford Handbook of the Trinity</em> &middot; Karl Rahner, <em>The Trinity</em> &middot; Vatican II, <em>Lumen Gentium</em> and <em>Unitatis Redintegratio</em>.</p>
+</section>
+
+<section class="chapter" id="unit1">
+<h2>Unit 1: The God of Israel and the Seeds of Plurality</h2>
+<div class="cue"><p><strong>Classroom Cue.</strong> Open the first Class by writing the Word "Trinity" on the Board and asking the Students to search their Bibles for it. No One will find it. Use the five Minutes of Searching to make the whole Course's Method vivid: the Doctrine is the Church's Articulation of what is given, not a Word waiting to be found by Concordance.</p></div>
+<p>The Doctrine of the Trinity is not a biblical Formula; it is the Church's dogmatic Articulation of what is given in Revelation. The Word "Trinity" never appears in the Bible, yet, as the sources insist, <em>"the later development of Trinitarian doctrine relies entirely on the scriptural testimonies of the Old and New Testaments."</em> When the early Church encountered the risen Christ and the Holy Spirit, it was forced to develop a Theology that could account for a Plurality in Unity without violating the uncompromising Monotheism inherited from Israel.</p>
+<h3 class="sec">The Bedrock: the Shema</h3>
+<p><em>"Hear, O Israel: the Lord our God, the Lord is one"</em> (Deut 6:4). Because of this uncompromising Stance, any Suggestion of "Threeness" invited Suspicion of Tritheism. Yet early Christian Theologians recognised in the Old Testament Anticipatory Categories that made the later Doctrine possible: the Plurality of Majesty in Genesis 1:26 ("Let Us make Humankind in Our Image"), the threefold "Holy, Holy, Holy" of Isaiah 6:3, and the Theophany of the three Visitors to Abraham in Genesis 18.</p>
+<h3 class="sec">Divine Agents: Word, Wisdom, Spirit</h3>
+<p>The Spirit (<em>ruach</em>) is the Breath of Life sustaining Creation (Gen 1:2; Ps 104:29&ndash;30). God's Word (<em>dabar</em>) accomplishes His Purposes (Isa 55:10&ndash;11; Ps 33:6). Wisdom (<em>hokmah</em>) is personified as a pre-existent Master Worker beside God at Creation (Prov 8:22&ndash;31). The sources give the key Claim: <em>"the vivid personifications of Wisdom/Word and Spirit, inasmuch as they were both identified with God and the divine activity and distinguished from God, opened up the way toward recognizing God to be tripersonal."</em> Pannenberg adds that the New Testament Writers "went beyond the OT faith, no doubt, but not against it," holding the Shema even while speaking of Father, Son and Spirit as one God.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>State the Shema in full (Deut 6:4) and explain why any Talk of "Threeness" in Israel invited the Charge of Tritheism.</li>
+<li>Name the three Old Testament Divine Agents that anticipate the later Doctrine, and give one Scripture Reference for each.</li>
+<li>An Interfaith Dialogue Partner in India objects that the Trinity is simply borrowed Polytheism dressed as Monotheism. Using the Old Testament material of this Unit, construct a two-minute Response.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit2">
+<h2>Unit 2: The New Testament Witness</h2>
+<p>The New Testament moves from implicit Plurality to the explicit Revelation of Father, Son and Holy Spirit. It does not present a systematic Doctrine but provides, in the sources' Phrase, <em>"the most complete set of raw data from which such a doctrine could be constructed."</em></p>
+<h3 class="sec">From Binitarian Core to Triadic Formula</h3>
+<p>The Foundation is Jesus' intimate Address of God as <em>abba</em> (Mk 14:36) and His Self-Distinction from the Father coupled with their Unity: <em>"I and the Father are one"</em> (Jn 10:30). Stephen Holmes describes the Gospels as presenting "a complex relationship of intimacy, union, shared knowledge and action, and subordination" — an initial binitarian Core. Binitarianism becomes Trinitarianism through the Church's Experience of the Spirit as "the medium of the communion of Jesus with the Father and the mediator of the participation of believers in Christ." The sources summarise this whole Movement in one Phrase: <em>"explicit binitarianism and implicit trinitarianism."</em></p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Students often assume that Trinitarian Belief appears suddenly and fully formed after the Resurrection. Point out that the sources describe a Process, "explicit binitarianism and implicit trinitarianism" — the Spirit's full Place takes longer to become explicit than the Son's. This protects the Students from imagining the New Testament as a completed Systematic Treatise.</p></div>
+<h3 class="sec">One Name, Three Owners</h3>
+<p>The Great Commission commands Baptism <em>"in the name of the Father and of the Son and of the Holy Spirit"</em> (Mt 28:19). The sources stress: <em>"the name here is singular even though it has three owners. Neither Father, Son, nor Spirit exhaust the divine identity; rather each shares it."</em> Paul's Letters, though "occasional and pastoral rather than systematic," are already "thoroughly saturated in a Trinitarian grammar" — he applies <em>Kyrios</em>, the Greek Rendering of Yahweh, directly to the risen Jesus (Rom 10:9; Phil 2:9&ndash;11). The triadic Benediction of 2 Corinthians 13:14 and the fourfold Unity of Ephesians 4:4&ndash;6 show the Grammar already at Work in Liturgy before it is fixed in Doctrine.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>Give the Etymology and Meaning of the Phrase "explicit binitarianism and implicit trinitarianism."</li>
+<li>Cite the Great Commission (Mt 28:19) and explain the significance of the singular "Name" with three "Owners."</li>
+<li>Choose one Pauline Text used in the Liturgy of your own Home Parish (for example the Grace at Mass, drawn from 2 Cor 13:14) and show how it already assumes a triadic Grammar.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit3">
+<h2>Unit 3: The Patristic Crisis, Part One — From the Apologists to Nicaea</h2>
+<h3 class="sec">Logos Theology and Tertullian's Formula</h3>
+<p>The second-century Apologists used the Concept of the <em>Logos</em> to explain the Father&ndash;Son Relationship. Justin Martyr: <em>"as the beginning before all creatures God begat of himself a certain rational power."</em> At the dawn of the third Century, Tertullian, writing against Modalism, coined the Latin Formula that would govern the West: <em>una substantia, tres personae</em>, one Substance in three Persons: <em>"three, however, not in condition, but in degree; not in substance, but in form... yet of one substance, and of one condition, and of one power."</em></p>
+<h3 class="sec">Origen and Eternal Generation</h3>
+<p>Origen made the pioneering Assertion of the eternal Generation of the Son. Because God is immutable, the Father did not become Father in Time: <em>"there was no time at which the Son was not."</em> He compared this timeless Begetting to "the begetting of brightness by the light" — an Image that will echo through Nicaea itself.</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Divide the Class into two Groups, one to argue Tertullian's Position and one Origen's, and give ten Minutes before asking each Group to state, on the Board, what its Theologian actually secured for the later Councils. Neither Group should be allowed to say "they were both just wrong" — both were building the Vocabulary Nicaea would need.</p></div>
+<h3 class="sec">Arius and the Council of Nicaea (325)</h3>
+<p>Arius, protecting the absolute Transcendence of God, held the Son to be a Creature made from Nothing: <em>"there was a time when he was not."</em> To resolve the Crisis, Nicaea affirmed the Son as consubstantial (<em>homoousios</em>) with the Father: <em>"God from God, Light from Light, true God from true God, begotten not made, consubstantial with the Father,"</em> and appended Anathemas directly against Arius's own Slogans. The sources' Verdict: <em>"Nicea's main achievement was to place on record once and for all that the being of the Son is identical to the being of the Father, dealing a mortal blow to subordinationism."</em> Athanasius defended this on soteriological Grounds: only if the Son is fully God can He divinise Humanity — <em>"he became man that we might become divine."</em></p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>State Tertullian's Latin Formula and translate it, then explain the technical Meaning of <em>persona</em> in his Usage.</li>
+<li>Give Arius's own Slogan and cite the Nicene Anathema that directly answers it.</li>
+<li>Explain, in your own Words, why Athanasius considered Arianism a Danger to Salvation itself, not merely a philosophical Error, and name one contemporary Christology in India that risks a similar under-statement of Christ's full Divinity.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit4">
+<h2>Unit 4: The Patristic Crisis, Part Two — The Cappadocians and Augustine</h2>
+<h3 class="sec">One Ousia, Three Hypostases</h3>
+<p>Nicaea had settled the Son's Divinity but left the Vocabulary of "Person" unclear. Basil the Great, Gregory of Nazianzus and Gregory of Nyssa provided the terminological Breakthrough: one Substance (<em>mia ousia</em>) in three Persons (<em>treis hypostaseis</em>), distinguishing Terms previously used interchangeably — <em>"'substance' relates to what is common to Father and Son... whereas 'hypostasis' denotes what is particular."</em> Gregory of Nazianzus: <em>"three in properties, or hypostases... but this light is one in respect of the substance, that is, the Godhead."</em></p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Ask the Class why the Cappadocians needed two Words, <em>ousia</em> and <em>hypostasis</em>, when Greek Philosophy before them had often treated the Terms as Synonyms. Let a Student struggle with the Answer before supplying it: without the Distinction, the Church could say either that God is One (collapsing into Modalism) or that the Persons are distinct (risking Tritheism), but not both at once.</p></div>
+<h3 class="sec">Constantinople (381) and the Spirit</h3>
+<p>Nicaea had said little about the Spirit, giving rise to the Pneumatomachians, "Spirit-fighters." Constantinople affirmed the Spirit's full Divinity: <em>"the Lord and life-giver, who proceeds from the Father, who is worshipped and glorified together with the Father and Son."</em> The Council avoided <em>homoousios</em> for the Spirit "to secure broader consensus," but the Application of <em>kyrios</em> and shared Worship "makes a strong statement of the deity of the Spirit."</p>
+<h3 class="sec">Augustine's Psychological Analogy</h3>
+<p>In the Latin West, Augustine produced the most influential Synthesis, using the Analogy of Memory, Understanding and Will: <em>"these three then... are not three lives but one life, nor three minds but one mind... they are not three substances but one substance."</em> He identified the Spirit as mutual Love between Father and Son: <em>"one loving him who is from him, and one loving him from whom he is, and love itself."</em> Augustine's own Caution must be remembered alongside the Analogy: <em>"if you understand, it is not God."</em></p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>Distinguish <em>ousia</em> from <em>hypostasis</em> as the Cappadocians used the Terms, with one Citation for each.</li>
+<li>Cite the Constantinopolitan Article on the Holy Spirit and explain why the Council avoided the Word <em>homoousios</em> for the Spirit.</li>
+<li>Explain Augustine's psychological Analogy in your own Words, then state its principal Danger when taught without his own Qualification.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit5">
+<h2>Unit 5: The Scholastic Synthesis — Aquinas on Processions, Relations and Missions</h2>
+<p>Aquinas synthesised Aristotelian Metaphysics with Augustinian Psychology (<em>Summa Theologiae</em> I, qq. 27&ndash;43).</p>
+<h3 class="sec">Two Processions</h3>
+<p><em>"We cannot conceive divine processions except as corresponding to actions which remain within the agent... to understand and to will."</em> The Son proceeds by way of Intellect (Word); the Spirit proceeds by way of Will (Love).</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Ask the Class what would happen if a Student, in the End-Semester Oral, said the Son proceeds "by way of Will" rather than "by way of Intellect." Use the Wrong Answer to test whether the Class actually understands why Aquinas assigns Intellect to the Son and Will to the Spirit, rather than merely having memorised the Pairing.</p></div>
+<h3 class="sec">Subsistent Relations</h3>
+<p><em>"In God, relations are constitutive of the persons... In God, person denotes subsistent relation."</em> Where in Creatures Relation is an Accident, in God Relation belongs to the very Essence — this single Move is what allows Aquinas to say there are real Distinctions of Person without dividing the one Substance.</p>
+<h3 class="sec">Missions as the Economy of the Processions</h3>
+<p>A divine Mission "is not essentially different from the eternal procession, but only adds a reference to a temporal effect." The temporal Missions of Son and Spirit are, in the sources' Phrase, "the outflowing in grace of their eternal procession," drawing the rational Creature back into the Life of God — the theological Root of every later Statement, from Rahner onward, that the Economic Trinity and the Immanent Trinity cannot finally be pulled apart.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>Name the two Processions in God according to Aquinas and the human Faculty each corresponds to.</li>
+<li>Explain "subsistent relation" and state why this Solution avoids both Modalism and Tritheism.</li>
+<li>A Seminarian preparing a Homily on the Sending of the Holy Spirit at Confirmation asks how the eternal Procession of the Spirit relates to His temporal Mission in the Sacrament. Answer him in Aquinas's own Terms.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit6">
+<h2>Unit 6: Heresies and the Filioque</h2>
+<p>Each Heresy below was refuted not by Pedantry but because it endangered Salvation itself; know the Error, the Refutation, and the Stake.</p>
+<ul class="plain">
+<li><strong>Modalism / Sabellianism.</strong> Denied real eternal Distinctions, treating Father, Son and Spirit as Modes of one God. The fatal Consequence was Patripassianism, that the Father Himself suffered and died. Refuted by the Cappadocian <em>ousia/hypostasis</em> Distinction.</li>
+<li><strong>Subordinationism.</strong> A pervasive pre-Nicene Tendency ranking Son and Spirit ontologically below the Father. Answered by Nicaea's <em>homoousios</em>: the infinite divine Nature admits no Degrees of "more or less."</li>
+<li><strong>Arianism.</strong> Radicalised Subordinationism: the Son a Creature from Nothing. Condemned at Nicaea (325).</li>
+<li><strong>Pneumatomachianism.</strong> Accepted the Son's Divinity but denied the Spirit's. Resolved at Constantinople I (381).</li>
+<li><strong>Tritheism.</strong> Belief in three Gods, guarded against by the Unity of Essence, the Monarchy of the Father, Perichoresis, and the Rule that all external Operations are undivided.</li>
+</ul>
+<div class="cue"><p><strong>Classroom Cue.</strong> Update this Unit each Year with any current Ecumenical News involving Orthodox-Catholic Relations. Ask the Students to bring one News Item from the past Month touching the Eastern Churches, and use it to make the <em>Filioque</em> feel like a live Question rather than a settled Item of eleventh-Century History.</p></div>
+<h3 class="sec">The Filioque Controversy</h3>
+<p>The Western Church added <em>Filioque</em>, "and the Son," to the Creed (Spain, c. 589), teaching that the Spirit proceeds from the Father and the Son. The East objected: the Addition was unilateral, made without an Ecumenical Council, and it seemed to introduce two Sources into the Godhead, threatening the Monarchy of the Father. The sources' verbatim Verdict: <em>"Historically, it was not resolved; it became the primary theological catalyst for the Great Schism of 1054."</em> Modern Dialogue treats the Greek and Latin Traditions as complementary: the Father alone is the "principle without principle," and the Eastern Formula that the Spirit proceeds from the Father <em>through</em> the Son is recognised as a valid Expression of the same Mystery.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>List the five Heresies of this Unit and, for each, the one Council or Father that answered it.</li>
+<li>State the two Objections the East raised against the <em>Filioque</em>.</li>
+<li>The <em>Filioque</em> remains a live Obstacle to Christian Unity. Drawing on this Unit, propose one sentence You would use in an Ecumenical Dialogue in India to explain the Catholic Position without dismissing the Orthodox Objection.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit7">
+<h2>Unit 7: The Magisterium — Councils, Creeds and Vatican II</h2>
+<h3 class="sec">The Medieval Councils</h3>
+<p>The Fourth Lateran Council (1215), against Joachim of Fiore: <em>"each of the persons is that supreme reality, viz., the divine substance, essence or nature,"</em> and gave the Hermeneutical Rule governing all Analogy: <em>"between creator and creature there can be noted no likeness so great that a greater dissimilarity cannot be seen between them."</em> The Council of Florence (1438&ndash;45) settled the Procession Formula: the Spirit proceeds from the Father and the Son <em>"not as from two principles, but as from one principle; not by two spirations, but by one single spiration."</em></p>
+<h3 class="sec">Papal and Catechetical Teaching</h3>
+<p>The Catechism of the Catholic Church: <em>"the Trinity is One. We do not confess three Gods, but one God in three persons, the 'consubstantial Trinity.'"</em> And on the real Distinction: <em>"It is the Father who generates, the Son who is begotten, and the Holy Spirit who proceeds."</em></p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Ask the Class what would happen today if the Congregation for the Doctrine of the Faith proposed adding a Word to the Creed unilaterally, as Spain did with the <em>Filioque</em> in the sixth Century. The Provocation should surface how differently Authority and Consultation function in the Church after Vatican II's Ecclesiology of Communion.</p></div>
+<h3 class="sec">Vatican II</h3>
+<p><em>Lumen Gentium</em> describes the Church as <em>"a people made one with the unity of the Father, the Son and the Holy Spirit"</em> (§4). <em>Unitatis Redintegratio</em>, the Decree on Ecumenism, grounds Christian Unity itself in the Trinity: it <em>"finds its highest model and source in the unity of the persons of the Trinity."</em></p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>State the Florence Formula on the Procession of the Spirit and explain why it uses "one Spiration" rather than "two."</li>
+<li>Cite <em>Lumen Gentium</em> §4 on the Church as a trinitarian People.</li>
+<li>Show how <em>Unitatis Redintegratio</em>'s grounding of Christian Unity in the Trinity applies concretely to the Divisions among the Churches of India (Latin, Syro-Malabar, Syro-Malankara, and the Protestant Communions).</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit8">
+<h2>Unit 8: Perichoresis, Appropriations and the Missions</h2>
+<h3 class="sec">Perichoresis — Mutual Indwelling</h3>
+<p>Perichoresis denotes "the reciprocal interiority of the trinitarian persons," their "co-inherence in one another without any coalescence or commixture." John of Damascus gave the Doctrine its classic Form: for the Trinity, unlike three human Beings, <em>"their distinct individuality is conceptual, in reality there is no separate individuality, but a complete coinherence between the persons."</em> Moltmann's modern Retrieval: <em>"in the perichoresis, the very thing that divides them becomes that which binds them together... all subordinationism in the doctrine of the Trinity is avoided."</em></p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Complete the Sentence Exercise: write "Perichoresis is like..." on the Board and collect five Analogies from the Class (a Dance, a Marriage, a Conversation, and so on). Let the Class test each Analogy against John of Damascus's own Criterion, no Coalescence and no Commixture, and discard any Analogy that fails it.</p></div>
+<h3 class="sec">Appropriations</h3>
+<p>Appropriation attributes a Reality common to all three Persons to one of them in particular, to aid human Understanding. Aquinas: Power is appropriated to the Father, "who is the principle of the entire Godhead"; Wisdom to the Son, "who proceeds as Word"; Goodness to the Holy Spirit, "who proceeds as love."</p>
+<h3 class="sec">The Undivided Works and the Missions</h3>
+<p>The Axiom <em>opera Trinitatis ad extra indivisa sunt</em>: any Action God performs outside the divine Life is executed by the whole Trinity acting as one. Augustine: <em>"as they are indivisible, so work indivisibly."</em> Yet the temporal Missions really do send one Person rather than another into History and into the Soul of the Just — the Distinction of Persons is preserved <em>ad intra</em> even while the Work <em>ad extra</em> is undivided.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>Define Perichoresis and cite John of Damascus's classic Formulation.</li>
+<li>Give Aquinas's threefold Scheme of Appropriations (Power, Wisdom, Goodness) with the Person each is appropriated to.</li>
+<li>Explain how the Rule "the external Works of the Trinity are undivided" is compatible with saying that the Spirit alone, and not the Father, was sent at Pentecost.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit9">
+<h2>Unit 9: The Modern Renaissance — Barth, Rahner, Moltmann, Zizioulas</h2>
+<h3 class="sec">Barth and Rahner</h3>
+<p>Barth ignited the twentieth-century Renaissance, front-loading the Doctrine at the Head of the <em>Church Dogmatics</em>: <em>"the doctrine of the Trinity is what basically distinguishes the Christian doctrine of God as Christian."</em> Rahner rescued it from speculative Isolation with the Identity Axiom, Rahner's Rule: <em>"the 'economic' Trinity is the 'immanent' Trinity and the 'immanent' Trinity is the 'economic' Trinity."</em></p>
+<h3 class="sec">Moltmann, von Balthasar, Zizioulas</h3>
+<p>Moltmann pushed the Doctrine toward the Cross, reading it as an intra-trinitarian Event: <em>"what happened on the cross was an event between God and God... a deep division in God himself... and at the same time a unity in God."</em> Von Balthasar traced the Cross back to an eternal Kenosis: <em>"the Father strips himself, without remainder, of his Godhead and hands it over to the Son."</em> Zizioulas, from the Orthodox East, grounded God's Being in the Person of the Father to secure divine Freedom: <em>"the Father out of love — that is, freely — begets the Son and brings forth the Spirit."</em></p>
+<div class="cue"><p><strong>Classroom Cue.</strong> Students often assume Rahner's Rule is a modern Invention with no patristic Root. Point out that it is, in fact, a formal Statement of what the Cappadocians and Augustine both already assumed when they argued from the Missions back to the Processions; Rahner names sharply what the Fathers practised without naming.</p></div>
+<h3 class="sec">The Latin/Social Trinity Debate</h3>
+<p>A defining late-twentieth-century Divide. Moltmann: the West, following Augustine, favoured the Analogy of the individual Person; the Cappadocians and the Orthodox favoured the Analogy of Community, an "emphatically social doctrine of the Trinity." Critics such as Karen Kilby caution that social Trinitarianism can project a preferred human Community back onto God — a Warning worth remembering before turning any Doctrine of God into a ready-made political Programme.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>State Rahner's Rule and explain in one Sentence what it repairs in prior Trinitarian Theology.</li>
+<li>Distinguish the "Latin" and "Social" approaches to the Trinity, naming one Representative Theologian of each.</li>
+<li>Kilby warns that Social Trinitarianism risks projecting human Politics onto God. Give one Example, from Indian Church or Political Life, where this Danger is real.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="unit10">
+<h2>Unit 10: The Trinity, Deification, and the Indian Encounter</h2>
+<h3 class="sec">Deification and Indwelling</h3>
+<p>Athanasius: <em>"he became man that we might become divine."</em> Augustine is precise that this is by Grace, not Nature: <em>"if we have been made sons of God, we have also been made gods: but this is the effect of grace adopting, not of nature generating."</em> The whole Trinity, not the Spirit alone, dwells in the Believer: <em>"by the Holy Spirit necessarily the Father and the Son dwell in us also."</em> LaCugna's Summary governs this whole Unit: <em>"the doctrine of the Trinity is not ultimately a teaching about God but a teaching about God's life with us and our life with each other."</em></p>
+<h3 class="sec">Saccidananda — the Indian Encounter</h3>
+<p>India's deepest Inculturation of the Doctrine came through <em>Saccidananda</em> (<em>sat, cit, ananda</em>). Keshab Chunder Sen correlated Father, Son and Spirit with <em>sat, cit, ananda</em> — "the True, the Good, the Beautiful." Brahmabandhab Upadhyay, drawing on Thomism, composed the Sanskrit Hymn <em>Vande Saccidanandam</em> to refine Sen's Analogy with a proper Sense of "Person" and "Nature." Monchanin and Abhishiktananda, at the Saccidananda Ashram in Kulitalai, Tamil Nadu, prayed the Father as <em>sat</em>, the "principleless Principle"; the Son as <em>cit</em>, the "intellectual Image of the Existent"; the Spirit as <em>ananda</em>. The Limit must be stated honestly, in the sources' own Words: <em>"the concept of person does not translate easily into Sanskrit,"</em> and any cross-cultural Mapping "will always fall short of the exactitude that would make it entirely compelling" — yet remains "a necessary and deeply enriching evolution of the doctrine in the third millennium."</p>
+<div class="cue"><p><strong>Classroom Cue.</strong> This final Unit carries the heaviest pastoral Weight of the Course. Do not let the Class treat the Caste Illustration as a rhetorical Flourish; ask directly whether any Student has witnessed separate Seating or separate Burial Practice in a Parish they know, and let the Silence or the Answer sit before moving on. The Doctrine has failed its own Test if it cannot be brought into that Room.</p></div>
+<h3 class="sec">The Trinity as Social Critique</h3>
+<p>Leonardo Boff reads Perichoresis as a Model for a just, egalitarian social Order: <em>"a society that takes its inspiration from trinitarian communion cannot tolerate class differences, dominations based on power."</em> <strong>Indian Context:</strong> a Church that baptises "in the Name of the Father and of the Son and of the Holy Spirit" while permitting separate Seating for Dalit Christians in the Parish Hall, or separate Burial Grounds, has not yet allowed the Doctrine it recites to reach its own Practice. The Trinity confessed at the Font and the Caste enforced in the Pew cannot both be true expressions of the same Faith.</p>
+<div class="review">
+<h4>Review Questions</h4>
+<ol>
+<li>Distinguish Deification by Grace from Deification by Nature, citing Augustine.</li>
+<li>Name the three Pioneers of the Saccidananda Approach in India and state what each contributed.</li>
+<li>Using Boff's Reading of Perichoresis, write a three-sentence Examination Answer on why caste Discrimination inside an Indian Parish is a direct Contradiction of the Trinity confessed at that Parish's own Baptismal Font.</li>
+</ol>
+</div>
+</section>
+
+<section class="chapter" id="closing">
+<h2>Closing Unit: The Dance That Includes Us</h2>
+<p>Perichoresis was once translated, almost playfully, as a "Dance" — the three Persons circling in and around one another without Confusion and without Separation. But the Prayer that gave this Course its Leitmotif does not leave the Dance closed. <em>"I in them and You in Me, that they may become perfectly one"</em> (Jn 17:23). The Trinity You have studied for twenty-two Weeks is not a Diagram to be reproduced correctly in an Examination Hall and then set aside. It is the Life You were baptised into, the Name that was spoken over You, and the Communion You are sent, as Priest or Lay Theologian, to make visible wherever Division — of Caste, of Language, of Rite — currently contradicts it. The Fire that Moses saw and did not walk away from, and the Dance that Damascus and the Cappadocians tried to describe without dissolving its Mystery, are, in the End, the same one Invitation.</p>
+</section>
+
+<section class="chapter" id="bibliography">
+<h2>Select Bibliography</h2>
+<h3 class="sec">Conciliar and Magisterial Documents</h3>
+<ul class="plain">
+<li>The Nicene-Constantinopolitan Creed (325/381).</li>
+<li>Fourth Lateran Council (1215); Council of Florence (1438&ndash;45); Council of Trent (1545&ndash;63).</li>
+<li>Catechism of the Catholic Church, §§232&ndash;267.</li>
+<li>Vatican II, <em>Lumen Gentium</em>; <em>Unitatis Redintegratio</em>.</li>
+<li>Leo XIII, <em>Divinum Illud Munus</em> (1897); Pius XII, <em>Mystici Corporis</em> (1943); John Paul II, <em>Dominum et Vivificantem</em> (1986).</li>
+</ul>
+<h3 class="sec">Scholarly Works</h3>
+<ul class="plain">
+<li>Gilles Emery and Matthew Levering, eds. <em>The Oxford Handbook of the Trinity</em>. Oxford University Press.</li>
+<li>Gilles Emery, O.P. <em>The Trinity: An Introduction to Catholic Doctrine on the Triune God</em>.</li>
+<li>Karl Rahner. <em>The Trinity</em>. Karl Barth. <em>Church Dogmatics</em> I/1.</li>
+<li>Thomas Aquinas. <em>Summa Theologiae</em> I, qq. 27&ndash;43.</li>
+<li>John Zizioulas. <em>Being as Communion</em>. Jürgen Moltmann. <em>The Trinity and the Kingdom</em>.</li>
+<li>Catherine Mowry LaCugna. <em>God for Us: The Trinity and Christian Life</em>.</li>
+<li>V.-M. Kärkkäinen. <em>Christian Understandings of the Trinity</em>.</li>
+</ul>
+<h3 class="sec">Indian and Asian Contextual</h3>
+<ul class="plain">
+<li>Brahmabandhab Upadhyay. <em>Vande Saccidanandam</em> (hymn).</li>
+<li>Jules Monchanin and Henri Le Saux (Abhishiktananda). Writings from the Saccidananda Ashram, Shantivanam.</li>
+<li>Raimon Panikkar. <em>The Trinity and the Religious Experience of Man</em>.</li>
+<li>Jung Young Lee. <em>The Trinity in Asian Perspective</em>.</li>
+</ul>
+</section>
+
+</main>
+
+<footer class="page">
+  Class notes for the Bachelor of Theology Programme, Morning Star Regional Seminary, Barrackpore &mdash; affiliated to Jnana-Deepa Pontifical Athenaeum, Pune. Student Edition. Authored from the consolidated Trinity source notebook (Emery &amp; Levering, <em>The Oxford Handbook of the Trinity</em>, and companion sources), following the house BTh format.
+</footer>
